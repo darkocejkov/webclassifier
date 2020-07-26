@@ -1,0 +1,95 @@
+
+            We've verified that the organization   controls the domain:
+           GitHub is home to over 50 million developers working together. Join them to grow your own development teams, manage permissions, and collaborate on projects. 
+        The Python programming language
+       
+ 
+ 
+ 
+ 
+        Optional static typing for Python 3 and 2 (PEP 484)
+       
+ 
+ 
+ 
+ 
+        Source code for python.org
+       
+ 
+ 
+ 
+ 
+        Python Enhancement Proposals
+       
+ 
+ 
+ 
+ 
+        Collection of library stubs for Python, with static types
+       
+ 
+ 
+ 
+ 
+        The Python developer's guide
+       
+ 
+ 
+ 
+ 
+            Spanish translation of the Python documentation.
+ 
+            Korean translation of the Python documentation
+ 
+            Configuration for Python planets (e.g.  )
+ 
+            The Python programming language
+ 
+            zh_CN translation of the Python documentation
+ 
+            Optional static typing for Python 3 and 2 (PEP 484)
+ 
+            Collection of library stubs for Python, with static types
+ 
+            Brazilian Portuguese translation of the Python Documentation
+ 
+            Python Enhancement Proposals
+ 
+            Contributor License Agreement assistant (CLA assistant)
+ 
+            Source code for python.org
+ 
+            `blurb add` over the internet
+ 
+            A bot to help identify missing information for CPython pull requests
+ 
+            CLA enforcement bot for Python organization projects
+ 
+            The Python developer's guide
+ 
+  - A bot for backporting and merging CPython pull requests
+ 
+            Work related to PEP 484: typing.py (released via PyPI) and issue tracker
+ 
+            Sphinx theme for Python documentation
+ 
+            Source for packages that the cpython build process depends on
+ 
+            Python Performance Benchmark Suite
+ 
+            French translation of the Python documentation.
+ 
+            Modified fork of CPython's ast module that parses `# type:` comments
+ 
+            scripts for building documentation on docs.python.org
+ 
+            PSF infrastructure configuration
+ 
+            Communications from the Steering Council
+ 
+            Configuration for buildbot.python.org
+ 
+            Binaries that the cpython build process depends on
+ 
+            Terjemahan Bahasa Indonesia untuk Dokumentasi Python
+ 
