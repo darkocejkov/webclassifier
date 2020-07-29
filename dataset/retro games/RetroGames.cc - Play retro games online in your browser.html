@@ -1,0 +1,1164 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta name="description" content="Play retro games from NES, SNES, GB, GBC, GBA, SEGA Genesis and Classic Arcade Games in your browser."> <meta name="keywords" content="retro games, retrogames, old games, games, online, nes, snes, n64, gb, gbc, gba, sega">
+<title>RetroGames.cc - Play retro games online in your browser</title>
+<link rel="stylesheet" href="https://www.retrogames.cc/css/app.css?v=202006112">
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+<script src="https://www.retrogames.cc/bower_components/jquery/dist/jquery.js?v=201904161"></script>
+<link rel="dns-prefetch" href="//www.emulatorjs.com">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:url" content="https://www.retrogames.cc/" />
+<link rel="canonical" href="https://www.retrogames.cc/">
+
+<meta name="application-name" content="RetroGames">
+<meta name="theme-color" content="#e96969">
+<style>
+    #breadcrumb .google-auto-placed, #breadcrumb+.google-auto-placed, .fullwidth-game .google-auto-placed{display: none}
+    @media (max-width:1024px) {
+        .st-sticky-share-buttons{display:none !important} 
+    }
+    </style>
+
+
+</head>
+<body>
+<noscript>
+    <p>You must have javascript enabled in your browser settings in order to visit this site.</p>
+</noscript>
+<p class="notice-gamepad" style="display: none"></p>
+<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+<div class="off-canvas position-left light-off-menu" id="offCanvas-responsive" data-off-canvas>
+<div class="off-menu-close">
+<h3>Menu</h3>
+<span data-toggle="offCanvas-responsive"><i class="fa fa-times"></i></span>
+</div>
+<ul class="vertical menu off-menu" data-responsive-menu="drilldown">
+<li><a href="https://www.retrogames.cc">
+
+&nbsp;Home</a></li>
+<li><a href="/nes-games" title="NES Games Online"><i class="icon icon-nes"></i>NES</a></li>
+<li><a href="/snes-games" title="SNES Games Online"><i class="icon icon-snes"></i>SNES</a></li>
+<li><a href="/gameboy-games" title="GB Games Online"><i class="icon icon-gb"></i>GB</a></li>
+<li><a href="/gameboycolor-games" title="GBC Games Online"><i class="icon icon-gb"></i>GBC</a></li>
+<li><a href="/gameboyadvance-games" title="GBA Games Online"><i class="icon icon-gba"></i>GBA</a></li>
+<li><a href="/n64-games" title="N64 Games Online"><i class="icon icon-n64"></i>N64</a></li>
+<li><a href="/mastersystem-games" title="Master System Games Online"><i class="icon icon-mastersystem"></i>Master System</a></li>
+<li><a href="/gamegear-games" title="Game Gear Games Online"><i class="icon icon-gamegear"></i>Game Gear</a></li>
+<li><a href="/genesis-games" title="Genesis Games Online"><i class="icon icon-genesis"></i>Genesis</a></li>
+<li><a href="/segacd-games" title="Sega CD Games Online"><i class="icon icon-genesis"></i>Sega CD</a></li>
+<li><a href="/wonderswan-games" title="Wonderswan Games Online"><i class="icon icon-wonderswan"></i>Wonderswan</a></li>
+<li><a href="/turbografx16-games" title="Turbografx-16 Games Online"><i class="icon icon-turbografx16"></i>Turbografx-16</a></li>
+<li><a href="/turbografxcd-games" title="Turbografx CD Games Online"><i class="icon icon-turbografx16"></i>Turbografx CD</a></li>
+<li><a href="/pcecd-games" title="PC Engine CD Games Online"><i class="icon icon-turbografx16"></i>PC Engine CD</a></li>
+<li><a href="/atari7800-games" title="Atari 7800 Games Online"><i class="icon icon-atari7800"></i>Atari 7800</a></li>
+<li><a href="/lynx-games" title="Atari Lynx Games Online"><i class="icon icon-atari-lynx"></i>Atari Lynx</a></li>
+<li><a href="/jaguar-games" title="Atari Jaguar Games Online"><i class="icon icon-atarijaguar"></i>Atari Jaguar</a></li>
+<li><a href="/arcade-games" title="Classic Arcade Games Online"><i class="icon icon-arcade"></i>Arcade</a></li>
+<li><a href="/ngp-games" title="Neo Geo Pocket Games Online"><i class="icon icon-ngp"></i>Neo Geo Pocket</a></li>
+</ul>
+<div class="responsive-search">
+<form class="search-form" method="get" action="/search">
+<div class="input-group">
+<input class="input-group-field" type="text" name="q" placeholder="search Here">
+<div class="input-group-button">
+<button type="submit" name=""><i class="fa fa-search"></i></button>
+</div>
+</div>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="top-button">
+<ul class="menu">
+<li class="dropdown-login">
+<a href="/login.html">Login/Register</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="off-canvas-content" data-off-canvas-content>
+<header>
+
+<section id="top" class="topBar show-for-large">
+<div class="row">
+<div class="medium-6 columns">
+<div class="socialLinks" style="min-height:1px">
+<div class="fb-like" data-href="https://www.retrogames.cc/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+</div>
+</div>
+<div class="medium-6 columns">
+<div class="top-button">
+<ul class="menu float-right">
+<li>
+<a class="fb-login" href="#" style="background: #395996;"><i class="fa fa-facebook"></i>Facebook Connect</a>
+</li>
+<li class="dropdown-login">
+<a class="loginReg" data-toggle="example-dropdown" href="#">login/Register</a>
+<div class="login-form">
+<h6 class="text-center">Great to have you back!</h6>
+<form method="post" action="/user/login_check">
+<div class="input-group">
+<span class="input-group-label"><i class="fa fa-user"></i></span>
+<input class="input-group-field" name="_username" type="text" placeholder="Enter username">
+</div>
+<div class="input-group">
+<span class="input-group-label"><i class="fa fa-lock"></i></span>
+<input class="input-group-field" name="_password" type="password" placeholder="Enter password">
+</div>
+<div class="checkbox">
+<input id="check1" type="checkbox" name="_remember_me" value="1">
+<label class="customLabel" for="check1">Remember me</label>
+</div>
+<input type="submit" name="submit" value="Login Now">
+</form>
+<p class="text-center">New here? <a class="newaccount" href="/register.html">Create a new Account</a></p>
+<h5 class="text-center">OR</h5>
+<div class="social-login" data-equalizer-watch="">
+<div class="social-login-btn facebook">
+<a href="#" class="fb-login"><i class="fa fa-facebook"></i>login via facebook</a>
+</div>
+</div>
+</div>
+</li>
+</ul> </div>
+</div>
+</div>
+</section>
+
+<section id="navBar">
+<nav class="sticky-container" data-sticky-container>
+<div class="sticky topnav" data-sticky data-top-anchor="navBar" data-btm-anchor="footer-bottom:bottom" data-margin-top="0" data-margin-bottom="0" style="width: 100%; background: #fff;" data-sticky-on="large">
+<div class="row">
+<div class="large-12 columns">
+<div class="title-bar" data-responsive-toggle="beNav" data-hide-for="large">
+<button class="menu-icon" type="button" data-toggle="offCanvas-responsive"></button>
+<div class="title-bar-title"><img title="Retro Games" src="https://www.retrogames.cc/images/logo.png?v=20180731" alt="logo"></div>
+</div>
+<div class="top-bar show-for-large" id="beNav" style="width: 100%;">
+<div class="top-bar-left">
+<ul class="menu">
+<li class="menu-text">
+<a title="Retro Games" href="https://www.retrogames.cc"><img title="Retro Games" src="https://www.retrogames.cc/images/logo.png?v=20180731" alt="logo"></a>
+</li>
+</ul>
+</div>
+<div class="top-bar-right search-btn">
+<ul class="menu">
+<li class="search">
+<i class="fa fa-search"></i>
+</li>
+</ul>
+</div>
+<div class="top-bar-right">
+<ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+ <li class="has-submenu">
+<a href="#">Nintendo</a>
+<ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
+<li><a href="/nes-games" title="NES Games Online"><i class="icon icon-nes"></i>NES</a></li>
+<li><a href="/snes-games" title="SNES Games Online"><i class="icon icon-snes"></i>SNES</a></li>
+<li><a href="/gameboy-games" title="GB Games Online"><i class="icon icon-gb"></i>GB</a></li>
+<li><a href="/gameboycolor-games" title="GBC Games Online"><i class="icon icon-gb"></i>GBC</a></li>
+<li><a href="/gameboyadvance-games" title="GBA Games Online"><i class="icon icon-gba"></i>GBA</a></li>
+<li><a href="/n64-games" title="N64 Games Online"><i class="icon icon-n64"></i>N64</a></li>
+<li><a href="/nds-games" title="NDS Games Online"><i class="icon icon-nds"></i>NDS</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">Sega</a>
+<ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
+<li><a href="/mastersystem-games" title="Master System Games Online"><i class="icon icon-mastersystem"></i>Master System</a></li>
+<li><a href="/gamegear-games" title="Game Gear Games Online"><i class="icon icon-gamegear"></i>Game Gear</a></li>
+<li><a href="/genesis-games" title="Genesis Games Online"><i class="icon icon-genesis"></i>Genesis</a></li>
+<li><a href="/sega32x-games" title="32X Games Online"><i class="icon icon-genesis"></i>32X</a></li>
+<li><a href="/segacd-games" title="Sega CD Games Online"><i class="icon icon-genesis"></i>Sega CD</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">NEC</a>
+<ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
+<li><a href="/turbografx16-games" title="Turbografx-16 Games Online"><i class="icon icon-turbografx16"></i>Turbografx-16</a></li>
+<li><a href="/turbografxcd-games" title="Turbografx CD Games Online"><i class="icon icon-turbografxcd"></i>Turbografx CD</a></li>
+<li><a href="/pcecd-games" title="PC Engine CD Games Online"><i class="icon icon-pcecd"></i>PC Engine CD</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">Atari</a>
+<ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
+<li><a href="/atari7800-games" title="Atari 7800 Games Online"><i class="icon icon-atari-7800"></i>Atari 7800</a></li>
+<li><a href="/lynx-games" title="Atari Lynx Games Online"><i class="icon icon-atari-lynx"></i>Atari Lynx</a></li>
+<li><a href="/jaguar-games" title="Atari Jaguar Games Online"><i class="icon icon-atari-jaguar"></i>Atari Jaguar</a></li>
+</ul>
+</li>
+<li><a href="/psx-games" title="PS1 Games Online"><i class="icon icon-arcade"></i>Playstation</a></li>
+<li><a href="/arcade-games" title="Classic Arcade Games Online"><i class="icon icon-arcade"></i>Arcade</a></li>
+<li class="has-submenu">
+<a href="#">Other</a>
+<ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
+<li><a href="/wonderswan-games" title="Wonderswan Games Online"><i class="icon icon-wonderswan"></i>Wonderswan</a></li>
+<li><a href="/ngp-games" title="Neo Geo Pocket Games Online"><i class="icon icon-ngp"></i>Neo Geo Pocket</a></li>
+<li><a href="/msx1-games" title="MSX 1 Games Online"><i class="icon icon-ngp"></i>MSX</a></li>
+<li><a href="/msx2-games" title="MSX 2 Games Online"><i class="icon icon-ngp"></i>MSX 2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="search-bar" class="clearfix search-bar-light" itemscope itemtype="http://schema.org/WebSite">
+<meta itemprop="url" content="https://www.retrogames.cc" />
+<form class="search-form" method="get" action="/search" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+<meta itemprop="target" content="https://www.retrogames.cc/search?q={q}" />
+<div class="search-input float-left">
+<input type="search" name="q" value="" placeholder="Search for Games" itemprop="query-input">
+</div>
+<div class="search-btn float-right text-right">
+<button class="button" name="" type="submit">search now</button>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</section>
+</header>
+<section class="content" style="background:#fff">
+<div class="row ">
+<div class="large-8 medium-8 columns parentbg">
+<div class="sidebarBg"></div>
+<div class="row column head-text clearfix">
+<h4>Most Popular Games</h4>
+</div>
+<div class="row list-group">
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb nes-thumb" data-poster="https://static.retrogames.cc/screenshot/55/m/21929_303c969ec6e82e380a7ce9a65b146c106e02b0c0.png">
+<img data-src="https://static.retrogames.cc/screenshot/55/m/21929_303c969ec6e82e380a7ce9a65b146c106e02b0c0.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario Bros. (Europe) (Rev 0A)" /> <a href="/nes-games/super-mario-bros-europe-rev-0a.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>NES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>60</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario Bros. (Europe) (Rev 0A)" href="/nes-games/super-mario-bros-europe-rev-0a.html">Super Mario Bros. (Europe) (Rev 0A)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb snes-thumb" data-poster="https://static.retrogames.cc/screenshot/79/y/16847_3ba149aa1126bde8ffea62c6894209fafa7ee971.png" data-video="/video/snes/super-mario-world-usa.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/79/y/16847_3ba149aa1126bde8ffea62c6894209fafa7ee971.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario World (USA)" /> <a href="/snes-games/super-mario-world-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>SNES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>296</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario World (USA)" href="/snes-games/super-mario-world-usa.html">Super Mario World (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb snes-thumb" data-poster="https://static.retrogames.cc/screenshot/79/f/18635_30ece895ce37a0c2057a344f217f2fe9f4b881f5.png">
+<img data-src="https://static.retrogames.cc/screenshot/79/f/18635_30ece895ce37a0c2057a344f217f2fe9f4b881f5.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario Kart (USA) [Hack by Ok Impala v1.0] (~Super Mario Kart - The Impala Battles) (Custom Battle Tracks)" /> <a href="/snes-games/super-mario-kart-usa-hack-by-ok-impala-v1-0-super-mario-kart-the-impala-battles-custom-battle-tracks.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>SNES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>26</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario Kart (USA) [Hack by Ok Impala v1.0] (~Super Mario Kart - The Impala Battles) (Custom Battle Tracks)" href="/snes-games/super-mario-kart-usa-hack-by-ok-impala-v1-0-super-mario-kart-the-impala-battles-custom-battle-tracks.html">Super Mario Kart (USA) [Hack by Ok Impala v1.0] (~Super Mario Kart - The Impala Battles) (Custom Battle Tracks)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb genesis-thumb" data-poster="https://static.retrogames.cc/screenshot/47/d/17236_b4a87780cb8e26771c3a4f20505e80605fd272ea.png">
+<img data-src="https://static.retrogames.cc/screenshot/47/d/17236_b4a87780cb8e26771c3a4f20505e80605fd272ea.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Sonic the Hedgehog 2 (World) (Rev A)" /> <a href="/genesis-games/sonic-the-hedgehog-2-world-rev-a.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Genesis</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>20</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Sonic the Hedgehog 2 (World) (Rev A)" href="/genesis-games/sonic-the-hedgehog-2-world-rev-a.html">Sonic the Hedgehog 2 (World) (Rev A)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb gameboyadvance-thumb" data-poster="https://static.retrogames.cc/screenshot/43/p/28096_d70b68d8b7a577c6d795db8277ce1202caa31fde.png" data-video="/video/gameboyadvance/dragon-ball-z---supersonic-warriors.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/43/p/28096_d70b68d8b7a577c6d795db8277ce1202caa31fde.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Dragon Ball Z - Supersonic Warriors (K)(ProjectG)" /> <a href="/gameboyadvance-games/dragon-ball-z-supersonic-warriors-k-projectg.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Game Boy Advance</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>28</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Dragon Ball Z - Supersonic Warriors (K)(ProjectG)" href="/gameboyadvance-games/dragon-ball-z-supersonic-warriors-k-projectg.html">Dragon Ball Z - Supersonic Warriors (K)(ProjectG)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb psx-thumb" data-poster="https://static.retrogames.cc/screenshot/72/2018/09/04/40238_0ae25ae7f0f2fdd2ff1546d5c92cc5dabe06095c.png">
+<img data-src="https://static.retrogames.cc/screenshot/72/2018/09/04/40238_0ae25ae7f0f2fdd2ff1546d5c92cc5dabe06095c.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Tekken 3" /> <a href="/psx-games/tekken-3.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>PlayStation</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>96</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Tekken 3" href="/psx-games/tekken-3.html">Tekken 3</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb arcade-thumb" data-poster="https://static.retrogames.cc/previews/mvscu.png">
+<img data-src="https://static.retrogames.cc/previews/mvscu.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Marvel vs Capcom - clash of super heroes (980123 USA)" /> <a href="/arcade-games/marvel-vs-capcom-clash-of-super-heroes-980123-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Arcade</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>110</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Marvel vs Capcom - clash of super heroes (980123 USA)" href="/arcade-games/marvel-vs-capcom-clash-of-super-heroes-980123-usa.html">Marvel vs Capcom - clash of super heroes (980123 USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb n64-thumb" data-poster="https://static.retrogames.cc/screenshot/59/2018/01/06/32112_fb8798c04b0298b854fee1c61957d9f091b6c228.png" data-video="/video/n64/super-mario-64.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/59/2018/01/06/32112_fb8798c04b0298b854fee1c61957d9f091b6c228.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario 64 (USA)" /> <a href="/n64-games/super-mario-64-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Nintendo 64</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>183</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario 64 (USA)" href="/n64-games/super-mario-64-usa.html">Super Mario 64 (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb snes-thumb" data-poster="https://static.retrogames.cc/screenshot/79/w/16886_dde1cf15899788c350b1802a55488d71f8d3070f.png" data-video="/video/snes/super-mario-all-stars-usa.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/79/w/16886_dde1cf15899788c350b1802a55488d71f8d3070f.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario All-Stars (USA)" /> <a href="/snes-games/super-mario-all-stars-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>SNES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>59</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario All-Stars (USA)" href="/snes-games/super-mario-all-stars-usa.html">Super Mario All-Stars (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb arcade-thumb" data-poster="https://static.retrogames.cc/previews/jojoban.png">
+<img data-src="https://static.retrogames.cc/previews/jojoban.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="JoJo's Bizarre Adventure: Heritage for the Future / JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD)" /> <a href="/arcade-games/jojos-bizarre-adventure:-heritage-for-the-future-jojo-no-kimyou-na-bouken:-mirai-e-no-isan-japan-990927-no-cd.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Arcade</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>230</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="JoJo's Bizarre Adventure: Heritage for the Future / JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD)" href="/arcade-games/jojos-bizarre-adventure:-heritage-for-the-future-jojo-no-kimyou-na-bouken:-mirai-e-no-isan-japan-990927-no-cd.html">JoJo's Bizarre Adventure: Heritage for the Future / JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb gameboyadvance-thumb" data-poster="https://static.retrogames.cc/screenshot/43/i/28605_c8b7e510c9bb81132062ac99cd2dcc0e4092e7b0.png">
+<img data-src="https://static.retrogames.cc/screenshot/43/i/28605_c8b7e510c9bb81132062ac99cd2dcc0e4092e7b0.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario World - Super Mario Advance 2 (J)(Eurasia)" /> <a href="/gameboyadvance-games/super-mario-world-super-mario-advance-2-j-eurasia.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Game Boy Advance</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>12</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario World - Super Mario Advance 2 (J)(Eurasia)" href="/gameboyadvance-games/super-mario-world-super-mario-advance-2-j-eurasia.html">Super Mario World - Super Mario Advance 2 (J)(Eurasia)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb gameboyadvance-thumb" data-poster="https://static.retrogames.cc/screenshot/43/x/18861_b0f91328ade7388e04e823a33f0a57b35b6765e2.png">
+<img data-src="https://static.retrogames.cc/screenshot/43/x/18861_b0f91328ade7388e04e823a33f0a57b35b6765e2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Pokemon Rouge Feu (F)(Rising Sun)" /> <a href="/gameboyadvance-games/pokemon-rouge-feu-f-rising-sun.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Game Boy Advance</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>56</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Pokemon Rouge Feu (F)(Rising Sun)" href="/gameboyadvance-games/pokemon-rouge-feu-f-rising-sun.html">Pokemon Rouge Feu (F)(Rising Sun)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb snes-thumb" data-poster="https://static.retrogames.cc/screenshot/79/e/19846_c1c2ac37e815f23bbd55d6357dae9d84be8b4471.png">
+<img data-src="https://static.retrogames.cc/screenshot/79/e/19846_c1c2ac37e815f23bbd55d6357dae9d84be8b4471.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Bomberman 4 (English - Translated)" /> <a href="/snes-games/super-bomberman-4-english-translated.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>SNES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>21</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Bomberman 4 (English - Translated)" href="/snes-games/super-bomberman-4-english-translated.html">Super Bomberman 4 (English - Translated)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb gameboyadvance-thumb" data-poster="https://static.retrogames.cc/screenshot/43/m/19514_cff105c7807d8ab3e9e33342bd7331dccb796dec.png">
+<img data-src="https://static.retrogames.cc/screenshot/43/m/19514_cff105c7807d8ab3e9e33342bd7331dccb796dec.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Pokemon Emerald (U)(TrashMan)" /> <a href="/gameboyadvance-games/pokemon-emerald-u-trashman.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Game Boy Advance</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>415</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Pokemon Emerald (U)(TrashMan)" href="/gameboyadvance-games/pokemon-emerald-u-trashman.html">Pokemon Emerald (U)(TrashMan)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb nes-thumb" data-poster="https://static.retrogames.cc/screenshot/55/x/16843_b78e168949dbf2da3cad644686b9e7325606e3be.png" data-video="/video/nes/super-mario-bros-world.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/55/x/16843_b78e168949dbf2da3cad644686b9e7325606e3be.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario Bros. (Japan, USA)" /> <a href="/nes-games/super-mario-bros-japan-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>NES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>102</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario Bros. (Japan, USA)" href="/nes-games/super-mario-bros-japan-usa.html">Super Mario Bros. (Japan, USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb arcade-thumb" data-poster="https://static.retrogames.cc/previews/sf2yyc2.png">
+<img data-src="https://static.retrogames.cc/previews/sf2yyc2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Street Fighter II' - Champion Edition (YYC bootleg set 2, 920313 etc) [Bootleg]" /> <a href="/arcade-games/street-fighter-ii-champion-edition-yyc-bootleg-set-2-920313-etc-bootleg.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Arcade</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>41</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Street Fighter II' - Champion Edition (YYC bootleg set 2, 920313 etc) [Bootleg]" href="/arcade-games/street-fighter-ii-champion-edition-yyc-bootleg-set-2-920313-etc-bootleg.html">Street Fighter II' - Champion Edition (YYC bootleg set 2, 920313 etc) [Bootleg]</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb n64-thumb" data-poster="https://static.retrogames.cc/screenshot/59/2018/01/06/32117_c83d24e3e7994fb4ba6d4c59cc39928df1cb6e0d.png" data-video="/video/n64/super-smash-bros.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/59/2018/01/06/32117_c83d24e3e7994fb4ba6d4c59cc39928df1cb6e0d.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Smash Bros. (USA)" /> <a href="/n64-games/super-smash-bros-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Nintendo 64</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>105</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Smash Bros. (USA)" href="/n64-games/super-smash-bros-usa.html">Super Smash Bros. (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb n64-thumb" data-poster="https://static.retrogames.cc/screenshot/59/x/32109_56bfc30521495c82c1ee67c30d8613f22c04a078.png">
+<img data-src="https://static.retrogames.cc/screenshot/59/x/32109_56bfc30521495c82c1ee67c30d8613f22c04a078.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Mario Kart 64 (E)" /> <a href="/n64-games/mario-kart-64-e.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Nintendo 64</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>63</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Mario Kart 64 (E)" href="/n64-games/mario-kart-64-e.html">Mario Kart 64 (E)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb genesis-thumb" data-poster="https://static.retrogames.cc/screenshot/47/p/30002_eb29ae6d432f1c7055dd56a784481df11f2514a5.png">
+<img data-src="https://static.retrogames.cc/screenshot/47/p/30002_eb29ae6d432f1c7055dd56a784481df11f2514a5.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Sonic the Hedgehog 3 (Europe)" /> <a href="/genesis-games/sonic-the-hedgehog-3-europe.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Genesis</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>31</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Sonic the Hedgehog 3 (Europe)" href="/genesis-games/sonic-the-hedgehog-3-europe.html">Sonic the Hedgehog 3 (Europe)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb snes-thumb" data-poster="https://static.retrogames.cc/screenshot/79/f/16887_80b55b20abd65e0c8fc9db42c86d4e0b7edb4077.png" data-video="/video/snes/super-mario-kart-usa.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/79/f/16887_80b55b20abd65e0c8fc9db42c86d4e0b7edb4077.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario Kart (USA)" /> <a href="/snes-games/super-mario-kart-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>SNES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>64</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario Kart (USA)" href="/snes-games/super-mario-kart-usa.html">Super Mario Kart (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb nes-thumb" data-poster="https://static.retrogames.cc/screenshot/55/e/16680_b515bb1234bb6b608c3ad4f88610d9014724b5e5.png" data-video="/video/nes/super-mario-bros-3-usa.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/55/e/16680_b515bb1234bb6b608c3ad4f88610d9014724b5e5.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Super Mario Bros. 3 (USA)" /> <a href="/nes-games/super-mario-bros-3-usa.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>NES</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>123</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Super Mario Bros. 3 (USA)" href="/nes-games/super-mario-bros-3-usa.html">Super Mario Bros. 3 (USA)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb arcade-thumb" data-poster="https://static.retrogames.cc/previews/neobombe.png" data-video="/video/arcade/neobombe.mp4">
+<img data-src="https://static.retrogames.cc/previews/neobombe.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Neo Bomberman" /> <a href="/arcade-games/neo-bomberman.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Arcade</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>33</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Neo Bomberman" href="/arcade-games/neo-bomberman.html">Neo Bomberman</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb genesis-thumb" data-poster="https://static.retrogames.cc/screenshot/47/t/29209_0e3475eb006699a6378ccb3f4440ab9489f0df0a.png" data-video="/video/genesis/sonic-knuckles-sonic-the-hedgehog-3-world.mp4">
+<img data-src="https://static.retrogames.cc/screenshot/47/t/29209_0e3475eb006699a6378ccb3f4440ab9489f0df0a.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Sonic & Knuckles + Sonic the Hedgehog 3 (World)" /> <a href="/genesis-games/sonic-knuckles-sonic-the-hedgehog-3-world.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Genesis</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>48</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Sonic & Knuckles + Sonic the Hedgehog 3 (World)" href="/genesis-games/sonic-knuckles-sonic-the-hedgehog-3-world.html">Sonic & Knuckles + Sonic the Hedgehog 3 (World)</a></h6>
+</div>
+</div>
+</div>
+<div class="item large-4 medium-6 columns group-item-grid-default">
+<div class="post thumb-border">
+<div class="post-thumb genesis-thumb" data-poster="https://static.retrogames.cc/screenshot/47/e/28249_348fa09e7f725c1d89643a1f8935c4c25cc0cdc8.png">
+<img data-src="https://static.retrogames.cc/screenshot/47/e/28249_348fa09e7f725c1d89643a1f8935c4c25cc0cdc8.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="Sonic the Hedgehog (USA, Europe) [Hack by LOst v1.0] (Sonic Jam's Easy Mode)" />  <a href="/genesis-games/sonic-the-hedgehog-usa-europe-hack-by-lost-v1-0-sonic-jam-s-easy-mode.html" class="hover-posts">
+<span><i class="fa fa-power-off"></i>Start Game</span>
+</a>
+<div class="video-stats clearfix">
+<div class="thumb-stats pull-left">
+<h6>Genesis</h6>
+</div>
+<div class="thumb-stats pull-left">
+<i class="fa fa-heart"></i>
+<span>25</span>
+</div>
+</div>
+</div>
+<div class="post-des">
+<h6><a title="Sonic the Hedgehog (USA, Europe) [Hack by LOst v1.0] (Sonic Jam's Easy Mode)" href="/genesis-games/sonic-the-hedgehog-usa-europe-hack-by-lost-v1-0-sonic-jam-s-easy-mode.html">Sonic the Hedgehog (USA, Europe) [Hack by LOst v1.0] (Sonic Jam's Easy Mode)</a></h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="large-4 medium-4 columns">
+<aside class="sidebar">
+<div class="sidebarBg"></div>
+<div class="row">
+
+<div class="large-12 medium-12 medium-centered columns">
+<div class="widgetBox">
+<div class="widgetTitle">
+<h5>Search for Games</h5>
+</div>
+<form id="searchform" method="get" role="search" action="/search">
+<div class="input-group">
+<input class="input-group-field" type="text" name="q" placeholder="Enter your keyword">
+<div class="input-group-button">
+<input type="submit" class="button" value="Submit">
+</div>
+</div>
+</form>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2571747185564504" data-ad-slot="7626490882" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<div class="large-12 medium-12 medium-centered columns">
+<div class="widgetBox">
+<div class="widgetTitle">
+<h5>New Games</h5>
+</div>
+<div class="widgetContent">
+<div class="media-object stack-for-small">
+<div class="media-object-section">
+<div class="recent-img">
+<a href="/n64-games/super-mario-star-road.html">
+<img data-src="https://static.retrogames.cc/screenshot/59/2020/07/25/42029_31c49864262f7d59744db444b8d7a81bc7e0f5a8.png" alt="">
+</a>
+</div>
+</div>
+<div class="media-object-section">
+<div class="media-content">
+<h6><a href="/n64-games/super-mario-star-road.html">Super Mario Star Road (Final) by Skelux</a></h6>
+<p><span>Nintendo 64</span></p>
+</div>
+</div>
+</div> <div class="media-object stack-for-small">
+<div class="media-object-section">
+<div class="recent-img">
+<a href="/n64-games/super-bowsette-64.html">
+<img data-src="https://static.retrogames.cc/screenshot/59/2020/07/25/42028_c560e7df71c8b7eee755c45142a88bf834b7e4a5.png" alt="">
+</a>
+</div>
+</div>
+<div class="media-object-section">
+<div class="media-content">
+<h6><a href="/n64-games/super-bowsette-64.html">Super Bowsette 64 By Kaze Emanuar</a></h6>
+<p><span>Nintendo 64</span></p>
+</div>
+</div>
+</div> <div class="media-object stack-for-small">
+<div class="media-object-section">
+<div class="recent-img">
+<a href="/nds-games/thor-god-of-thunder-europe-en-fr-de-es-it.html">
+<img style="height:auto" data-src="https://www.retrogames.cc/images/noscreenshot.jpg" alt="">
+</a>
+</div>
+</div>
+<div class="media-object-section">
+<div class="media-content">
+<h6><a href="/nds-games/thor-god-of-thunder-europe-en-fr-de-es-it.html">Thor - God of Thunder (Europe) (En,Fr,De,Es,It)</a></h6>
+<p><span>Nintendo DS</span></p>
+</div>
+</div>
+</div> <div class="media-object stack-for-small">
+<div class="media-object-section">
+<div class="recent-img">
+<a href="/nds-games/thor-god-of-thunder-usa-en-fr-de-es-it.html">
+<img style="height:auto" data-src="https://www.retrogames.cc/images/noscreenshot.jpg" alt="">
+</a>
+</div>
+</div>
+<div class="media-object-section">
+<div class="media-content">
+<h6><a href="/nds-games/thor-god-of-thunder-usa-en-fr-de-es-it.html">Thor - God of Thunder (USA) (En,Fr,De,Es,It)</a></h6>
+<p><span>Nintendo DS</span></p>
+</div>
+</div>
+</div> <div class="media-object stack-for-small">
+<div class="media-object-section">
+<div class="recent-img">
+<a href="/n64-games/super-mario-64-last-impact.html">
+<img data-src="https://static.retrogames.cc/screenshot/59/2020/07/24/42025_e296d64a01717d26aee6288c5dc8f182cc754088.png" alt="">
+</a>
+</div>
+</div>
+<div class="media-object-section">
+<div class="media-content">
+<h6><a href="/n64-games/super-mario-64-last-impact.html">Super Mario 64 Last Impact by Kaze Emanuar</a></h6>
+<p><span>Nintendo 64</span></p>
+</div>
+</div>
+</div> <SCRIPT language="Javascript">
+var cpmstar_rnd=Math.round(Math.random()*999999);
+var cpmstar_pid=78100;
+document.writeln("<SCR"+"IPT language='Javascript' src='//server.cpmstar.com/view.aspx?poolid="+cpmstar_pid+"&script=1&rnd="+cpmstar_rnd+"'></SCR"+"IPT>");
+</SCRIPT>
+</div>
+</div>
+</div>
+<div class="large-12 medium-centered columns">
+<div class="widgetBox" style="height: 500px;overflow: auto;margin-bottom:0">
+<style>
+                        ul#comments {
+                        margin:0;
+                        list-style-type: none;
+                        font-family: "Helvetica Neue",arial,sans-serif;
+                        font-size: 15px;
+                        color: #a5b2b9;
+                        }
+
+                        ul#comments li { margin-bottom: 30px; position: relative; }
+                        ul#comments li a { text-decoration: none; color: rgb(102, 204, 204); }
+
+                        .avatar-container { width: 60px; box-sizing: border-box; }
+                        .avatar { width: 50px; height: 50px; border-radius: 5px; float: left; margin: 5px; }
+
+                        .post-container { padding-top: 3px; margin-left: 70px;  box-sizing: border-box; }
+                        .post-container p { color: #3f4549; }
+                        .author_name { font-weight: bold; font-size: 13px; }
+
+                        .timeago, .posted { 
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: #a5b2b9;
+                        color: rgba(0,39,59,.35);
+                        }
+
+                        .bullet {
+                        padding: 0 2px;
+                        font-size: 10px;
+                        color: #ccc;
+                        line-height: 1.4;
+                        }
+                        </style>
+<ul id="comments">
+<script id="comments-template" type="text/x-handlebars-template">
+                                {{#each response}}
+                                <li>
+                                    <div class="avatar-container">
+                                    <a href="{{author.profileUrl}}" target="_blank">
+                                        <img src="{{author.avatar.small.permalink}}" class="avatar" alt="avatar" />
+                                    </a>
+                                    </div>
+                                    <div class="post-container">
+                                    <a href="{{author.profileUrl}}" class="author_name" target="_blank">
+                                        <span class="author_name">{{author.name}}
+                                    </a>
+                                    
+                                    <span class="bullet" aria-hidden="true">•</span>
+
+                                    <span class="timeago" title="{{createdAt}}Z">{{createdAt}}</span>
+
+                                    <div style="max-height: 70px;overflow: hidden;text-overflow: ellipsis;">{{{message}}}</div>
+
+                                    <span class="posted">posted on <a href="{{thread.link}}" target="_blank">{{thread.title}}</a></span>
+                                    </div>    
+                                </li>
+                                {{/each}}
+                            </script>
+</ul>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.0/jquery.timeago.min.js"></script>
+<script>
+                        var DisqusRecent = {
+                            init: function( config ) {
+                                this.api_key     = config.api_key;
+                                this.forum       = config.forum;
+                                this.template    = config.template;
+                                this.container   = config.container;
+
+                                this.fetchRecentComments();
+                            },
+
+                            fetchRecentComments: function() {
+                                $.ajax({
+                                url: "https://disqus.com/api/3.0/forums/listPosts.jsonp?forum="+this.forum+"&limit=15&related=thread&api_key="+this.api_key,
+                                dataType: "jsonp",
+                                context: this,
+
+                                success: function(results) {
+                                    var res = [];
+                                    res['cursor'] = results['cursor'];
+                                    res['response'] = [];
+                                    var j=0;
+                                    for (var i in results.response) {
+                                        results.response[i].thread.title = results.response[i].thread.title.replace('Play ', '').replace('Online in your browser - RetroGames.cc', '');
+                                        if (results.response[i].thread.title != 'SNES Hong Kong 97 (Hong Kong) ') {
+                                            res['response'][j] = results.response[i];
+                                            j++;
+                                        }
+                                    }
+                                    var source   = $(this.template).html();
+                                    var template = Handlebars.compile(source);
+                                    $(this.container).html(template(res));
+
+                                    $('.timeago').timeago();
+                                }
+                                });
+                            }
+                            }
+
+                            $(function() {
+                            DisqusRecent.init({
+                                api_key:     'x0csAbpnXSuJ5mZ9fOtnVZME4tZj8v6hEIzAyW2zfdNgV9b5o4sqVNKsOyYGmMRf',
+                                forum:       'retrogames-cc',
+                                template:    '#comments-template',
+                                container:   '#comments'
+                            });
+                            });
+
+                        </script>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<div id="footer-bottom">
+<div class="footer-links" style="text-align:center;font-size:12px">
+</div>
+<div class="btm-footer-text text-center">
+<p style="margin-bottom:20px">
+<a style="color: #fff;" href="/privacy-policy">Privacy Policy</a>
+</p>
+<p>2020 &copy; RetroGames.cc <a href="https://www.retrogames.cc">Online Emulator</a> </p>
+</div>
+</div>
+<div class="tiny reveal" id="loginModal" data-reveal>
+<h4 class="title">Great to have you back!</h4>
+<div class="content">
+<div class="login-form" style="display: block;border:none;width: 100%;position: static">
+<form method="post" action="">
+<div class="input-group">
+<span class="input-group-label"><i class="fa fa-user"></i></span>
+<input class="input-group-field" name="_username" type="text" placeholder="Enter username">
+</div>
+<div class="input-group">
+<span class="input-group-label"><i class="fa fa-lock"></i></span>
+<input class="input-group-field" name="_password" type="password" placeholder="Enter password">
+</div>
+<div class="checkbox">
+<input id="check1" type="checkbox" name="_remember_me" value="1">
+<label class="customLabel" for="check1">Remember me</label>
+</div>
+<input type="submit" name="submit" value="Login Now">
+</form>
+<p class="text-center">New here? <a class="newaccount" href="/register.html">Create a new Account</a></p>
+<h5 class="text-center">OR</h5>
+<div class="social-login" data-equalizer-watch="">
+<div class="social-login-btn facebook" style="max-width: 250px;margin: 0 auto;">
+<a href="#" class="fb-login"><i class="fa fa-facebook"></i>login via facebook</a>
+</div>
+</div>
+</div>
+</div>
+<button class="close-button" data-close aria-label="Close modal" type="button">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="https://www.retrogames.cc/js/chosen.jquery.min.js"></script>
+<script src="https://www.retrogames.cc/bower_components/what-input/what-input.js"></script>
+<script src="https://www.retrogames.cc/bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="https://www.retrogames.cc/js/jquery.showmore.src.js" type="text/javascript"></script>
+<script src="https://www.retrogames.cc/js/jquery.toast.min.js" type="text/javascript"></script>
+<script src="https://www.retrogames.cc/js/jquery.loading.min.js" type="text/javascript"></script>
+<script src="https://www.retrogames.cc/js/cookieconsent.min.js" type="text/javascript"></script>
+<script src="https://www.retrogames.cc/js/app.js?v=20171215"></script>
+<script>
+
+    var $ = jQuery;
+
+    if (typeof controllers == 'undefined') {
+        controllers = {};
+    }
+    
+    cookieconsent.initialise({
+        type: 'info',
+        palette: {
+        "popup":{"background":"#000"},
+        "button":{"background":"#ff5b5b","text":"#ffffff"},
+        }
+    });
+    
+    window.fbAsyncInit = function() {
+        FB._https = true;
+        FB.init({
+            appId      : '1025013147645024',
+            xfbml      : true,
+            version    : 'v2.12'
+        });
+
+        var loginModal = $('#loginModal');
+        $('.fb-login').click(function() {
+            if (!FB) return false;
+            var form = $(this).closest('.login-form');
+            if (form.length) {
+                form.loading();
+            }
+
+            FB.login(function(response) {
+                if (form.length) {
+                    form.loading('stop');
+                }
+                if (loginModal.is(':visible')) {
+                    loginModal.loading();
+                }
+                if (response['status'] == 'connected') {
+                    $.post('/ajax/oauth-login?from=facebook', {'access_token':response['authResponse']['accessToken']}, function(ret) {
+                        if (loginModal.is(':visible')) {
+                            loginModal.foundation('close');
+                            loginModal.loading('stop');
+                        }
+                        if (ret.status == 1) {
+                            $('.top-button').html(ret.menu);
+                            loginModal.foundation('close');
+                            if (typeof Game != 'undefined') Game.isLoggedIn = true;
+                            $(window).trigger('user.loginSuccess');
+                        } else {
+                            $.toast('Failed');
+                        }
+                    }, 'json');
+                }
+            }, {scope: 'public_profile,email', 'auth_type':'rerequest'});
+        });
+
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    $(document).ready(function() {
+        $('img[data-src]').each(function(i, img) {
+            var src = $(img).data('src');
+            $(img).attr('src', src);
+        });
+    });
+</script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58d61c23a1c5fb00126d1e41&product=inline-share-buttons"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41540658-2', {'userId': 0});
+    ga('send', 'pageview');
+
+    $('.search-form [type=submit]').on('click', function() {
+        var form = $(this).closest('.search-form');
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Games',
+            eventAction: 'search',
+            eventLabel: form.find('[name=q]').val()
+        });
+    });
+
+
+    // function adBlockNotDetected() {
+    //     ga('send','event','Blocking Ads','No',{'nonInteraction':1});
+    // }
+    // function adBlockDetected() {
+    //     var adbnoticeModal = $('#adblockNotice');
+    //     adbnoticeModal.foundation('open');
+    //     ga('send','event','Blocking Ads','Yes',{'nonInteraction':1});
+    // }
+    // if (typeof FuckAdBlock === 'undefined') {
+    //     //adBlockDetected();
+    // }
+
+	// var importFAB = document.createElement('script');
+	// importFAB.onload = function() {
+	// 	fuckAdBlock.onDetected(adBlockDetected)
+	// 	fuckAdBlock.onNotDetected(adBlockNotDetected);
+	// };
+	// importFAB.onerror = function() {
+	// 	adBlockDetected(); 
+	// };
+	// importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
+	// importFAB.crossOrigin = 'anonymous';
+	// importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
+	// document.head.appendChild(importFAB);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Sridhar has developed technical communication artifacts and has a master's degree in Software Systems. Want to watch this again later?       If you want to speak to someone who doesn't know your language, you will need an interpreter to translate the conversation between you and the other person. Similarly, if you want to run a command on a computer, the computer also needs an interpreter to understand the command and execute it.  On Linux, the interpreter that can understand the user commands and settings and pass them on to the computer for further processing is called a  . Here are a few shells on Linux:  On most Linux systems,  , called the  , is set as the default shell. The bash shell is also responsible for letting the users configure a set of user preferences or settings, also known as a user environment.  To know if bash exists on a Linux system, run the following command to display the contents of the   file:    The output will look something like this. It is a list of all the shells available on the system:            Apart from the commands you enter, bash can run a set of commands from a file, called a  , which we will refer to as a script going forward. Thus, bash is also a programming language in its own right. It contains its own syntax and programming constructs such as break, continue, exit, exec, return, and so on.  In Linux, everything is a file, be it a regular file with text in it or a device file. As a shell, bash regularly deals with three common files for standard input and output (I/O):  By default, these files are always open. Whenever a file is open in Linux, it is assigned a number called a   to keep track of it. If you are familiar with the C programming language, a file descriptor is similar to a file handle or a pointer.  Thus, stdin, stdout, and stderr are assigned the file descriptors  ,  , and   respectively. In the bash shell commands and scripts, they standard I/O are referred to as  ,  , and  , respectively. When other files are open, they get assigned the file descriptors between 3 and 9.  Imagine a simple command:    In this example,   is the command followed by   as the argument for the command. This is an example of a simple command.  In reality, you might have to run a sequence of complex commands that includes a set of simple commands. Typically, if we had to bring all of them together to run in a particular sequence, you would have to do put the commands in a programming construct such as a loop or conditions.  In Linux, you can use a method called as   by putting the commands in a pipeline. You can use   to gather the output of one command and redirect it as the input of another command.    Get access risk-free for 30 days,
+			 just create an account. The command   displays the contents of the   on the standard output, the screen. When its output is redirected to the   command, the contents of the   file are displayed one screen at a time. That's the power of redirection using pipes!  Imagine you have a gunzipped file of a tar file. To extract the actual contents of the file, you would have to run two commands to first extract the tar file and then extract the tar file, as follows:  With the simplicity and the elegance of redirection, the same result can be obtained using the following command:    Therefore, redirection helps you to gather the output from a script, a program, a command, or a file and redirect it as input to another script, a program, a command, or a file.  We learned that each command is associated with three standard I/O files - a stdin (fd 0), stdout (fd 1), and a stderr (fd 2).  If you want to send the stderr output to stdout, run the following command:    The   notation refers to the address of fd 1, stdout.  Sometimes, you might want to close a file descriptor for a specific reason or after a job is done.  For example, to close stdout, run the following command:    In this lesson, we discovered the Linux shells and explored the   shell.  We learned that a bash command is attached to three standard input and output (I/O) files:  Further, they are assigned the   of 0, 1, and 2 respectively. Any other open file is assigned a file descriptor between 3 and 9.  Through examples, we learned redirection through pipes, which is a method to redirect the input from one command/script as the input of another. 
+ 
+			To unlock this lesson you must be a Study.com Member.
+			 Already a member?  
+		Already registered?
+		
+		 
+ Did you know… We have over 200 college
+						courses that prepare you to earn
+						credit by exam that is accepted by over 1,500 colleges and universities. You can test out of the
+						first two years of college and save thousands off your degree. Anyone can earn
+						credit-by-exam regardless of age or education level. To learn more, visit our  Not sure what college you want to attend yet? Study.com has thousands of articles about every
+							imaginable degree, area of
+							study
+							and career path that can help you find the school that's right for you. Get the unbiased info you need to find the right school. Browse an area of study or degree level.  Back To Course 
+  chapters |
+				  lessons
+				
+			 
+  chapters |
+				  lessons
+				 
+ Next Lesson ©  copyright 2003-2020 Study.com.
+			All other trademarks and copyrights are the property of their respective owners.
+			All rights reserved.
+		 

@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js wf-loading">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"f3ebf7bfbf",applicationID:"121000636"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://linuxjournal.matomo.cloud/" : "http://linuxjournal.matomo.cloud/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);// enable the use of navigator.sendBeacon()
+_paq.push(['alwaysUseSendBeacon']);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/linuxjournal/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.linuxjournal.com/content/understanding-bash-elements-programming" />
+<link rel="shortlink" href="https://www.linuxjournal.com/node/1340133" />
+<link rel="revision" href="https://www.linuxjournal.com/content/understanding-bash-elements-programming" />
+
+    <title>Understanding Bash: Elements of Programming | Linux Journal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_tkxD35eJFi6VpcdaZwjPFzyDxQoKD9JY_f44ph4206A.css?q5ahxn" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_9xcWTe3tNJtUG9DTIJsIyUgdZCeCYWNL042_kzyTKjc.css?q5ahxn" />
+
+      <!--   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>-->
+
+    <script>
+      // Non-blocking webfonts.
+      (function iife() {
+        'use strict';
+
+        // JS is able to start executing.
+        document.documentElement.classList.remove('no-js');
+
+        // Optimization for Repeat Views
+        // Stop early for repeat views that have already cached fonts.
+        if (sessionStorage.fontsLoadedLateef && sessionStorage.fontsLoadedOpensans /* && sessionStorage.fontsLoadedNEWFONT */) {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-opensans');
+          document.documentElement.classList.add('wf-lateef');
+          // document.documentElement.classList.add('wf-NEWFONT');
+          return;
+        }
+
+        // Inlined Font Face Observer script + Promise polyfill.
+        /*! Font Face Observer v2.0.13 - © Bram Stein. License: BSD-3-Clause */
+        (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
+        function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
+        function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+
+        (function(){function l(a,b){document.addEventListener?a.addEventListener("scroll",b,!1):a.attachEvent("scroll",b)}function m(a){document.body?a():document.addEventListener?document.addEventListener("DOMContentLoaded",function c(){document.removeEventListener("DOMContentLoaded",c);a()}):document.attachEvent("onreadystatechange",function k(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",k),a()})};function r(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.f=document.createElement("span");this.g=-1;this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+        this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c)}
+        function t(a,b){a.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+b+";"}function y(a){var b=a.a.offsetWidth,c=b+100;a.f.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.g!==b?(a.g=b,!0):!1}function z(a,b){function c(){var a=k;y(a)&&a.a.parentNode&&b(a.g)}var k=a;l(a.b,c);l(a.c,c);y(a)};function A(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var B=null,C=null,E=null,F=null;function G(){if(null===C)if(J()&&/Apple/.test(window.navigator.vendor)){var a=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);C=!!a&&603>parseInt(a[1],10)}else C=!1;return C}function J(){null===F&&(F=!!document.fonts);return F}
+        function K(){if(null===E){var a=document.createElement("div");try{a.style.font="condensed 100px sans-serif"}catch(b){}E=""!==a.style.font}return E}function L(a,b){return[a.style,a.weight,K()?a.stretch:"","100px",b].join(" ")}
+        A.prototype.load=function(a,b){var c=this,k=a||"BESbswy",q=0,D=b||3E3,H=(new Date).getTime();return new Promise(function(a,b){if(J()&&!G()){var M=new Promise(function(a,b){function e(){(new Date).getTime()-H>=D?b():document.fonts.load(L(c,'"'+c.family+'"'),k).then(function(c){1<=c.length?a():setTimeout(e,25)},function(){b()})}e()}),N=new Promise(function(a,c){q=setTimeout(c,D)});Promise.race([N,M]).then(function(){clearTimeout(q);a(c)},function(){b(c)})}else m(function(){function u(){var b;if(b=-1!=
+        f&&-1!=g||-1!=f&&-1!=h||-1!=g&&-1!=h)(b=f!=g&&f!=h&&g!=h)||(null===B&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),B=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))),b=B&&(f==v&&g==v&&h==v||f==w&&g==w&&h==w||f==x&&g==x&&h==x)),b=!b;b&&(d.parentNode&&d.parentNode.removeChild(d),clearTimeout(q),a(c))}function I(){if((new Date).getTime()-H>=D)d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)f=e.a.offsetWidth,
+        g=n.a.offsetWidth,h=p.a.offsetWidth,u();q=setTimeout(I,50)}}var e=new r(k),n=new r(k),p=new r(k),f=-1,g=-1,h=-1,v=-1,w=-1,x=-1,d=document.createElement("div");d.dir="ltr";t(e,L(c,"sans-serif"));t(n,L(c,"serif"));t(p,L(c,"monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);v=e.a.offsetWidth;w=n.a.offsetWidth;x=p.a.offsetWidth;I();z(e,function(a){f=a;u()});t(e,L(c,'"'+c.family+'",sans-serif'));z(n,function(a){g=a;u()});t(n,L(c,'"'+c.family+'",serif'));
+        z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===typeof module?module.exports=A:(window.FontFaceObserver=A,window.FontFaceObserver.prototype.load=A.prototype.load);}());
+
+        // Load and observe Lateef
+        var Lateef = new FontFaceObserver('Lateef', {weight: 400});
+        Promise.all([Lateef.load()]).then(function() {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-lateef');
+
+          // Optimization for Repeat Views
+          // Set a flag in localstorage so repeat views can skip processing FFO.
+          sessionStorage.fontsLoadedLateef = true;
+        });
+
+        // Load and observe Open Sans
+        var os300 = new FontFaceObserver('Open Sans', {weight: 300});
+        var os400 = new FontFaceObserver('Open Sans', {weight: 400});
+        Promise.all([os300.load(), os400.load()]).then(function() {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-opensans');
+
+          // Optimization for Repeat Views
+          // Set a flag in localstorage so repeat views can skip processing FFO.
+          sessionStorage.fontsLoadedOpensans = true;
+        });
+
+        // Load and observe NEWFONT
+        /*
+        var NEWFONT = new FontFaceObserver('NEWFONT', {weight: 400});
+        Promise.all([NEWFONT.load()]).then(function() {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-NEWFONT');
+
+          // Optimization for Repeat Views
+          // Set a flag in localstorage so repeat views can skip processing FFO.
+          sessionStorage.fontsLoadedNEWFONT = true;
+        });
+        */
+      })();
+    </script>
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+  </head>
+  <body class="path-node page-node-type-story has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="wrap">
+<div class="leader-wrapper" id="leader-wrapper">
+  <div class="leader container">
+    <div class="region region-leader">
+    <section id="block-patreon" class="block block-block-content block-block-content9ae264c7-7c6f-4de3-acbf-4b4497017472 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><a href="https://www.patreon.com/bePatron?u=10705728"><img alt="Become a Patron!" data-entity-type="file" data-entity-uuid="afa5defb-aa9d-4348-b3a0-d0dd6414882c" src="/sites/default/files/inline-images/become_a_patron_button.png" /></a>
+</div>
+      
+  </section>
+
+
+  </div>
+
+  </div>
+</div>
+
+<div class="brand-wrapper" id="brand-wrapper">
+  <div class="brand container">
+    <div class="region region-brand">
+          <a class="logo navbar-btn" href="/" title="Home" rel="home">
+      <h1><img src="/themes/linuxjournal/images/ljlogo.png" alt="Linux Journal" /></h1>
+    </a>
+      
+  </div>
+
+  </div>
+
+          <div class="header-wrapper">
+    <header class="navbar navbar-default container" id="navbar" role="banner">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <section id="block-linuxjournal-main-menu" class="block block-system block-system-menu-blockmain clearfix navbar__menu col-xs-12 col-sm-8">
+  
+    
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                        <li>
+        <a href="/subscribe">Subscribe</a>
+                  </li>
+                        <li class="expanded dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">Topics+ <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/tag/cloud">Cloud</a>
+                  </li>
+                        <li>
+        <a href="/tag/containers" data-drupal-link-system-path="taxonomy/term/978">Containers</a>
+                  </li>
+                        <li>
+        <a href="/tag/desktop">Desktop</a>
+                  </li>
+                        <li>
+        <a href="/tag/kernel" data-drupal-link-system-path="taxonomy/term/662">Kernel</a>
+                  </li>
+                        <li>
+        <a href="/tag/mobile">Mobile</a>
+                  </li>
+                        <li>
+        <a href="/tag/networking">Networking</a>
+                  </li>
+                        <li>
+        <a href="/tag/privacy">Privacy</a>
+                  </li>
+                        <li>
+        <a href="/tag/programming">Programming</a>
+                  </li>
+                        <li>
+        <a href="/tag/security" data-drupal-link-system-path="taxonomy/term/31">Security</a>
+                  </li>
+                        <li>
+        <a href="/tag/servers">Servers</a>
+                  </li>
+                        <li>
+        <a href="/tag/sysadmin" data-drupal-link-system-path="taxonomy/term/21">SysAdmin</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li>
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+                  </li>
+                        <li>
+        <a href="/books" data-drupal-link-system-path="books">Books</a>
+                  </li>
+                        <li>
+        <a href="/digital">Magazine</a>
+                  </li>
+        </ul>
+  
+
+  </section>
+
+<section class="search-block-form block block-search block-search-form-block clearfix navbar__search col-xs-12 col-sm-4 col-md-4 col-md-offset-0" data-drupal-selector="search-block-form" id="block-linuxjournal-search" role="search">
+  
+      <h2 class="block-title sr-only">Search</h2>
+    
+
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+      <div id="edit-keys--description" class="description help-block">
+      Enter the terms you wish to search for.
+    </div>
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+</form>
+
+  </section>
+
+
+  </div>
+
+        </div>
+            <div class="navbar-header">
+          <div class="region region-navigation">
+    <section id="block-mobilenavigation" class="block block-system block-system-menu-blockmenu-mobile-navbar clearfix col-xs-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0 navbar__menu navbar__mobilenavigation">
+  
+    
+
+      
+      <ul class="menu menu--menu-mobile-navbar nav">
+                        <li>
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+                  </li>
+                        <li>
+        <a href="/popular" data-drupal-link-system-path="popular">Popular</a>
+                  </li>
+                        <li>
+        <a href="/recent" data-drupal-link-system-path="recent">Recent</a>
+                  </li>
+        </ul>
+  
+
+  </section>
+
+  </div>
+
+      </div>
+          </header>
+    </div>
+  
+</div>
+  <div role="main" class="main-container container js-quickedit-main-content" id="main">
+    <div class="row">
+
+            
+            
+                  <section class="col-sm-12">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+</div>
+                  
+                
+                
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="1340133" class="row bs-2col-stacked node node--type-story node--view-mode-full">
+  
+
+    <div class="col-sm-12 bs-region bs-region--top">
+    
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--items">
+              <div class="field--item"><div about="/tag/progamming" typeof="schema:Thing">
+  
+      <h2><a href="/tag/progamming">
+            <div property="schema:name" class="field field--name-name field--type-string field--label-hidden field--item">Progamming</div>
+      </a></h2>
+      <span property="schema:name" content="Progamming" class="hidden"></span>
+
+  
+</div>
+</div>
+              <div class="field--item"><div about="/tag/bash" typeof="schema:Thing">
+  
+      <h2><a href="/tag/bash">
+            <div property="schema:name" class="field field--name-name field--type-string field--label-hidden field--item">Bash</div>
+      </a></h2>
+      <span property="schema:name" content="Bash" class="hidden"></span>
+
+  
+</div>
+</div>
+              <div class="field--item"><div about="/tag/history" typeof="schema:Thing">
+  
+      <h2><a href="/tag/history">
+            <div property="schema:name" class="field field--name-name field--type-string field--label-hidden field--item">history</div>
+      </a></h2>
+      <span property="schema:name" content="history" class="hidden"></span>
+
+  
+</div>
+</div>
+              <div class="field--item"><div about="/tag/command-line" typeof="schema:Thing">
+  
+      <h2><a href="/tag/command-line">
+            <div property="schema:name" class="field field--name-name field--type-string field--label-hidden field--item">command line</div>
+      </a></h2>
+      <span property="schema:name" content="command line" class="hidden"></span>
+
+  
+</div>
+</div>
+              <div class="field--item"><div about="/tag/shell-programming" typeof="schema:Thing">
+  
+      <h2><a href="/tag/shell-programming">
+            <div property="schema:name" class="field field--name-name field--type-string field--label-hidden field--item">Shell Programming</div>
+      </a></h2>
+      <span property="schema:name" content="Shell Programming" class="hidden"></span>
+
+  
+</div>
+</div>
+          </div>
+  
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item"><h1>
+  Understanding Bash: Elements of Programming
+</h1>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by <a title="View user profile." href="/users/vladimir-likic" lang="" about="/users/vladimir-likic" typeof="schema:Person" property="schema:name" datatype="">Vladimir Likic</a></div>
+      
+            <div class="field field--name-node-post-date field--type-ds field--label-hidden field--item">on September 28, 2018</div>
+      
+  </div>
+  
+    <div class="col-sm-9 bs-region bs-region--left">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/850x500/public/nodeimage/story/bash-icon_0.png?itok=rARFpsdc 1x, /sites/default/files/styles/1700x1000/public/nodeimage/story/bash-icon_0.png?itok=FAhf9IjZ 2x" media="all and (min-width: 768px)" type="image/png"/>
+              <source srcset="/sites/default/files/styles/360_250/public/nodeimage/story/bash-icon_0.png?itok=JZG6p4sq 1x, /sites/default/files/styles/720x500/public/nodeimage/story/bash-icon_0.png?itok=aIRXqL3C 2x" media="all and (max-width: 767px)" type="image/png"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/360_250/public/nodeimage/story/bash-icon_0.png?itok=JZG6p4sq" alt="Bash" typeof="foaf:Image" class="img-responsive" />
+
+  </picture>
+
+</div>
+      <div class="shariff"   data-services="[&quot;twitter&quot;,&quot;facebook&quot;,&quot;googleplus&quot;,&quot;linkedin&quot;,&quot;reddit&quot;,&quot;mail&quot;]" data-theme="white" data-css="complete" data-orientation="horizontal" data-twitter-via="linuxjournal" data-mail-url="mailto:" data-lang="en">
+    
+        
+</div>
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><em>Ever wondered why programming in Bash is so difficult? Bash
+employs the same constructs as traditional programming languages;
+however, under the hood, the logic is rather different.</em></p>
+
+<p>
+The Bourne-Again SHell (Bash) was developed by the Free
+Software Foundation (FSF) under the GNU Project, which
+gives it a somewhat special reputation within the
+Open Source community. Today, Bash is the default user shell on
+most Linux installations. Although Bash is just one of
+several well known UNIX shells, its wide distribution with
+Linux makes it an important tool to know.
+</p>
+
+<p>
+The main purpose of a UNIX shell is to allow users to
+interact effectively with the system through the command
+line. A common shell action is to invoke an executable,
+which in turn causes the kernel to create a new running
+process. Shells have mechanisms to send the output of one
+program as input into another and facilities to interact
+with the filesystem. For example, a user can traverse the
+filesystem or direct the output of a program to a file.
+</p>
+
+<p>
+Although Bash is primarily a command interpreter, it's
+also a programming language. Bash supports variables,
+functions and has control flow constructs, such as
+conditional statements and loops. However, all of this comes
+with some unusual quirks. This is because Bash
+attempts to fulfill two roles at the same time: to be
+a command interpreter and a programming language—and
+there is tension between the two.
+</p>
+
+<p>
+All UNIX shells, including Bash, are primarily command
+interpreters. This trait has a deep history, stretching
+all the way to the very first shell and the first UNIX
+system. Over time, UNIX shells acquired the programming
+capabilities by evolution, and this has led to some
+unusual solutions for the programming environment. As
+many people come to Bash already having some background
+in traditional programming languages, the unusual
+perspective that Bash takes with programming constructs
+is a source of much confusion, as evidenced by many
+questions posted on Bash forums.
+</p>
+
+<p>
+In this article, I discuss how programming constructs
+in Bash differ from traditional programming languages.
+For a true understanding of Bash, it's useful to understand
+how UNIX shells evolved, so I first review the relevant
+history, and then introduce several Bash features.
+The majority of this
+article shows how the unusual aspects of Bash programming
+originate from the need to blend the command
+interpreter function seamlessly with the capabilities of a programming
+language.
+</p>
+
+<h3>
+Bash History</h3>
+
+<p>
+The term "shell" originated from the MULTICS project, a
+collaboration between Massachusetts Institute of Technology
+(MIT), General Electric and Bell Telephone Laboratories
+(henceforth Bell Labs) to develop a next-generation
+time-sharing operating system. Unhappy with the progress,
+Bell Labs withdrew from the project in 1969, and the Bell
+Labs team who worked on MULTICS went on to develop their
+own operating system: UNIX.
+</p>
+
+<p>
+The ancestor of Bash is the Thompson shell, the first
+UNIX command interpreter, developed by Ken Thompson
+in 1971. Figure 1 shows an excerpt from the <em>UNIX Programming
+Manual</em>, 1st edition, that describes the Thompson shell.
+</p>
+
+<img src="/sites/default/files/styles/max_650x650/public/u%5Buid%5D/12446f1.png" width="650" height="398" alt="&quot;&quot;" class="image-max_650x650" /><p>
+<em>Figure 1. An Excerpt from the <em>UNIX Programming Manual</em>,
+1st Edition, Published in 1971, Describing the Original
+Thompson Shell</em>
+</p>
+
+<p>
+Between 1973–1975, John R. Mashey extended the original
+Thompson shell and added several programming capabilities,
+making it a high-level programming language. In Mashey's
+own words:
+</p>
+
+<blockquote>
+<p>
+Modifications have been aimed at improving the use of the
+shell...and making it even more convenient to use as
+a high-level programming language. In line with the
+philosophy of much existing UNIX software, an attempt has
+been made to add new features only when they are shown
+necessary by actual user experience in order to avoid
+contaminating a compact, elegant system through "creeping
+featurism". (From J. Mashey, "Using a Command Language as a
+High-level Programming Language", CSE '76 Proceedings
+of the 2nd International Conference on Software
+engineering, 1976.)
+</p></blockquote>
+
+<p>
+Stephen Bourne started working on a new shell early
+in 1976. The Bourne shell benefited from the concepts
+introduced by the Mashey shell, and it brought some new
+ideas of its own. The Bourne shell officially
+was introduced in UNIX Version 7, released in 1979.
+</p>
+
+<p>
+The original Thompson shell, the Mashey shell and
+the Bourne shell were all called sh, and they overlapped
+or replaced one another in the years 1970–1976 as
+they were refined and gained additional capabilities.
+Throughout 1970s, UNIX was mostly being developed
+at Bell Labs and, in parallel, at the University of
+California at Berkeley (the variant known as BSD).
+With the development of UNIX, shells were constantly
+developed and refined. At the time when the Bourne shell
+already was in use, Bill Joy at Berkeley developed
+the C shell (csh). The C shell was the first truly
+alternative UNIX shell, and it was incorporated in the
+2BSD release of Berkeley UNIX. In the early 1980s,
+David Korn developed the Korn shell (ksh). Compared
+to the Bourne shell, the C shell emphasized the
+command interpreter mode, and the Korn shell came
+with more extensive programming capabilities.
+</p>
+
+<p>
+UNIX development efforts at Bell Labs and Berkeley
+enriched each other, and the two versions were
+later merged. In the 1980s, AT&amp;T licensed UNIX to a number of
+commercial vendors, and this resulted in the disruptive
+wars for the UNIX market domination. In 1985, Richard
+Stallman established the Free Software Foundation (FSF),
+whose main initiative was to build a free-to-use
+UNIX-like system, one that is not encumbered by the
+intellectual property issues surrounding UNIX. This
+is the famous GNU Project ("GNU's not UNIX"). In fact,
+the original letter from Stallman, sent on the
+net.unix-wizards mailing list in September 1983,
+started with the cry: "Free Unix!"
+</p>
+
+<p>
+Since it's impossible to have free UNIX without a shell,
+that was a priority for the GNU Project. Brian Fox, the
+Free Software Foundation's first paid programmer,
+started working on a shell 1988. This became
+Bash, first released as beta in 1989. Bash is
+mostly a clone of the Bourne shell (hence
+"Bourne-Again"), but it also includes additional
+features inspired by the C shell and Korn shell. Brian Fox was the official maintainer of
+Bash until 1992. At the time, Chet Ramey already
+was involved with the work on Bash, and he became the official
+maintainer in 1993. Chet Ramey continued to maintain
+and develop Bash for the next 25 years, and he's still
+Bash's current maintainer.
+</p>
+
+<h3>
+Doing Two Different Things at Once</h3>
+
+<p>
+The original Thompson shell was a simple command interpreter
+whose mode of operation was as follows:
+
+</p><pre><code>
+$ command [ arg1 ... [ argN ]
+</code>
+</pre>
+
+
+<p>
+where <code>command</code> is the name of the executable file (that is, a
+command to be executed), and the optional arguments
+<code>arg1 ... argN</code> are passed to the command. The Thompson shell
+had no programming capabilities. This changed with the
+development of the Mashey shell (and later the Bourne shell).
+In his seminal paper "The UNIX Shell", published in 1978,
+Stephen Bourne wrote:
+</p>
+
+<blockquote>
+<p>
+The UNIX shell is both a programming language and a command
+language. As a programming language, it contains control-flow
+primitives and string-valued variables. As a command language,
+it provides a user interface to the process-related facilities
+of the UNIX operating system. (S.R Bourne, "The UNIX Shell", <em>The Bell System Technical
+Journal</em>, Vol 56, No 6, July–August 1978.)
+</p></blockquote>
+
+<p>
+Note the emphasis on the different functionality: a programming
+language and a command language. In fact, it was the Mashey
+and Bourne shells that extended the capabilities of the
+Thompson shell beyond the command interpreter. The shell's
+original role was a command interpreter, and the programming
+capabilities of shells were added later. UNIX shells evolved
+some ingenious ways of consolidating the programming
+capabilities with the original command interpreter role.
+</p>
+
+<h3>
+Bash Mode of Operation</h3>
+
+<p>
+Today's Bash is more powerful compared to the original Mashey
+shell and the Bourne shell. However, the purpose of the shell
+remains exactly the same. Arguably, the most important
+function of the shell is running commands (that is, submitting
+an executable file to the kernel for execution). This has several
+profound ramifications. For a start, Bash treats (almost)
+anything that is given to it as a command. Consider the
+following Bash session:
+
+</p><pre><code>
+$ VAR
+bash: VAR: command not found
+$ 9
+bash: 9: command not found
+$ 9 + 1
+bash: 9: command not found
+$
+</code>
+</pre>
+
+
+<p>
+This shows that Bash splits the input into words,
+then attempts to execute the first word as a command (the "words"
+<code>VAR</code> and <code>9</code>). Here, a "command" may be either a
+Bash built-in command (such as <code>cd</code>), a utility (such as
+<code>/bin/ls</code>) or some other executable file. When the string
+<code>9 + 1</code> was given on input, Bash split it into three
+"words": <code>9</code>, <code>+</code> and <code>1</code>. It's important
+to note that
+Bash keeps all words as strings and has no concept of
+numbers until forced to do an arithmetic evaluation. As
+a rather simplified summary, Bash operates as follows:
+</p>
+
+<ol><li>
+Takes the input and splits it into words on white spaces (space or tab).
+</li>
+
+<li>
+Assumes that the first word is a command. If anything
+follows the first word, it assumes they are arguments
+to be passed to the command.
+</li>
+
+<li>
+Attempts to execute the command (and pass the arguments
+to it, if any).
+</li></ol><p>
+This view ignores several intermediate steps. For example,
+Bash scans the input line and performs all sorts of expansions
+and replacements. It also checks for a built-in command
+with the name given, and executes that, if it exists. Not to
+lose sight of the big picture, I often ignore these details.
+</p>
+
+<p>
+So, Bash's most essential purpose is
+to execute commands, and this has some profound implications.
+Notably, the programming constructs in Bash, which at
+first sight may look like a programming language, are
+derived from this mode of operation. And, that is the central
+theme of this article.
+</p>
+
+<h3>
+Bash Built-ins vs. External Commands</h3>
+
+<p>
+The point that's often confusing to Bash newcomers is the
+difference between Bash built-in commands and external
+commands. On a typical Linux/UNIX system, a
+number of common commands are both built-in in Bash
+and <em>also</em> exist as independent executables with the
+same name. Examples of this include <code>echo</code> (built-in)
+and <code>/bin/echo</code>, <code>kill</code> (built-in) and
+<code>/bin/kill</code>,
+<code>test</code> (built-in) and <code>/usr/bin/test</code> (and there are
+more). Consider how the Bash built-in <code>echo</code> and
+<code>/bin/echo</code> behave very similarly:
+
+</p><pre><code>
+$ echo 'Echoed with a built-in!'
+Echoed with a built-in!
+$ /bin/echo 'Echoed with external program!'
+Echoed with external program!
+$
+</code>
+</pre>
+
+
+<p>
+However, there are also subtle differences (try <code>echo --version</code>).
+Why this duplication of commands? There are several reasons.
+The built-in version typically exists for performance
+reasons: Bash built-ins execute within the shell process that's
+already running. In contrast, executing an external utility
+involves loading and executing the external binary by the
+kernel, which is a much slower process.
+</p>
+
+<p>
+At this point, it's useful to note that some shell commands, by
+their nature, cannot be external utilities (in other words, they
+must be shell built-ins). Consider the <code>cd</code> command that changes
+the current working directory. An external utility wouldn't be
+able to change the shell's current working directory, so
+<code>cd</code> must be a Bash built-in. Why? Because invoking a command
+as an external utility would make the shell its parent process,
+and a child process cannot change the current working directory
+of the parent process.
+</p>
+
+<p>
+You could turn this question around and ask, "if <code>echo</code> is already
+built in to the shell, why does the external utility <code>/bin/echo</code>
+exist?" That's because one doesn't always work through the shell
+and may need to invoke <code>echo</code> without the mediating shell process.
+Second, in principle, there's nothing to enforce that a UNIX shell
+must have <code>echo</code> as a built-in, and therefore, it's important to
+have the external utility <code>/bin/echo</code> as a fallback.
+</p>
+
+<p>
+A practical problem users often face is this: how do you know whether
+the command you just called is the shell built-in or an external
+utility with the same name? The Bash command <code>type</code> (which is
+itself a shell built-in) indicates what command would be used
+if executed. For example:
+
+</p><pre><code>
+$ type echo
+echo is a shell builtin
+$ type ls
+ls is hashed (/bin/ls)
+$
+</code>
+</pre>
+
+
+<p>
+The basic rule is as follows: if the built-in command with a
+given name exists, it will be executed. If the built-in command
+doesn't exist, Bash will search for an external program, and
+if found, will execute it. If you want to be sure to use the
+executable, which happens to have the same name as a shell
+built-in, calling the executable with the full path will do.
+</p>
+
+<h3>
+Variable Assignment</h3>
+
+<p>
+When a command is entered in Bash, Bash expects that the
+first word it encounters is a command. However, there's
+one exception: if the first word contains <code>=</code>, Bash will
+attempt to execute a variable assignment. For example:
+
+</p><pre><code>
+$ VAR=7
+$
+</code>
+</pre>
+
+
+<p>
+This has assigned the value 7 to the variable named <code>VAR</code>.
+To retrieve the value of a variable, you need to prefix the
+variable name with the dollar sign. Thus, to view the value
+of a variable, you can combine the dollar-sign prefix with
+<code>echo</code>:
+
+</p><pre><code>
+$ echo $VAR
+7
+$
+</code>
+</pre>
+
+
+<p>
+For a variable assignment, a contiguous string that contains
+<code>=</code> is important. The following will fail:
+
+</p><pre><code>
+$ VAR = 1
+bash: VAR: command not found
+$
+</code>
+</pre>
+
+
+<p>
+In this case, Bash splits the input <code>VAR = 1</code> into three "words"
+(<code>VAR</code>, <code>=</code> and <code>1</code>) and then attempts to execute the first
+word as a command. This clearly isn't what was intended here.
+</p>
+
+<h3>
+The ? Built-in Variable</h3>
+
+<p>
+Although Bash allows you to create arbitrary variables on the fly
+simply by assigning the values to them, it also has a number
+of built-in variables. An example of a built-in variable is
+<code>BASHPID</code>. This contains the process ID of the Bash shell
+itself:
+
+</p><pre><code>
+$ echo $BASHPID
+2141
+$
+</code>
+</pre>
+
+
+<p>
+Another built-in variable (and one that I cover
+extensively here) is <code>?</code>. At any point in a Bash session,
+this variable contains the return value of the last
+executed command. The return value is always an integer.
+(And specifically, this is the return value of the C
+program function <code>main()</code>. Note: in any C program the
+function <code>main()</code> must return an integer.) By the UNIX
+convention, the return value of 0 denotes success, and
+any other value denotes failure. For example, consider
+the utility <code>/bin/ls</code>:
+
+</p><pre><code>
+$ touch NEWFILE
+$ /bin/ls NEWFILE
+NEWFILE
+$ echo $?
+0
+$
+</code>
+</pre>
+
+           
+<p>
+As per the convention, the utility <code>/bin/ls</code> returned 0 on
+success, which you can see by inspecting the value of <code>?</code>.
+If <code>ls</code> is unable to execute (for example, unable to access
+the file), it returns the value <code>&gt;0</code>:
+
+</p><pre><code>
+$ /bin/ls DOESNOTEXIST
+ls: cannot access 'DOESNOTEXIST': No such file or directory
+$ echo $?
+2
+$ echo $?
+0
+$
+</code>
+</pre>
+
+
+<p>
+In the last example, note that the first <code>?</code> was set to 2,
+and the second <code>?</code> was set to 0. Why? Because the second
+<code>?</code> contains the exit status of the <code>echo</code> command (which
+executed successfully). Remember, the
+<code>?</code> variable contains the exit status of the last executed
+command. You can use the commands <code>true</code> and <code>false</code> to
+set the value of <code>?</code> to 0 or 1, respectively:
+
+</p><pre><code>
+$ false
+$ echo $?
+1
+$ false
+$ true
+$ echo $?
+0
+$
+</code>
+</pre>
+
+
+<p>
+That might look rather silly at first, but keep reading.
+</p>
+
+<h3>
+Bash Blending Behavior</h3>
+
+<p>
+Now let's consider how Bash provides an
+impression of a seamlessly integrated command
+environment, even when the tasks it executes are
+inherently quite different. First, note that running
+a Bash built-in command produces the same effect on
+the <code>?</code> variable as running an external program:
+
+</p><pre><code>
+$ false   #  set ? to 1
+$ echo 'Calling a built-in command'
+Calling a built-in command
+$ echo $?
+0
+</code>
+</pre>
+
+
+<p>
+This example shows that calling the built-in command
+<code>echo</code> changed <code>?</code> to 0 (to confirm this, first
+run the <code>false</code> command, which sets <code>?</code> to 1). The
+point is that it behaves the same as calling the
+external program <code>echo</code>:
+
+</p><pre><code>
+$ false  #  set ? to 1
+$ /bin/echo 'Calling external program'
+Calling external program
+$ echo $?
+0
+</code>
+</pre>
+
+
+<p>
+Yet, these two scenarios are quite different. In the
+first scenario, Bash invoked an internal command
+<code>echo</code>; in the second example, Bash requested from
+the kernel to run an external executable (<code>/bin/echo</code>)
+and suspended itself waiting for the executable to
+complete. The effect on the <code>?</code> variable is exactly
+the same.
+</p>
+
+<p>
+Even for a variable assignment, Bash will set the
+<code>?</code> variable accordingly:
+
+</p><pre><code>
+$ false   #  set ? to 1
+$ VAR=one
+$ echo $?
+0
+$
+</code>
+</pre>
+
+
+<p>
+From this, you can see that Bash treats a variable
+assignment as a command. If the variable assignment
+is not successful, <code>?</code> is set to a value &gt;0. For
+example, the built-in variable <code>BASHPID</code> is read-only,
+and you can't change it (that is, Bash can't change
+its own process ID). So this will fail:
+
+</p><pre><code>
+$ true  #  set ? to 0
+$ BASHPID=99
+$ echo $?
+1
+$
+</code>
+</pre>
+
+
+<p>
+Attempting to execute a non-existent command would
+also set <code>?</code> to indicate a failure:
+
+</p><pre><code>
+$ true  # set ? to 0
+$ DUMMY
+bash: DUMMY: command not found
+$ echo $?
+127
+$
+</code>
+</pre>
+
+
+<p>
+In this case, Bash filled the special variable <code>?</code> with
+the number 127. This number is hard-wired in Bash, and
+it specifically means "command not found".
+</p>
+
+<p>
+To summarize, the above examples show three completely
+different scenarios: invoking an internal Bash command,
+running an external program and variable assignment. Yet,
+Bash views all three as command execution and provides
+a common behavior with respect to the <code>?</code> special variable.
+Armed with these insights, now let's examine
+three basic programming constructs in Bash: the <code>if</code>
+statement, the <code>while</code> loop and the <code>until</code> loop.
+</p>
+
+<h3>
+The Conditional <code>if</code> Statement</h3>
+
+<p>
+The fundamental element of almost every programming language
+is the conditional <code>if</code> statement. In the C language, it
+looks like this:
+
+</p><pre><code>
+if (TRUTH_TEST) {
+   statements to execute
+}
+</code>
+</pre>
+
+
+<p>
+Here <code>TRUTH_TEST</code> is a test that evaluates true or false
+according to the rules of the C language. This is sometimes
+called "truth value testing". Here's an example of this in Python:
+
+</p><pre><code>
+if True:
+    print('Yay true!')
+</code>
+</pre>
+
+
+<p>
+In Bash, the same example looks like this:
+
+</p><pre><code>
+if true
+then
+  echo 'Yay true!'
+fi
+</code>
+</pre>
+
+
+<p>
+You can reformat this by using ; to provide a handy one-liner
+to type in:
+
+</p><pre><code>
+$ if true; then echo 'Yay true!'; fi
+Yay true!
+$
+</code>
+</pre>
+
+
+<p>
+This looks very much like the <code>if</code> conditional statement
+in any programming language. However, it's not. In the
+above example, <code>true</code> is a command. In fact, <code>true</code> is
+a shell built-in:
+
+</p><pre><code>
+$ type true
+true is a shell builtin
+$ help true
+true: true
+    Return a successful result.
+
+    Exit Status:
+    Always succeeds.
+</code>
+</pre>
+
+
+<p>
+Let that sink in: <code>true</code> is a command. In fact, that's the
+same <code>true</code> command that was run above from the command line
+to set the value of the <code>?</code> variable. What then is the
+<code>if</code>
+statement evaluating? It's evaluating the return value of
+the <code>true</code> command. If you're not convinced, consider that
+<code>true</code> can be replaced with the external utility
+<code>/bin/true</code>:
+
+</p><pre><code>
+$ if /bin/true; then echo 'Yay true!'; fi
+Yay true!
+$
+</code>
+</pre>
+
+
+<p>
+Where:
+
+</p><pre><code>
+$ man true
+TRUE(1)                User Commands                   TRUE(1)
+
+NAME
+       true - do nothing, successfully
+
+SYNOPSIS
+       true [ignored command line arguments]
+       true OPTION
+
+DESCRIPTION
+       Exit with a status code indicating success.
+</code>
+</pre>
+
+
+<p>
+If <code>true</code> is a command, you can put any command there,
+right? Indeed:
+
+</p><pre><code>
+$ if /bin/echo; then echo 'Yay true!'; fi
+
+Yay true!
+$
+</code>
+</pre>
+
+
+<p>
+Notice how the blank line was printed before the string
+<code>Yay true!</code>. That's because the <code>if</code> statement actually
+executed the command <code>/bin/echo</code>, and without any
+arguments, this prints a newline character. You
+actually can give an argument to the <code>echo</code> command:
+
+</p><pre><code>
+$ if /bin/echo 'Hi'; then echo 'Yay true!'; fi
+Hi
+Yay true!
+$
+</code>
+</pre>
+
+
+<p>
+The two <code>echo</code> commands executed here are different: the
+first is the external utility <code>/bin/echo</code>; the second,
+an <code>echo</code> that appears in the body of the <code>if</code> statement,
+is the shell built-in. Clearly, the second <code>echo</code> could
+be replaced with the external utility too.
+</p>
+
+<p>
+Moving on,
+I mentioned previously that Bash will treat the
+variable assignment as a command. Thus, variable assignment
+can be used in the same place as the built-in command
+or external executable:
+
+</p><pre><code>
+$ if VAR=99; then echo 'Assignment done!'; fi
+Assignment done!
+$ echo $VAR
+99
+$
+</code>
+</pre>
+
+
+<p>
+To sum up, the general form of the <code>if</code> conditional statement
+is: <code>if CMD1; then CMD2; fi</code> where <code>CDM1</code> and
+<code>CMD2</code> are commands.
+The <code>if</code> statement controls flow by evaluating the exit code
+of the command <code>CMD1</code>: if <code>CMD1</code> was successful (judging by
+the exit status of 0), then <code>CMD2</code> is executed. This is
+rather different compared to truth value testing in most
+traditional programming languages, and it's the source of much
+confusion. I shall call this the <em>source of confusion number 1</em>.
+</p>
+
+<h3>
+The <code>false</code> Command</h3>
+
+<p>
+I just described how <code>true</code> is a command. So not surprisingly,
+there is a <code>false</code>, the exact opposite of <code>true</code>.
+For the Bash built-in:
+
+</p><pre><code>
+$ type false
+false is a shell builtin
+$ help false
+false: false
+    Return an unsuccessful result.
+
+    Exit Status:
+    Always fails.
+$
+</code>
+</pre>
+
+
+<p>
+And, there is an external utility with the same function:
+
+</p><pre><code>
+$ man false
+FALSE(1)               User Commands                 FALSE(1)
+
+NAME
+       false - do nothing, unsuccessfully
+
+SYNOPSIS
+       false [ignored command line arguments]
+       false OPTION
+
+DESCRIPTION
+       Exit with a status code indicating failure.
+</code>
+</pre>
+
+
+<p>
+The commands <code>true</code> and <code>false</code> do nothing, but exit with
+the status 0 or 1, respectively. Since the <code>if</code> statement
+evaluates the exit code when deciding whether to execute
+the body, <code>if true</code> always succeeds, and <code>if false</code>
+always fails. Note that the exit value of <code>true</code> is 0, and
+the exit value of <code>false</code> is 1. This is somewhat
+counterintuitive, and it's the exact opposite of most programming
+languages. For example, in Python truth value testing, 0 is
+equated with False (boolean), and 1 is equated with True
+(boolean).
+</p>
+
+<h3>
+Bash <code>if</code> Is Testing the Exit Value</h3>
+
+<p>
+Let's confirm that the <code>if</code> statement in Bash is merely
+testing the value of the program's exit value by writing a
+simple C program, true.c, that returns 1 (note, the real
+utility <code>true</code> returns 0, or success!):
+
+</p><pre><code>
+int main() {
+   return 1;
+}
+</code>
+</pre>
+
+
+<p>
+This program doesn't do much; it merely returns 1 as the exit
+status. According to the UNIX convention, the exit status
+of 1 indicates a failure (no matter that the program may run
+just fine!). Let's compile and execute this program, and
+confirm that it returns an "unsuccessful" exit status to the
+shell:
+
+</p><pre><code>
+$ gcc true.c -o true
+$ ./true
+$ echo $?
+1
+$
+</code>
+</pre>
+
+
+<p>
+So, if you use this program in the <code>if</code> statement, the output
+won't be what you may expect:
+
+</p><pre><code>
+$ if ./true; then echo 'Yay true!'; fi
+$
+</code>
+</pre>
+
+
+<p>
+In other words, the <code>true</code> command has "failed". This example
+confirms that all the <code>if</code> statement does is evaluate the exit
+status. It doesn't matter that the program runs just fine,
+exactly as intended; from the Bash perspective, a non-zero exit
+status indicates failure. This I shall call the <em>source of
+confusion number 2<em>.
+</em></em></p>
+
+<h3>
+More Bash Ingenuity</h3>
+
+<p>
+Consider the following task: test if the file exists, and if
+it does, delete it. For this you can use the Bash built-in
+<code>test</code> command with the <code>-e</code> flag:
+
+</p><pre><code>
+$ rm dum.txt        # make sure file 'dum.txt' doesn't exist
+$ test -e dum.txt   # test if file 'dum.txt' exists
+$ echo $?           # confirm that the command test failed
+1
+$ touch dum.txt     # now create file 'dum.txt'
+$ test -e dum.txt   # test if file 'dum.txt' exists
+$ echo $?           # confirm the command test was successful
+0
+$
+</code>
+</pre>
+
+
+<p>
+Therefore, to test if the file exists, and if yes, delete it:
+
+
+</p><pre><code>
+$ touch dum.txt    # create file 'dum.txt'
+$ if test -e dum.txt; then rm dum.txt; fi  # file deleted
+$
+</code>
+</pre>
+
+
+<p>
+The key to note here is that <code>if test -e dum.txt; then rm dum.txt;
+fi</code>
+actually executes the command <code>test -e dum.txt</code>. In this case,
+<code>test</code> is a Bash built-in. As you might suspect, there is a
+<code>/usr/bin/test</code> utility that does the same thing and could be used to the
+same effect:
+
+</p><pre><code>
+$ touch dum.txt  # create file 'dum.txt'
+$ if /usr/bin/test -e dum.txt; then rm dum.txt; fi
+ ↪# file deleted
+$
+</code>
+</pre>
+
+
+<p>
+Now, Bash implements <code>[ ]</code> as a synonym for the built-in
+<code>test</code> command:
+
+
+</p><pre><code>
+$ test -e dum.txt  #  command successful if file exists
+$ [ -e dum.txt ]   #  exactly the same as previous example!
+</code>
+</pre>
+
+
+<p>
+Note, <code>[ -e dum.txt ]</code> is a command. And this, of course,
+returns 0 on success and 1 on failure. Let's confirm:
+
+</p><pre><code>
+$ rm dum.txt
+$ [ -e dum.txt ]
+$ echo $?
+1
+$ touch dum.txt
+$ [ -e dum.txt ]
+$ echo $?
+0
+$
+</code>
+</pre>
+
+
+<p>
+With this understanding, you can repeat the above example with
+the <code>[ -e ... ]</code> construct:
+
+</p><pre><code>
+$ touch dum.txt  # create file 'dum.txt'
+$ if [ -e dum.txt ]; then rm dum.txt; fi  # file deleted
+$
+</code>
+</pre>
+
+
+<p>
+The last construct looks even more like the <code>if</code> control
+statement in most traditional programming languages.
+However, it's not. <code>[ ]</code> is a command—basically another
+way to call the built-in <code>test</code> command.
+</p>
+
+<h3>
+Command Lists</h3>
+
+<p>
+The surprises don't quite end there. In Bash, the <code>if</code>
+statement can take any number of commands separated
+by a semicolon, after the keyword <code>if</code> and before the
+body denoted with the keyword <code>then</code>. Something like
+this: <code>if CMD1; CMD2; ... CMDN; then CMDN+1; CMDN+2;
+CMDN+M; fi</code>. The <code>if</code> statement evaluates all commands
+sequentially and executes the body of the loop only
+if the exit status of the last command is 0 (a success
+by convention). Consider the following example:
+
+</p><pre><code>
+$ if false; true; then echo 'Yay true!'; fi
+ ↪# body will execute
+Yay true!
+$ if true; false; then echo 'Yay true!'; fi
+ ↪# body will not execute
+$
+</code>
+</pre>
+
+     
+<p>
+So in Bash, it's completely legal to write something
+like this:
+
+</p><pre><code>
+$ if [ -e dum.txt ]; echo 'Hi'; false; then rm dum.txt; fi
+Hi
+$
+</code>
+</pre>
+
+
+<p>
+This executes three commands given after <code>if</code>, and it
+never will execute the body (<code>rm dum.txt</code>) because the last command
+is <code>false</code>, which always fails (more precisely, returns a
+non-zero status). In summary, in place of a single command,
+you can use a list of commands. The overall exit status of
+such a command list is given by the exit status of the last
+command in the list. This I shall call the <em>source of
+confusion number 3</em>.
+</p>
+
+<h3>
+The Loops <code>while</code> and <code>until</code></h3>
+
+<p>
+Understanding the behavior of the <code>if</code> statement is rather
+useful because the same behavior applies to <code>while</code> and
+<code>until</code> loops. Consider the following example:
+
+</p><pre><code>
+$ while true; do echo 'Hi, while looping ...'; done
+Hi, while looping ...
+Hi, while looping ...
+Hi, while looping ...
+^C
+$
+</code>
+</pre>
+
+
+<p>
+Let's understand exactly what happened here. First, the <code>while</code>
+loop executed the <code>true</code> command and evaluated its exit status.
+Since the exit status of <code>true</code> is always 0, it executed the
+body of the loop (<code>echo 'Hi, while looping ...'</code>). Then it went
+back for another cycle of the same. Because the <code>true</code> command
+always runs with success, this created an infinite loop (which
+was broken with Ctrl-C). Since <code>true</code> is a command, you can replace
+it with any command. For example:
+
+</p><pre><code>
+$ while /bin/echo 'ECHO'; do echo 'Hi, while looping ...'; done
+ECHO
+Hi, while looping ...
+ECHO
+Hi, while looping ...
+ECHO
+Hi, while looping ...
+^C
+$
+</code>
+</pre>
+
+
+<p>
+Thus, this <code>while</code> loop merely alternates the execution of the
+two <code>echo</code> commands: <code>/bin/echo</code>, the external
+executable, and
+<code>echo</code>, the Bash built-in.
+</p>
+
+<p>
+As you might suspect, the <code>while</code> construct can accept a
+command list, and in such a case, it would proceed to execute
+the body of the loop based on the exit status of the last
+command in the list. In other words, the general form of
+the <code>while</code> loop is as follows: <code>while CMD1; CMD2; ... CMDN;
+do CMDN+1; CMDN+2; CMDN+M; done</code>. For example:
+
+</p><pre><code>
+$ while true; false; do echo 'Hi, looping ...'; done
+$
+</code>
+</pre>
+
+
+<p>
+In this example, the body of the loop is not executed because
+the last command is <code>false</code> (which always fails). The
+<code>until</code>
+loop works similarly:
+
+</p><pre><code>
+$ until false; do echo 'Hi, until looping ...'; done
+Hi, until looping ...
+Hi, until looping ...
+Hi, until looping ...
+^C
+$
+</code>
+</pre>
+
+
+<p>
+In the case of the <code>until</code> loop, the body of the loop
+executes as long as the command listed after the keyword
+<code>until</code> is returning a non-zero exit status. Since the
+command <code>false</code> returns a non-zero exit status every
+time, the above example resulted in an infinite loop.
+And of course, in the general form, the <code>until</code> loop can
+accept command lists: <code>until CMD1; CMD2; ...  CMDN;
+do CMDN+1; CMDN+2; CMDN+M; done</code>.
+</p>
+
+<p>
+You may ask, if these loops merely execute two commands
+(or two command lists), how is it useful in practice
+at all? The commands that are tested
+in the loop may depend on some dynamic condition (for
+example, the number of bytes written to a file, or the
+type of network traffic and so on). The change in
+conditions may cause the command to fail or succeed.
+Also you can modify the Bash variable in the body of
+the loop, which leads to the use of loops similarly as
+shown here:
+
+</p><pre><code>
+$ i=1
+$ while [ $i -le 3 ]; do echo $i; i=$((i+1)); done
+1
+2
+3
+$
+</code>
+</pre>
+
+
+<p>
+Here <code>((i + 1))</code> forces Bash arithmetic evaluation, and
+<code>$((i + 1))</code> returns the resulting value; the construct
+<code>[ $i -le 3 ]</code> is a synonym for <code>test $i -le 3</code> that performs arithmetic comparison. Note that
+from the perspective of Bash, this is a command
+that executes successfully or not:
+
+</p><pre><code>
+$ i=1
+$ [ $i -le 3 ]
+$ echo $?
+0
+$ i=9
+$ [ $i -le 3 ]
+$ echo $?
+1
+$
+</code>
+</pre>
+
+
+<p>
+This is why the <code>[ $i -le 3 ]</code> construct can be used after
+the <code>while</code> keyword, which expects a command (or a
+command list).
+</p>
+
+<h3>
+Conclusion</h3>
+
+<p>
+Bash is an independently implemented derivative of the
+Bourne shell produced by the GNU Project, with enhancements
+inspired by the C shell and the Korn shell. The original
+UNIX shell (the Thompson shell) was a simple command
+interpreter. Subsequently, the Mashey shell and the Bourne
+shell blended in programming capabilities. Since Bash is
+a direct descendant of the Bourne shell, it inherited
+all the key ideas of how a programming environment works.
+This includes how it blends the programming language
+with the command interpreter. And for that purpose, UNIX
+shells have evolved some ingenious solutions.
+</p>
+
+<p>
+In Bash, the programming constructs look similar to
+those found in traditional programming languages.
+However, how those programming constructs inherently
+work is quite different. This can be rather confusing
+to people coming with some knowledge of the traditional
+programming languages (which is usually the case for
+Bash users). Here are the three main sources
+of confusion with Bash programming:
+</p>
+
+<ol><li>
+The surprising aspect of Bash programming is that
+the constructs <code>if</code>, <code>while</code> and <code>until</code> evaluate the
+exit status of a command. Basically these constructs
+evaluate the following: "is the exit status zero?"
+By the UNIX convention, the exit status of 0 denotes
+success, and anything else denotes a failure.
+</li>
+
+<li>
+The exit status is an integer returned by the
+executable—think of this as the value returned by the
+C function <code>main()</code>. Note that a program that runs just
+fine may return a non-zero exit status (I showed an example of this
+above). However, writing such programs is not
+recommended. It would break the convention, and it
+most likely will break other things since the entire
+environment relies heavily on this convention.
+</li>
+
+<li>
+A single command can be replaced by a list of
+commands separated by a semicolon. In such a case,
+the exit status of a command list is the status
+returned by the last executed command.
+</li>
+</ol><h3>
+Acknowledgements</h3>
+
+<p>
+My sincere thanks to Chet Ramey for his feedback on
+the draft of this article. I would also like to thank
+Isidora C. Likic for checking the text and examples.
+</p>
+
+<h3>Resources</h3>
+
+<p>Too many articles and books on this topic exist to list in this space,
+but if you're interested in learning more, we recommend these <em>Linux
+Journal</em> articles (and there are actually too many <em>LJ</em> articles to list here
+as well, but here are some to get you started):
+</p>
+
+<ul><li><a href="https://www.linuxjournal.com/content/creating-concentration-game-pairs-bash">"Creating
+the Concentration Game PAIRS with Bash" by Dave Taylor</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/create-dynamic-wallpaper-bash-script">"Create
+Dynamic Wallpaper with a Bash Script" by Patrick Wheelan</a>
+</li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/developing-console-applications-bash">"Developing
+Console Applications with Bash" by Andy Carlson</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/hacking-safe-bash">"Hacking a Safe
+with Bash" by Adam Kosmin</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/ubuntu-linux-and-bash-windows-program">"Ubuntu
+Linux and Bash as a Windows Program!" by Dave Taylor</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/bash-parameter-expansion">"Bash
+Parameter Expansion" by Mitch Frazier</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/bash-regular-expressions">"Bash
+Regular Expressions" by Mitch Frazier</a></li>
+
+<li><a href="https://www.linuxjournal.com/content/bash-extended-globbing">"Bash
+Extended Globbing" by Mitch Frazier</a></li>
+
+<li><a href="https://www.linuxjournal.com/article/7385">"My Favorite bash Tips
+and Tricks" by Prentice Bisbal</a>
+</li>
+
+<li>
+<a href="https://www.linuxjournal.com/content/parsing-rss-news-feed-bash-script">Parsing
+an RSS News Feed with a Bash Script" by Jim Hall</a></li>
+</ul><p><strong>Bash Videos:</strong></p>
+
+<ul><li>
+<a href="https://www.linuxjournal.com/video/getting-loopy-bash-using-loops">"Getting
+Loopy with Bash: Using for Loops" by Shawn Powers</a></li>
+
+<li>
+<a href="https://www.linuxjournal.com/video/bash-startup-scripts-bashrc-and-bashprofile">"Bash
+Startup Scripts: bashrc and bash_profile" by Shawn Powers</a></li>
+</ul><p>
+<strong>For more programming articles like this, check out the Programming Deep Dive section of the October 2018 issue of <em>Linux Journal</em>.
+</strong></p></div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-author field--type-ds field--label-hidden field--item"><div></div>
+<p>
+Vladimir Likic holds a PhD in bioinformatics, and he has been using
+UNIX since 1991 and Linux since 1995. Originally from Europe,
+he lived in the US for a number of years and now calls Australia home.
+Follow Vladimir on Twitter: @unix_byte.
+</p>
+</div>
+      
+    <section class="section--disqus">
+    <a id="comments-link" class="btn btn-default" href="https://www.linuxjournal.com/content/understanding-bash-elements-programming#disqus_thread">Load Disqus comments</a>
+
+    <div id="disqus_thread"></div>
+  <noscript>Our discussions are <a href="https://disqus.com/?ref_noscript" rel="nofollow">powered by Disqus</a>, which require JavaScript.</noscript>
+
+    
+</section>
+  </div>
+  
+    <div class="col-sm-3 bs-region bs-region--right">
+    
+            <div class="field field--name-dynamic-block-fieldnode-sidebar-image field--type-ds field--label-hidden field--item"><div class="views-element-container form-group"><div class="view view-sidebar-image view-id-sidebar_image view-display-id-block_1 js-view-dom-id-bc84296a41f8ce2621749e24cdd37b0f6512debdbb22cacdd073028eadb1d6a6">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://www.embeddedarm.com/products/TS-4900"><img alt="technologic systems" data-entity-type="file" data-entity-uuid="3bda91b9-024b-48b8-894d-6d9bf88522ec" src="/sites/default/files/inline-images/technologic-v2.0.jpg" /></a></p>
+
+<p> </p></div>
+      </div>
+
+    </div>
+  
+          </div>
+</div>
+</div>
+      
+            <div class="field field--name-dynamic-block-fieldnode-recent-content field--type-ds field--label-hidden field--item"><div class="views-element-container form-group"><div class="view view-related-content view-id-related_content view-display-id-block_2 js-view-dom-id-d20af8bac156de6a18a18db900b42f07f814491ccbde298656e945484fb4f644">
+  
+    
+      <div class="view-header">
+      <h2 class="block-title">Recent Articles</h2>
+    </div>
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/linux-journal-ceases-publication-awkward-goodbye"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/bigstock-Torn-Red-Paper-Revealing-The-W-294597019_0.jpg?itok=z2dvuMZ5" width="75" height="75" alt="Goodbye" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/linux-journal-ceases-publication-awkward-goodbye" hreflang="en">Linux Journal Ceases Publication: An Awkward Goodbye</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/kyle-rankin" hreflang="en">Kyle Rankin</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/oops-debugging-kernel-panics-0"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/bigstock--173363303_0.jpg?itok=fee5-qqd" width="75" height="75" alt="debugging kernel panics" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/oops-debugging-kernel-panics-0" hreflang="en">Oops! Debugging Kernel Panics</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/petros-koutoupis" hreflang="en">Petros Koutoupis</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/loadsharers-funding-load-bearing-internet-person"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/loadsharers-logo.jpg?itok=Cm2slbI3" width="75" height="75" alt="loadsharers " typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/loadsharers-funding-load-bearing-internet-person" hreflang="en">Loadsharers: Funding the Load-Bearing Internet Person</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/eric-s-raymond" hreflang="en">Eric S. Raymond</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/documenting-proper-git-usage"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/bigstock-Git-Emblem-White-Branches-On--297714445.jpg?itok=OAGXE-NM" width="75" height="75" alt="git emblem" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/documenting-proper-git-usage" hreflang="en">Documenting Proper Git Usage</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/zack-brown" hreflang="en">Zack Brown</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/understanding-pythons-asyncio"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/bigstock-Python-Coding-Language-with-Gr-216840211_7.jpg?itok=skWaLWou" width="75" height="75" alt="Python" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/understanding-pythons-asyncio" hreflang="en">Understanding Python&#039;s asyncio</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/reuven-m-lerner" hreflang="en">Reuven M. Lerner</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-field-node-image"><div class="field-content">  <a href="/content/rv-offsite-backup-update"><img src="/sites/default/files/styles/75x75_square/public/nodeimage/story/12413f1.jpg?itok=m7khE70o" width="75" height="75" alt="RV" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/content/rv-offsite-backup-update" hreflang="en">RV Offsite Backup Update</a></span></div><div class="views-field views-field-uid"><span class="field-content"><a href="/users/kyle-rankin" hreflang="en">Kyle Rankin</a></span></div></div>
+
+    </div>
+  
+          </div>
+</div>
+</div>
+      
+  <div class="field field--name-field-related-articles field--type-entity-reference field--label-above">
+    <div class="field--label"><h2 class="title">Related Articles</h2></div>
+          <div class="field--items">
+              <div class="field--item-group"><div data-history-node-id="1340027" class="row bs-1col node node--type-story node--view-mode-sidebar">
+  
+  <div class="col-sm-12 bs-region bs-region--main">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">  <a href="/content/creating-concentration-game-pairs-bash"><img src="/sites/default/files/styles/wide_thumbnail/public/nodeimage/story/bigstock-Terminal-startup-icon-direct--90816239_1.png?itok=yLPxjNvP" width="250" height="175" alt="bash" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div>
+      
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item">  <a href="/content/creating-concentration-game-pairs-bash" hreflang="en">Creating the Concentration Game PAIRS with Bash</a>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by Dave Taylor</div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field--item-group"><div data-history-node-id="1340137" class="row bs-1col node node--type-story node--view-mode-sidebar">
+  
+  <div class="col-sm-12 bs-region bs-region--main">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">  <a href="/content/writing-more-compact-bash-code"><img src="/sites/default/files/styles/wide_thumbnail/public/nodeimage/story/bash-icon.png?itok=-wUXQ14l" width="250" height="175" alt="&quot;&quot;" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div>
+      
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item">  <a href="/content/writing-more-compact-bash-code" hreflang="en">Writing More Compact Bash Code</a>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by Mitch Frazier</div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field--item-group"><div data-history-node-id="1339880" class="row bs-1col node node--type-story node--view-mode-sidebar">
+  
+  <div class="col-sm-12 bs-region bs-region--main">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">  <a href="/content/developing-console-applications-bash"><img src="/sites/default/files/styles/wide_thumbnail/public/nodeimage/story/Gnu-bash-logo_1.png?itok=rSZuyeus" width="250" height="175" alt="Bash screenshot from Wikipedia, https://en.wikipedia.org/wiki/Bash_(Unix_shell)" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div>
+      
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item">  <a href="/content/developing-console-applications-bash" hreflang="en">Developing Console Applications with Bash</a>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by Andy Carlson</div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field--item-group"><div data-history-node-id="1339769" class="row bs-1col node node--type-story node--view-mode-sidebar">
+  
+  <div class="col-sm-12 bs-region bs-region--main">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">  <a href="/content/create-dynamic-wallpaper-bash-script"><img src="/sites/default/files/styles/wide_thumbnail/public/nodeimage/story/12270f1-edited.jpg?itok=2VFSxhu4" width="250" height="175" alt="screenshot" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div>
+      
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item">  <a href="/content/create-dynamic-wallpaper-bash-script" hreflang="en">Create Dynamic Wallpaper with a Bash Script</a>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by Patrick Wheelan</div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field--item-group"><div data-history-node-id="1340138" class="row bs-1col node node--type-story node--view-mode-sidebar">
+  
+  <div class="col-sm-12 bs-region bs-region--main">
+    
+            <div class="field field--name-field-node-image field--type-image field--label-hidden field--item">  <a href="/content/investigating-some-unexpected-bash-coproc-behavior"><img src="/sites/default/files/styles/wide_thumbnail/public/nodeimage/story/bash-148836_960_720_11.png?itok=fEraqjax" width="250" height="175" alt="&quot;&quot;" typeof="foaf:Image" class="img-responsive" />
+
+</a>
+</div>
+      
+            <div class="field field--name-node-title field--type-ds field--label-hidden field--item">  <a href="/content/investigating-some-unexpected-bash-coproc-behavior" hreflang="en">Investigating Some Unexpected Bash coproc Behavior</a>
+</div>
+      
+            <div class="field field--name-node-author field--type-ds field--label-hidden field--item">by Mitch Frazier</div>
+      
+  </div>
+</div>
+
+</div>
+              </div>
+      </div>
+
+            <div class="field field--name-dynamic-block-fieldnode-sponsors field--type-ds field--label-hidden field--item"><div class="views-element-container form-group"><div class="view view-latest-sponsor-block view-id-latest_sponsor_block view-display-id-block_1 js-view-dom-id-d7e7ae2d0cfbfe15bd366ac1e11d61c40d14f9034bb85a3d5c88592d794f39a5">
+  
+    
+      <div class="view-header">
+      <h2 class="block-title">Corporate Patron</h2>
+    </div>
+      
+      <div class="view-content">
+          <div class="views-row">
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://www.pulseway.com?rfid=linuxjournal"><img alt="Pulseway Logo" data-entity-type="file" data-entity-uuid="e4ce514f-1342-46c5-b1e1-1bc9c4698248" src="/sites/default/files/inline-images/PulsewayLogoFinal_Tagline_ForWhiteBg_Medium.png" /></a></p></div>
+      </div>
+
+    </div>
+  
+          </div>
+</div>
+</div>
+      
+  </div>
+  
+  
+</article>
+
+
+
+  </div>
+
+              </section>
+
+                </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <section class="views-element-container block block-views block-views-blocknewsletter-promo-block-block-1 clearfix" id="block-views-block-newsletter-promo-block-block-1">
+  
+    
+
+      <div class="form-group"><div class="view view-newsletter-promo-block view-id-newsletter_promo_block view-display-id-block_1 js-view-dom-id-0e1a71f20f56db34b54a4a5ab1a205783f2ee82b760c6c6c8ccc5fdb06490367">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="newsletter-bottom">
+<div class="col-md-9 col-sm-12 signup-form">
+<h3>Linux Journal Week in Review</h3>
+<p>Sign up to get all the good stuff delivered to your inbox every week.</p>
+
+
+<form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255CDBC34DDF3E170B13E2BAC2D68C42BF424F853383C84F5BAE38EAB4CFA5C73907CAC074FF8192503AF80F3699F7FE5CE1">	
+<div class="flexform">
+    <!--<label for="fieldEmail">Email</label>
+    <br />-->
+    <input id="fieldEmail" name="cm-gjjtdh-gjjtdh" type="email" class="js-cm-email-input" placeholder="Enter your email. Get the newsletter." 
+    required />
+
+    <button class="js-cm-submit-button" type="submit">Sign Up</button>
+</div>
+<div>
+    <input id="cm-privacy-consent" name="cm-privacy-consent" required type="checkbox"
+    />
+    <label for="cm-privacy-consent">I give my consent to be emailed</label>
+    <input id="cm-privacy-consent-hidden"
+    name="cm-privacy-consent-hidden" type="hidden" value="true" />
+</div>
+
+</form>
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+</div>
+<div class="col-md-3 col-sm-12 subs-callout">
+<img src="/sites/default/files/styles/large/public/2019-01/LJ294-Jan2019-Cover_0.jpg" width="100px" />
+
+<h3>The Value of Open Source Journalism</h3>
+<p>
+Subscribe and support our coverage for technology's biggest thinkers – with up to 52% savings.
+</p>
+<strong><a href="https://www.linuxjournal.com/subscribe">Subscribe <i class="fa fa-angle-double-right" aria-hidden="true"></i></a> 
+</strong>
+
+
+
+</div>
+</div>
+
+</div>
+      </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+
+  </div>
+
+      		<div class="footer-blocks col-sm-12">
+                <div class="col-md-6 col-sm-12 footer-left">
+                        <div class="region region-footer-left">
+    <section id="block-connectwithusfooter" class="block block-block-content block-block-content5e722bd4-5e08-454b-8507-956089bfa661 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="footer-heading">Connect With Us <span class="social-media"><a href="https://youtube.com/linuxjournalonline"  alt="Linux Journal on YouTube"><i class="fa fa-youtube fa-2x"></i></a><a href="https://www.facebook.com/linuxjournal/" alt="Linux Journal on Facebook"><i class="fa fa-facebook-f fa-2x"></i><a href="https://twitter.com/linuxjournal" alt="Linux Journal on Twitter"><i class="fa fa-twitter fa-2x"></i></a></span></div>
+
+<p>Linux Journal, representing 25+ years of publication, is the original magazine of the global Open Source community.</p></div>
+      
+  </section>
+
+<section id="block-linuxjournal-block-9" class="block block-block-content block-block-content8669793b-e217-4426-a79e-eb3c21ede127 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div id="copyright">© 2020 Linux Journal, LLC. All rights reserved.</div>
+</div>
+      
+  </section>
+
+<nav role="navigation" aria-labelledby="block-footersubmenu-menu" id="block-footersubmenu">
+            
+  <h2 class="visually-hidden" id="block-footersubmenu-menu">Footer Submenu</h2>
+  
+
+        
+      <ul class="menu menu--footer-submenu nav">
+                        <li>
+        <a href="/content/privacy-statement" data-drupal-link-system-path="node/1000321">Privacy Policy</a>
+                  </li>
+                        <li>
+        <a href="/terms-service" data-drupal-link-system-path="node/1339804">Terms of Service</a>
+                  </li>
+                        <li>
+        <a href="/sponsors" data-drupal-link-system-path="node/1339742">Advertise</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                  </div>
+        
+        		<div class="col-md-4 col-sm-8 footer-middle">
+                        <div class="region region-footer-middle">
+    <nav role="navigation" aria-labelledby="block-footermenucolumn1-menu" id="block-footermenucolumn1">
+            
+  <h2 class="visually-hidden" id="block-footermenucolumn1-menu">Footer Menu Column 1</h2>
+  
+
+        
+      <ul class="menu menu--footer-menu-column-1 nav">
+                        <li>
+        <a href="/subscribe">Subscribe</a>
+                  </li>
+                        <li>
+        <a href="/renew">Renew</a>
+                  </li>
+                        <li>
+        <a href="/digital">Backissues</a>
+                  </li>
+                        <li>
+        <a href="/subs/customer_service" data-drupal-link-system-path="node/1009253">Customer Service</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footermenucolumn2-menu" id="block-footermenucolumn2">
+            
+  <h2 class="visually-hidden" id="block-footermenucolumn2-menu">Footer Menu Column 2</h2>
+  
+
+        
+      <ul class="menu menu--footer-menu-column-2 nav">
+                        <li>
+        <a href="/content/masthead" data-drupal-link-system-path="node/1007727">Masthead</a>
+                  </li>
+                        <li>
+        <a href="/content/linux-journal-20-faq" data-drupal-link-system-path="node/1339633">FAQ</a>
+                  </li>
+                        <li>
+        <a href="/author" data-drupal-link-system-path="node/1009249">Authors</a>
+                  </li>
+                        <li>
+        <a href="/contact" data-drupal-link-system-path="contact">Letters to Editor</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footermenucolumn3-menu" id="block-footermenucolumn3">
+            
+  <h2 class="visually-hidden" id="block-footermenucolumn3-menu">Footer Menu Column 3</h2>
+  
+
+        
+      <ul class="menu menu--footer-menu-column-3 nav">
+                        <li>
+        <a href="/rss_feeds" data-drupal-link-system-path="node/1000457">RSS Feeds</a>
+                  </li>
+                        <li>
+        <a href="/enewsletters" data-drupal-link-system-path="node/1007818">Newsletters</a>
+                  </li>
+                        <li>
+        <a href="http://www.linuxjournalstore.com/">Merchandise</a>
+                  </li>
+                        <li>
+        <a href="/aboutus" data-drupal-link-system-path="node/1000267">Contact Us</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                  </div>
+        
+                </div>
+    </footer>
+  
+</div> 
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1340133","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","cookieconsent":{"message":"LinuxJournal.com uses cookies. We think online privacy and consent are broken, including the need for these notices. Join the fight: E-mail Doc@linuxjournal.com. Meanwhile, click to accept, or accept by continuing to use the site. See our privacy policy for ","dismiss":"I Accept","learnMore":"more info.","link":"\/content\/privacy-statement","path":"\/","expiry":"365","target":"_self","domain":".www.linuxjournal.com","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n    \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003EI Accept\u003C\/a\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003ELinuxJournal.com uses cookies. We think online privacy and consent are broken, including the need for these notices. Join the fight: E-mail Doc@linuxjournal.com. Meanwhile, click to accept, or accept by continuing to use the site. See our privacy policy for  \u003Ca data-cc-if=\u0022options.link\u0022 target=\u0022_self\u0022 class=\u0022cc_more_info\u0022 href=\u0022\/content\/privacy-statement\u0022\u003Emore info.\u003C\/a\u003E\u003C\/p\u003E\n    \u003Ca class=\u0022cc_logo\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/silktide.com\/cookieconsent\u0022\u003ECookie Consent plugin for the EU cookie law\u003C\/a\u003E\n\u003C\/div\u003E\n","container":null,"theme":false},"matomo":{"trackMailto":true},"bootstrap":{"forms_has_error_value_toggle":1,"popover_enabled":1,"popover_animation":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1},"linuxjournal":{"disqus":{"origin":"https:\/\/www.linuxjournal.com","prettyUrl":"\/content\/understanding-bash-elements-programming","fullUrl":"https:\/\/www.linuxjournal.com\/content\/understanding-bash-elements-programming","embedUrl":"https:\/\/linuxjournal.disqus.com\/embed.js","shortname":"linuxjournal"}},"statistics":{"data":{"nid":"1340133"},"url":"\/core\/modules\/statistics\/statistics.php"},"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"c6d560e532040877d2aa806f24e67b7bac958bcc1fbe108029a267aa475a1917"}}</script>
+<script src="/sites/default/files/js/js_JSIEX2ISiDl8EBorlF8lOPAhPGwYqDGPcWVuXT8VFyY.js"></script>
+<script src="https://linuxjournal.disqus.com/count.js" async defer id="dsq-count-scr"></script>
+<script src="/sites/default/files/js/js_HFF1eCrsUkPNjSrCAtAiIL3DGOQxXjrSdN9fYi_9e7c.js"></script>
+
+    <!-- START EMBED -->
+<script src="https://api.b2c.com/api/init-448i7exgpyqpr9c144q.js" data-cfasync="false" async></script><noscript><img src="https://api.b2c.com/api/noscript-448i7exgpyqpr9c144q.gif"></noscript>
+<!-- END EMBED -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f3ebf7bfbf","applicationID":"121000636","transactionName":"ZgYBZBcFV0FZABcNXl9MIlMRDVZcFxMCA1RuAAJTDQE=","queueTime":0,"applicationTime":31,"atts":"SkECEl8fRE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

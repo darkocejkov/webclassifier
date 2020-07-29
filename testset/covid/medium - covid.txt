@@ -1,0 +1,526 @@
+   #[1]Medium [2]alternate
+
+      [1] https://elemental.medium.com/osd.xml
+      [2] android-app://com.medium.reader/https/medium.com/p/252f32aa9817
+
+   [3]Sign in
+   Elemental
+  https://medium.com/m/signin?operation=login&redirect=https://elemental.medium.com/what-we-know-and-dont-about-catching-covid-19-outdoors-252f32aa9817&source=--------------------------nav_reg-
+
+     * [4]BODY
+      https://elemental.medium.com/body/home?source=post_page-----252f32aa9817----------------------
+
+     * [5]BRAIN
+      https://elemental.medium.com/brain/home?source=post_page-----252f32aa9817----------------------
+
+     * [6]FOOD
+      https://elemental.medium.com/food/home?source=post_page-----252f32aa9817----------------------
+
+     * [7]LIFE
+      https://elemental.medium.com/life/home?source=post_page-----252f32aa9817----------------------
+
+     * [8]TRENDS
+      https://elemental.medium.com/trends/home?source=post_page-----252f32aa9817----------------------
+
+     * [9]Coronavirus
+
+      [9] https://elemental.medium.com/coronavirus/home?source=post_page-----252f32aa9817----------------------
+
+Responses
+
+   (BUTTON)
+
+   This article has been made free for everyone, thanks to
+   [10]Medium Members. For more information on the novel
+   coronavirus and Covid-19, visit [11]cdc.gov.
+
+     [10] https://medium.com/membership?source=post_page-----252f32aa9817----------------------
+     [11] https://www.cdc.gov/coronavirus/2019-nCoV?source=post_page-----252f32aa9817----------------------
+
+What We Know (and Don’t) About Catching Covid-19 Outdoors
+
+Everyone says outdoors is safer. Here’s why.
+
+   Robert Roy Britt
+   [12]Robert Roy Britt
+   (BUTTON) Follow
+   [13]Jul 13 · 9 min read
+   (BUTTON)
+   (BUTTON)
+   (BUTTON)
+   Image for post
+   Image for post Image for post
+   People enjoy an afternoon at Brooklyn’s Brighton Beach on May
+   24, 2020 in New York City. Photo: Spencer Platt/Getty Images
+
+     [12] https://elemental.medium.com/@robertroybritt?source=post_page-----252f32aa9817----------------------
+     [13] https://elemental.medium.com/what-we-know-and-dont-about-catching-covid-19-outdoors-252f32aa9817?source=post_page-----252f32aa9817----------------------
+
+   While cases of Covid-19 surge to new highs nationwide,
+   responsible outdoor activities are being encouraged. From
+   California to New York, states and cities are shutting down
+   indoor dining (or keeping it closed) while allowing outdoor
+   service and keeping beaches and parks open, too. Governors are
+   coming around to the view that scientists have been espousing
+   for months: The coronavirus transmits more easily indoors than
+   outdoors.
+
+   “The risk is definitely lower outdoors,” says Kimberly Prather,
+   PhD, an atmospheric chemist at the Scripps Institution of
+   Oceanography. “The primary reason is there’s just such a large
+   volume of clean air.”
+
+   Imagine a tablespoon of saltwater dispersing in a bucket of
+   fresh water versus in a small glass of water, she suggests.
+   Sunlight has also been [14]shown to kill the coronavirus, she
+   says, although the effect takes a few minutes.
+
+     [14] https://academic.oup.com/jid/article/doi/10.1093/infdis/jiaa334/5856149?fbclid=IwAR3jqSUPN8mFgSNcG8hmoCgTjLB8rf2q_eqgKSzuoisRjN40XlkKoPb9NdE
+
+   However, outdoors is not totally safe, and images of crowded
+   beaches and maskless pool parties over the Fourth of July
+   weekend have health experts worried that [15]already
+   skyrocketing infection rates will [16]just get worse. After
+   all, an infected person’s coronavirus-laden respiratory
+   exhalations don’t always obey the six-foot rule.
+
+     [15] https://elemental.medium.com/5-stages-of-the-pandemic-and-why-covid-19-will-get-worse-e8e6d82f5772
+     [16] https://www.chicagotribune.com/coronavirus/ct-nw-covid-19-world-updates-20200706-rvo5gdnfnvbhxdigd2hk7pgcya-story.html
+
+   “I’m wearing a surgical mask at all times and I’m farther away
+   than six feet. I’m at least 10, indoors or outdoors,” Prather
+   tells Elemental. “Distance is your friend. Always.” Prather
+   admits she’s more cautious than many people, both because of
+   what she knows and what remains unknown.
+
+     “The risk is definitely lower outdoors. The primary reason
+     is there’s just such a large volume of clean air.”
+
+How the coronavirus gets airborne
+
+   The coronavirus that causes Covid-19 can be passed along by
+   handshakes or after landing on surfaces, and [17]maybe even
+   through human feces. But the primary means of spread is thought
+   to be through the air, especially in poorly ventilated indoor
+   spaces, and especially within six feet.
+
+     [17] https://elemental.medium.com/toilet-flushing-could-spread-covid-19-in-the-air-via-poop-droplets-23ff89e65f84
+
+   Here’s what happens: When we breathe, talk, sing, cough, or
+   sneeze, we spew droplets of various sizes, from the visible to
+   the microscopic. Scientists [18]recently measured droplets from
+   a cough flying 16 feet indoors and sneeze droplets traveling 26
+   feet. Each droplet contains moist mucus and saliva, plus salts
+   and proteins, cells from the respiratory system, and other
+   bodily stuff. In a person infected with Covid-19, the droplets
+   can also contain super tiny coronavirus particles. The
+   measurements are in microns, or millionths of a meter.
+   Image for post
+   Image for post Image for post
+
+     [18] https://edgerton.mit.edu/how_disease_epidemics_move_through_air
+
+   Upon hitting the air, the droplets begin evaporating
+   immediately. Larger, heavier ones tend to fall quickly. Others
+   lose most or all of their moisture and shrink down to as small
+   as five microns or less, a mere nucleus of the former droplet.
+   Somewhere around this rough threshold, the droplets become
+   aerosols, able to stay suspended in the air for minutes or
+   hours, says Prather, who explained it in a recent
+   [19]perspective article in the journal Science.
+
+     [19] https://science.sciencemag.org/content/368/6498/1422
+
+   Indoors, virus-infected aerosols can spread throughout an
+   entire room and effectively create an invisible, infectious
+   cloud.
+
+   How long the coronavirus remains infectious in aerosols is an
+   open question, however. A recent [20]study in the New England
+   Journal of Medicine suggests the virus can remain viable in
+   aerosols that can drift about for many minutes or hours. In an
+   enclosed space, they’ll be constantly replenished as long as
+   people keep breathing. If individuals are talking loudly,
+   shouting, or [21]singing, even more viral particles are spewed.
+
+     [20] https://www.nejm.org/doi/full/10.1056/NEJMc2004973
+     [21] https://elemental.medium.com/why-singers-might-be-covid-19-super-spreaders-57607ed71b9b
+
+     “It’s not about one inhalation. It’s about sitting there and
+     breathing it over time.”
+
+   “In a poorly ventilated indoor environment where you need to
+   shout to be heard, the six-foot separation rule will not be
+   effective,” says Dr. Donald Milton, an environmental health
+   professor at the University of Maryland and an expert on
+   airborne infections.
+
+Why outside is less risky
+
+   Whether you come down with Covid-19 depends on two primary
+   factors: dosage (how many viral particles you inhale) and
+   duration (for how long you inhale them). The thresholds are not
+   known. The U.S. Centers for Disease Control and Prevention says
+   a person should be tested or isolated if they’ve been exposed
+   to someone infectious, closer than six feet for at least 15
+   minutes, regardless whether either was wearing a mask or not.
+
+   “It’s not about one inhalation,” Prather explains. “It’s about
+   sitting there and breathing it over time.”
+
+   Aerosols will follow circulation patterns — they drift with the
+   wind, in sort of a plume. Prather uses cigarette smoke as an
+   analogy to understand the plumes you might encounter: “If a
+   person was smoking and talking to me, where would I sit, to not
+   breathe their smoke?”
+
+   A recent [22]computer modeling effort illustrates what can
+   happen when someone coughs outside. Taking into account
+   evaporation and air movement, it showed that a slight breeze of
+   2.5 mph carried a plume of droplets 18 feet in five seconds. A
+   stronger wind keeps the droplets higher off the ground, but
+   they’ll disperse more across the same distance, the scientists
+   concluded in the journal Physics of Fluids.
+   Image for post
+   Image for post Image for post
+   Saliva droplets can travel large distances, depending on
+   environmental conditions such as wind speed, temperature,
+   pressure, and humidity. Wind shown blowing left to right at
+   speeds of 2.5 mph (4 kph) in the top image and 9.3 mph (15 kph)
+   at the bottom can transport saliva droplets up to 18 feet (6
+   meters). Image: Talib Dbouk and Dimitris Drikakis
+
+     [22] https://aip.scitation.org/doi/10.1063/5.0011960
+
+   The point is: Whether at an outdoor restaurant or the beach or
+   strolling the boardwalk, proximity to others and environmental
+   conditions matter. Even with a mask and several feet of
+   separation, you wouldn’t want to be just downwind from a group
+   of people who are singing or shouting. “If you’re walking
+   behind a group of people who are talking, you have to think
+   about that, too,” Prather says.
+
+   There are other factors that may further lower risk outside.
+   Simulated summer sunlight kills 90% of the coronavirus
+   particles in aerosols within six minutes, according to a June
+   11 [23]study in the Journal of Infectious Diseases.
+
+     [23] https://academic.oup.com/jid/article/doi/10.1093/infdis/jiaa334/5856149?fbclid=IwAR3jqSUPN8mFgSNcG8hmoCgTjLB8rf2q_eqgKSzuoisRjN40XlkKoPb9NdE
+
+   Heat and high humidity are bad news for many viruses, which is
+   one reason the flu subsides in summer. But it’s not yet clear
+   whether or how quickly they disable the coronavirus. One
+   indication: Unlike the flu, Covid-19 has been raging throughout
+   southern states despite the heat of summer. The simulated
+   sunlight study found no evidence that humidity alone kills the
+   virus.
+
+Being outside is just one layer of protection
+
+   No single protective measure is foolproof, but in a layered
+   approach, they add up. Prather explains one aspect of this with
+   some funky math: If two people who are near each other are both
+   wearing masks that are, say, 50% effective, the combined
+   efficiency between them is 75%.
+
+   If they back up, that helps. If they’re outside, that’s even
+   better.
+
+   “There’s a reason why we have stacked up so many imperfect
+   measures” to reduce risk, says Dr. Neha Nanda, an expert on
+   emerging infectious diseases at Keck Medicine of the University
+   of Southern California. “Each lever has an additive benefit and
+   they complement each other, and all are imperfect. So at a
+   given time, we want to apply all if possible to reduce the
+   risk.”
+
+   One hint that outdoor gatherings can be relatively safe:
+   Protests around the country, which started in late May and most
+   often involved a lot of mask-wearing, have [24]not yet produced
+   any known, significant outbreaks, based on early data from
+   several cities. Experts worry they still might, but even in New
+   York City, [25]no significant protest-related surge has yet
+   been identified as of July 1.
+
+     [24] https://elemental.medium.com/masks-help-prevent-covid-19-spread-at-protests-early-data-suggest-9669fde45425
+     [25] https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html
+
+   Because so many [26]younger people are now getting infected,
+   often passing the disease along without knowing it, because
+   they may not have symptoms, prevention requires constant
+   vigilance from everyone in a community, the experts say.
+
+     [26] https://elemental.medium.com/surge-in-younger-covid-19-infections-could-worsen-the-pandemic-4622aa43126
+
+     Simulated summer sunlight kills 90% of the coronavirus
+     particles in aerosols within six minutes, according to a
+     June 11 study in the Journal of Infectious Diseases.
+
+Clearing up confusing communication
+
+   The messaging on all this has been confusing, scientists admit,
+   in part because it took time to figure out the behavior of a
+   novel virus that emerged just six months ago. Every virus has
+   different means and levels of infectiousness and durability.
+   Additional confusion has been created by suggestions that
+   there’s a firm cutoff between droplets and aerosols. Rather,
+   experts agree, [27]there’s a continuum of sizes, therefore a
+   range of distances across which the virus might be carried.
+
+     [27] https://haicontroversies.blogspot.com/2020/07/a-tiresome-spat.html
+
+   As one example of the evolving advice, even the World Health
+   Organization has been reluctant to acknowledge what the vast
+   majority of experts now agree on, based on a [28]letter sent to
+   the WHO this week by more than 200 scientists: The coronavirus
+   can spread via airborne, aerosol-sized respiratory particles
+   well beyond six feet. The scientists admit direct evidence for
+   this is lacking — you can’t gather people, spray the virus all
+   around, and see what happens.
+
+     [28] https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa939/5867798
+
+   “Is aerosol transmission possible? Well it’s not proven, but
+   absence of evidence is not evidence of absence,” says William
+   Hanage, PhD, an associate professor of epidemiology at Harvard
+   T.H. Chan School of Public Health. “It can be possible on some
+   occasions, and yet the majority of transmission can be
+   short-range and droplet — which the majority of studies suggest
+   it is.”
+
+   Among the indirect evidence for aerosol transmission: Several
+   “[29]superspreader” events, in which one person has infected
+   dozens or hundreds of others, at a [30]choir practice, at
+   [31]nightclubs, and on [32]cruise ships. Adding to the
+   consensus conclusion is the overall speed and pervasiveness of
+   the coronavirus spread.
+
+     [29] https://elemental.medium.com/the-science-of-superspreaders-2ceed2b68834
+     [30] https://www.cdc.gov/mmwr/volumes/69/wr/mm6919e6.htm
+     [31] http://www.koreaherald.com/view.php?ud=20200512000586
+     [32] https://medium.com/luminate/how-dangerous-are-covid-19-silent-spreaders-fcd48a9d881b
+
+   The WHO has since [33]formally acknowledged that aerosol
+   transmission, particularly among those who are indoors for long
+   periods of time, “cannot be ruled out.”
+
+     [33] https://www.who.int/news-room/q-a-detail/q-a-how-is-covid-19-transmitted
+
+   Meanwhile, some scientists are concerned that calling the
+   coronavirus “airborne” will instill unnecessary fear,
+   especially given how quickly it disperses outside. Measles is
+   decidedly and very dangerously airborne, for example, but other
+   viruses don’t survive at all outside the body.
+
+   “When we talk about aerosols, especially with Covid-19, it’s
+   really about closer interaction within an enclosed space,” says
+   Saskia Popescu, PhD, an epidemiologist and adjunct professor of
+   public health at the University of Arizona. “We know that
+   primarily, transmission is through droplet transmission,”
+   Popescu tells Elemental. “Aerosols can be generated, but we
+   shouldn’t take this as ‘it’s airborne!’ — rather a layer of
+   transmission to consider.”
+
+     Even with a mask and several feet of separation, you
+     wouldn’t want to be just downwind from a group of people who
+     are singing or shouting.
+
+What experts are willing to do outdoors
+
+   After three months of online school at home, Jennifer Horney’s
+   kids needed to get out. Horney, PhD, an epidemiologist and
+   professor at the University of Delaware, understands how
+   Covid-19 is transmitted. But she also understands that we can’t
+   all stay cooped up forever. She emphasizes that the best way to
+   combat the physical and mental downsides of isolation “is to do
+   some outdoor activities that are relatively safe compared to
+   other things,” including hiking, biking, or swimming, so long
+   as physical distancing can be maintained.
+
+   So her kids are now spending time at a local community pool,
+   where they swim in lanes only with other family members, and
+   Hula-Hoops mark off each child’s space on the pool deck.
+
+   Horney knows that chlorine and bromine, in a properly
+   maintained pool, [34]inactive the coronavirus. Two other keys
+   to Horney’s decision to give her kids a break: In Delaware,
+   mask-wearing is widely accepted, and the level of community
+   transmission has been low compared to other states.
+
+     [34] https://www.cdc.gov/coronavirus/2019-ncov/community/parks-rec/park-administrators.html
+
+   “What I’m willing to do both personally and to advise people
+   professionally is really contingent on what [the metrics] look
+   like in our community,” she says in a phone interview. “It all
+   goes back to your local situation.”
+
+   She would not, for example, take her family to a crowded beach
+   in California or Florida, where new cases are surging, and
+   where she’d have less control over the behavior of others.
+
+   Marc Lipsitch, PhD, a professor of epidemiology and director of
+   the Center for Communicable Disease Dynamics at Harvard T.H.
+   Chan School of Public Health, knows as much as anyone about
+   this pandemic. I asked him if, given all he understands, he’d
+   go to an outdoor restaurant during the pandemic.
+
+   “I have, actually, once,” he said. It was with family and one
+   friend, who he describes as almost family. “I don’t think
+   that’s a riskless activity,” Lipsitch says. “But the wait staff
+   was masked, and we were masked when we weren’t eating.”
+   Importantly, he notes, this was in a part of Massachusetts
+   where he knew there were very few cases.
+
+   “That seems completely reasonable to me,” he says. “If I were
+   in Houston, Texas, I might not.”
+   [35]
+
+     [35] https://elemental.medium.com/?source=post_sidebar--------------------------post_sidebar-
+
+Elemental
+
+Your life, sourced by science.
+
+   (BUTTON) Follow
+
+(BUTTON) 3.2K
+
+   (BUTTON)
+
+22
+
+     * [36]Covid 19
+      https://elemental.medium.com/tagged/covid-19
+
+     * [37]Coronavirus
+      https://elemental.medium.com/tagged/coronavirus
+
+     * [38]Health
+      https://elemental.medium.com/tagged/health
+
+     * [39]Public Health
+      https://elemental.medium.com/tagged/public-health
+
+     * [40]Outdoors
+
+     [40] https://elemental.medium.com/tagged/outdoors
+
+(BUTTON) 3.2K claps
+
+(BUTTON) 3.2K claps
+
+   (BUTTON)
+
+22 responses
+
+   (BUTTON)
+   (BUTTON)
+   (BUTTON)
+   Robert Roy Britt
+
+   Written by
+
+[41]Robert Roy Britt
+
+     [41] https://elemental.medium.com/@robertroybritt?source=follow_footer--------------------------follow_footer-
+
+   (BUTTON) Follow
+
+Explainer of things, science & health journalist, author, former
+editor-in-chief of LiveScience & Space dot com, seeker of a more just
+and equitable world.
+
+   (BUTTON) Follow
+   [42]Elemental
+
+     [42] https://elemental.medium.com/?source=follow_footer--------------------------follow_footer-
+
+[43]Elemental
+
+     [43] https://elemental.medium.com/?source=follow_footer--------------------------follow_footer-
+
+   (BUTTON) Follow
+
+Your life, sourced by science. A new Medium publication about health
+and wellness.
+
+   (BUTTON) Follow
+   Robert Roy Britt
+
+   Written by
+
+[44]Robert Roy Britt
+
+     [44] https://elemental.medium.com/@robertroybritt?source=follow_footer--------------------------follow_footer-
+
+   (BUTTON) Follow
+
+Explainer of things, science & health journalist, author, former
+editor-in-chief of LiveScience & Space dot com, seeker of a more just
+and equitable world.
+
+   [45]Elemental
+
+     [45] https://elemental.medium.com/?source=follow_footer--------------------------follow_footer-
+
+[46]Elemental
+
+     [46] https://elemental.medium.com/?source=follow_footer--------------------------follow_footer-
+
+   (BUTTON) Follow
+
+Your life, sourced by science. A new Medium publication about health
+and wellness.
+
+   [47]
+
+     [47] https://medium.com/about?autoplay=1&source=post_page-----252f32aa9817----------------------
+
+Discover Medium
+
+   Welcome to a place where words matter. On Medium, smart voices
+   and original ideas take center stage - with no ads in sight.
+   [48]Watch
+   [49]
+
+     [48] https://medium.com/about?autoplay=1&source=post_page-----252f32aa9817----------------------
+     [49] https://medium.com/topics?source=post_page-----252f32aa9817----------------------
+
+Make Medium yours
+
+   Follow all the topics you care about, and we’ll deliver the
+   best stories for you to your homepage and inbox. [50]Explore
+   [51]
+
+     [50] https://medium.com/topics?source=post_page-----252f32aa9817----------------------
+     [51] https://medium.com/membership?source=post_page-----252f32aa9817----------------------
+
+Become a member
+
+   Get unlimited access to the best stories on Medium — and
+   support writers while you’re at it. Just $5/month. [52]Upgrade
+
+     [52] https://medium.com/membership?source=post_page-----252f32aa9817----------------------
+
+[53]About
+
+     [53] https://medium.com/about?autoplay=1&source=post_page-----252f32aa9817----------------------
+
+[54]Help
+
+     [54] https://help.medium.com/hc/en-us?source=post_page-----252f32aa9817----------------------
+
+[55]Legal
+
+     [55] https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=post_page-----252f32aa9817----------------------
+
+Get the Medium app
+
+   [56]A button that says 'Download on the App Store', and if
+   clicked it will lead you to the iOS App store
+   [57]A button that says 'Get it on, Google Play', and if clicked
+   it will lead you to the Google Play store
+
+     [56] https://itunes.apple.com/app/medium-everyones-stories/id828256236?pt=698524&mt=8&ct=post_page&source=post_page-----252f32aa9817----------------------
+     [57] https://play.google.com/store/apps/details?id=com.medium.reader&source=post_page-----252f32aa9817----------------------
+

@@ -1,0 +1,1509 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+  
+
+<meta name="citation_title" content="Introduction to the Bash Command Line" />
+
+<meta name="citation_author" content="Ian Milligan" />
+
+<meta name="citation_author" content="James Baker" />
+
+<meta name="citation_publication_date" content="2014-09-20" />
+<meta name="citation_journal_title" content="Programming Historian" />
+<meta name="citation_public_url" content="https://programminghistorian.org/en/lessons/intro-to-bash" />
+
+  
+
+  
+  <!--https://dev.twitter.com/cards/-->
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ProgHist" />
+<meta name="twitter:title" content="Introduction to the Bash Command Line" />
+
+
+    <meta name="twitter:description" content="This lesson will teach you how to enter commands using a command-line interface, rather than through a graphical interface. Command-line interfaces have advantages for computer users who need mo..." />
+
+
+<meta name="twitter:image" content="https://programminghistorian.org/gallery/intro-to-bash.png" />
+
+  
+
+  <link rel="shortcut icon" href="/images/favicons/en_favicon.ico" type="image/x-icon">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+  <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+
+  <title>Introduction to the Bash Command Line | Programming Historian</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round|Open+Sans|Quattrocento|Roboto|Roboto+Condensed" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="all">
+  <link rel="stylesheet" href="/css/github.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/ext_links.js"></script>
+  <script type="text/javascript" src="/js/header_links.js"></script>
+
+  
+  
+
+  <script src="/js/bootstrap-4-navbar.js"></script>
+
+
+</head>
+
+
+  <body>
+    <main>
+      <div class="hide-screen">
+        
+        
+
+<div class="alert alert-success sitewide-alert text-center">
+  <h2><a href="https://www.patreon.com/theprogramminghistorian" class="alert-link">Donate to <i>The Programming Historian</i> today!</a></h2>
+
+</div>
+
+        
+        
+
+
+
+
+
+
+
+
+<nav class="hide-screen navbar navbar-toggleable-sm navbar-dark bg-dark"
+  style="background-color: #444444" role="navigation">
+  <!--<div class="container">-->
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/">The Programming
+    Historian</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end" role="menubar">
+      <li class="nav-item dropdown mobile-drop" role="menu">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" role="button">
+          About
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/en/about"
+            role="menuitem">About PH</a>
+          <a class="dropdown-item" href="/en/project-team"
+            role="menuitem">Project Team</a>
+          <a class="dropdown-item" href="/en/research"
+            role="menuitem">Research</a>
+          <a class="dropdown-item" href="/en/privacy-policy"
+            role="menuitem">Privacy Policy</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown mobile-drop" role="menu">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" role="button">
+          Contribute
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item"
+            href="/en/contribute"
+            role="menuitem">Overview</a>
+          <a class="dropdown-item"
+            href="/en/feedback"
+            role="menuitem">Feedback</a>
+          <a class="dropdown-item" href="/en/reviewer-guidelines"
+            role="menuitem">Reviewer Guidelines</a>
+          <a class="dropdown-item" href="/en/author-guidelines"
+            role="menuitem">Author Guidelines</a>
+          
+          
+          <a class="dropdown-item"
+            href="/en/translator-guidelines"
+            role="menuitem">Translator Guidelines</a>
+          
+          <a class="dropdown-item" href="/en/editor-guidelines"
+            role="menuitem">Editor Guidelines</a>
+          <a class="dropdown-item" href="/en/lesson-requests"
+            role="menuitem">Lesson Requests</a>
+          <a class="dropdown-item" href="/en/support-us"
+            role="menuitem">Support Us</a>
+          <a class="dropdown-item"
+            href="https://github.com/programminghistorian/jekyll/wiki/Making-Technical-Contributions"
+            role="menuitem">Technical Contributions</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="menuitem">
+        <a class="nav-link" href="/en/lessons"
+          role="menuitem">Lessons</a>
+      </li>
+
+      <li class="nav-item" role="menuitem">
+        <a class="nav-link" href="/blog"
+          role="menuitem">Blog</a>
+      </li>
+
+      
+
+      
+
+      <li class="nav-item">
+        <div class="btn-group" role="group" aria-label="Language selector">
+          
+
+          
+          <a class="btn btn-secondary nav-link active disabled" role="button"
+            aria-pressed="true">en</a>
+          
+          
+
+          
+
+          
+
+          
+          <a class="btn btn-secondary nav-link" role="button"
+            href="/es/lecciones/introduccion-a-bash">es</a>
+          
+          
+          
+
+          
+
+          
+
+          
+          <a class="btn btn-secondary nav-link" role="button"
+            href="/fr">fr</a>
+          
+          
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--</div>-->
+</nav>
+
+<nav class="hide-print print-header navbar-brand">The Programming Historian </nav>
+
+      </div>
+      <div class="hide-print print-header">
+        <h1>The Programming Historian</h1>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+
+  <div class="container-fluid">
+
+    <div class="container expanded">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="header-image rounded">
+            <img src="/gallery/intro-to-bash.png" alt="Soldiers in antique armor with spears">
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="header-title">
+            <h1><a href="/en/lessons/intro-to-bash">Introduction to the Bash Command Line</a></h1>
+          </div>
+
+          <div class="header-author">
+            <h2>
+
+
+
+Ian Milligan and James Baker <a href="https://orcid.org/0000-0002-2682-6922"><img src="/images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a> </h2>
+          </div>
+
+          <div class="header-abstract">
+            <p>This lesson will teach you how to enter commands using a command-line interface, rather than through a graphical interface. Command-line interfaces have advantages for computer users who need more precision in their work, such as digital historians. They allow for more detail when running some programs, as you can add modifiers to specify exactly how you want your program to run. Furthermore, they can be easily automated through scripts, which are essentially recipes of text-based commands.</p>
+
+          </div>
+
+          <div class="container expanded">
+            <div class="row d-flex justify-content-left">
+              
+              <div class="peer-review mr-5">
+                <p>
+                  
+                    <i class="fas fa-user-check"></i> Peer-reviewed
+                    
+                </p>
+              </div>
+              
+              <div class="open-license mr-5">
+                <p><a href="https://creativecommons.org/licenses/by/4.0/deed.en"><i class="fas fa-lock-open"></i> CC-BY
+                    4.0</a></p>
+              </div>
+              <div class="donate mr-5">
+                <p><a
+                    href="https://programminghistorian.org/en/support-us#donate-to-us"><i
+                      class="fas fa-credit-card"></i> Support PH</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid header-helpers">
+    <div class="container expanded">
+      
+      
+      <div class="col-6 p-0 m-0">
+        
+          <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between">
+            <div>
+              <h3>edited by</h3>
+              <ul>
+                
+                
+                <li>Adam Crymble</li>
+                
+              </ul>
+            </div>
+
+            <div>
+              <h3>reviewed by</h3>
+              <ul>
+                
+                
+                <li>M. H. Beals
+                </li>
+                
+                
+                <li>Allison Hegel
+                </li>
+                
+                
+                <li>Charlotte Tupman
+                </li>
+                
+              </ul>
+            </div>
+
+            
+
+            
+
+            
+          </div>
+        </div>
+      </div> <!-- end row -->
+    </div>
+
+    <div class="container-fluid header-bottom">
+      <div class="container expanded">
+        <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between">
+          <div class="metarow">
+            <h4>published</h4> 2014-09-20
+          </div>
+          
+          
+          <div class="metarow">
+            <h4>modified</h4> <span
+              id="modified-date">2014-09-20</span>
+          </div>
+          
+          <div class="metarow">
+            <h4>difficulty</h4> 
+
+Low
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+<div class="container">
+
+  
+  
+<div class="alert alert-success hide-screen"><h2 id="donate-today">Donate today!</h2>
+
+<p>Great Open Access tutorials cost money to produce. Join the growing number of people <a href="https://www.patreon.com/theprogramminghistorian">supporting <em>The Programming Historian</em></a> so we can continue to share knowledge free of charge.</p>
+</div>
+
+  
+
+  
+
+  <div class="alert alert-warning">
+    <!-- Banner pointing to the original and other translations of this lesson when they exist -->
+    Available in:
+
+    <a href="/en/lessons/intro-to-bash"> EN
+    </a> (original) |
+
+    
+
+    <a href="/es/lecciones/introduccion-a-bash"> ES </a>
+    
+
+    
+  </div>
+  
+
+  
+
+  
+
+
+  
+
+  <div class="content">
+    
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#introduction-to-the-bash-command-line" id="markdown-toc-introduction-to-the-bash-command-line">Introduction to the Bash Command Line</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+      <li><a href="#windows-only-installing-git-bash" id="markdown-toc-windows-only-installing-git-bash">Windows Only: Installing Git Bash</a></li>
+      <li><a href="#opening-your-shell" id="markdown-toc-opening-your-shell">Opening Your Shell</a></li>
+      <li><a href="#moving-around-your-computers-file-system" id="markdown-toc-moving-around-your-computers-file-system">Moving Around Your Computer’s File System</a></li>
+      <li><a href="#interacting-with-files" id="markdown-toc-interacting-with-files">Interacting with Files</a></li>
+      <li><a href="#editing-text-files-directly-on-the-command-line" id="markdown-toc-editing-text-files-directly-on-the-command-line">Editing Text Files Directly on the Command Line</a></li>
+      <li><a href="#moving-copying-and-deleting-files" id="markdown-toc-moving-copying-and-deleting-files">Moving, Copying, and Deleting Files</a></li>
+      <li><a href="#conclusions" id="markdown-toc-conclusions">Conclusions</a></li>
+      <li><a href="#reference-guide" id="markdown-toc-reference-guide">Reference Guide</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="introduction-to-the-bash-command-line">Introduction to the Bash Command Line</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Many of the lessons at the <em>Programming Historian</em> require you to enter commands through a <strong>Command-Line Interface</strong>. The usual way that computer users today interact with their system is through a <strong>Graphical-User Interface</strong>, or GUI. This means that when you go into a folder, you click on a picture of a file folder; when you run a program, you click on it; and when you browse the web, you use your mouse to interact with various elements on a webpage. Before the rise of GUIs in the late 1980s, however, the primary way to interact with a computer was through a command-line interface.</p>
+
+<figure>
+    <img src="/images/intro-to-bash/GUI.png" alt="GUI of Ian Milligan's Computer" />
+<figcaption>
+    <p>GUI of Ian Milligan’s Computer</p>
+
+</figcaption>
+</figure>
+
+<p>Command-line interfaces have advantages for computer users who need more precision in their work – such as digital historians. They allow for more detail when running some programs, as you can add modifiers to specify <em>exactly</em> how you want your program to run. Furthermore, they can be easily automated through <a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/chap_01.html">scripts</a>, which are essentially recipes of text-based commands.</p>
+
+<p>There are two main command-line interfaces, or ‘shells,’ that many digital historians use. On OS X or many Linux installations, the shell is known as <code class="language-plaintext highlighter-rouge">bash</code>, or the ‘Bourne-again shell.’  For users on Windows-based systems, the command-line interface is by default <code class="language-plaintext highlighter-rouge">MS-DOS-based</code>, which uses different commands and <a href="https://en.wikipedia.org/wiki/Syntax">syntax</a>, but can often achieve similar tasks. This tutorial provides a basic introduction to the <code class="language-plaintext highlighter-rouge">bash</code> terminal, and Windows users can follow along by installing popular shells such as <a href="https://www.cygwin.com/">Cygwin</a> or Git Bash (see below).</p>
+
+<p>This lesson uses a <strong><a href="https://en.wikipedia.org/wiki/Unix_shell">Unix shell</a></strong>, which is a command-line interpreter that provides a user interface for the <a href="https://en.wikipedia.org/wiki/Unix">Unix</a> operating system and for Unix-like systems. This lesson will cover a small number of basic commands. By the end of this tutorial you will be able to navigate through your file system and find files, open them, perform basic data manipulation tasks such as combining and copying files, as well as both reading them and making relatively simple edits. These commands constitute the building blocks upon which more complex commands can be constructed to fit your research data or project. Readers wanting a reference guide that goes beyond this lesson are recommended to read Deborah S. Ray and Eric J. Ray, <em>Unix and Linux: Visual Quickstart Guide</em>, 4th edition (2009).</p>
+
+<h2 id="windows-only-installing-git-bash">Windows Only: Installing Git Bash</h2>
+
+<p>For those on OS X, and most Linux installations, you’re in luck — you already have a bash shell installed. For those of you on Windows, you’ll need to take one extra step and install Git Bash. This can be installed by downloading the most recent ‘Full installer’ at <a href="https://git-for-windows.github.io/">this page</a>. Instructions for installation are available at <a href="https://web.archive.org/web/20190114082523/https://openhatch.org/missions/windows-setup/install-git-bash">Open Hatch</a>.</p>
+
+<h2 id="opening-your-shell">Opening Your Shell</h2>
+
+<p>Let’s start up the shell. In Windows, run Git Bash from the directory that you installed it in. You will have to run it as an administrator - to do so, right click on the program and select ‘Run as Administrator.’ In OS X, by default the shell is located in:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Applications -&gt; Utilities -&gt; Terminal</code></p>
+
+<figure>
+    <img src="/images/intro-to-bash/Terminal.png" alt="The Terminal.app program on OS X" />
+<figcaption>
+    <p>The Terminal.app program on OS X</p>
+
+</figcaption>
+</figure>
+
+<p>When you run it, you will see this window.</p>
+
+<figure>
+    <img src="/images/intro-to-bash/Blank-Terminal.png" alt="A blank terminal screen on our OS X workstation" />
+<figcaption>
+    <p>A blank terminal screen on our OS X workstation</p>
+
+</figcaption>
+</figure>
+
+<p>You might want to change the default visual appearance of the terminal, as eyes can strain at repeatedly looking at black text on a white background. In the default OS X application, you can open the ‘Settings’ menu in ‘Preferences’ under Terminal. Click on the ‘Settings’ tab and change it to a new colour scheme. We personally prefer something with a bit less contrast between background and foreground, as you’ll be staring at this a great deal. ‘Novel’ is a soothing one as is the popular <a href="http://ethanschoonover.com/solarized">Solarized</a> suite of colour palettes. For Windows users, a similar effect can be achieved using the Git Bash <code class="language-plaintext highlighter-rouge">Properties</code> tab. To reach this, right-click anywhere in the top bar and select <code class="language-plaintext highlighter-rouge">Properties</code>.</p>
+
+<figure>
+    <img src="/images/intro-to-bash/Settings.png" alt="The Settings Screen on the OS X Terminal Shell Application" />
+<figcaption>
+    <p>The Settings Screen on the OS X Terminal Shell Application</p>
+
+</figcaption>
+</figure>
+
+<p>Once you are happy with the interface, let’s get started.</p>
+
+<h2 id="moving-around-your-computers-file-system">Moving Around Your Computer’s File System</h2>
+
+<p>If, when opening a command window, you are unsure of where you are in a computer’s file system, the first step is to find out what directory you are in. Unlike in a graphical system, when in a shell you cannot be in multiple directories at once. When you open up your file explorer on your desktop, it’s revealing files that are within a directory. You can find out what directory you are in through the <code class="language-plaintext highlighter-rouge">pwd</code> command, which stands for “print working directory.” Try inputing:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pwd</code></p>
+
+<p>and hitting enter. If you’re on OS X or Linux, your computer will probably display <code class="language-plaintext highlighter-rouge">/users/USERNAME</code> with your own user name in place of USERNAME. For example, Ian’s path on OS X is <code class="language-plaintext highlighter-rouge">/users/ianmilligan1/</code>.</p>
+
+<p>Here is where you realize that those on Windows and those on OS X/Linux will have slightly different experiences. On Windows, James is at:</p>
+
+<p><code class="language-plaintext highlighter-rouge">c/users/jbaker</code></p>
+
+<p>There are minor differences, but fear not; once you’re moving and manipulating files, these platform divergences can fade into the background.</p>
+
+<p>To orient ourselves, let’s get a listing of what files are in this directory. Type</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls</code></p>
+
+<p>and you will see a list of every file and directory within your current location. Your directory may be cluttered or it may be pristine, but you will at a minimum see some familiar locations. On OS X, for example, you’ll see <code class="language-plaintext highlighter-rouge">Applications</code>, <code class="language-plaintext highlighter-rouge">Desktop</code>, <code class="language-plaintext highlighter-rouge">Documents</code>, <code class="language-plaintext highlighter-rouge">Downloads</code>, <code class="language-plaintext highlighter-rouge">Library</code>, <code class="language-plaintext highlighter-rouge">Pictures</code>, etc.</p>
+
+<p>You may want more information than just a list of files. You can do this by specifying various <em>flags</em> to go with our basic commands. These are additions to a command that provide the computer with a bit more guidance of what sort of output or manipulation you want. To get a list of these, OS X/Linux users can turn to the built-in help program. OS X/Linux users type</p>
+
+<p><code class="language-plaintext highlighter-rouge">man ls</code></p>
+
+<figure>
+    <img src="/images/intro-to-bash/man-ls.png" alt="The Manual page for the LS command" />
+<figcaption>
+    <p>The Manual page for the LS command</p>
+
+</figcaption>
+</figure>
+
+<p>Here, you see a listing of the name of the command, the way that you can format this command and what it does. <strong>Many of these will not make sense at this stage, but don’t worry; over time you will become more familiar with them.</strong> You can explore this page in a variety of ways: the spacebar moves down a page, or you can arrow down and arrow up throughout the document.</p>
+
+<p>To leave the manual page, press</p>
+
+<p><code class="language-plaintext highlighter-rouge">q</code></p>
+
+<p>and you will be brought back to the command line where you were before entering the manual page.</p>
+
+<p>Try playing around with the <code class="language-plaintext highlighter-rouge">man</code> page for the other command you have learned so far, <code class="language-plaintext highlighter-rouge">pwd</code>.</p>
+
+<p>Windows users can use the <code class="language-plaintext highlighter-rouge">help</code> command, though this command has fewer features than <code class="language-plaintext highlighter-rouge">man</code> on OS X/Linux. Enter <code class="language-plaintext highlighter-rouge">help</code> to see the help available, and <code class="language-plaintext highlighter-rouge">help pwd</code> for an example of the command’s output.</p>
+
+<p>Let’s try using a few of those options you saw in the <code class="language-plaintext highlighter-rouge">man</code> page for ls. Perhaps you only want to see TXT files that are in our home directory. Type</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls *.txt</code></p>
+
+<p>which returns a list of text files, if you have any in your home directory (you may not, and that is OK as well). The * command is a <strong>wildcard</strong> — it stands for ‘anything.’ So, in this case, you’re indicating that anything that fits the pattern:</p>
+
+<p>[anything.txt]</p>
+
+<p>will be displayed. Try out different combinations. If, for example, you had several files in the format <code class="language-plaintext highlighter-rouge">1-Canadian.txt</code>, <code class="language-plaintext highlighter-rouge">2-Canadian.txt</code>, and so forth, the command <code class="language-plaintext highlighter-rouge">ls *-Canadian.txt</code> would display them all but exclude all other files (those that do not match the pattern).</p>
+
+<p>Say you want more information. In that long <code class="language-plaintext highlighter-rouge">man</code> page, you saw an option that might be useful:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-l      (The lowercase letter ``ell''.)  List in long format.  (See below.)  If
+        the output is to a terminal, a total sum for all the file sizes is out-
+        put on a line before the long listing.
+</code></pre></div>  </div>
+</blockquote>
+
+<p>So, if you type</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls -l</code></p>
+
+<p>the computer returns a long list of files that contains information similar to what you’d find in your finder or explorer: the size of the files in bites, the date it was created or last modified, and the file name. However, this can be a bit confusing: you see that a file test.html is ‘6020’ bits large. In commonplace language, you are more used to units of measurement like bytes, kilobytes, megabytes, and gigabytes.</p>
+
+<p>Luckily, there’s another flag:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-h      When used with the -l option, use unit suffixes: Byte, Kilobyte,
+        Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number
+        of digits to three or less using base 2 for sizes.
+</code></pre></div>  </div>
+</blockquote>
+
+<p>When you want to use two flags, you can just run them together. So, by typing</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls -lh</code></p>
+
+<p>you receive output in a human-readable format; you learn that that 6020 bits is also 5.9KB, that another file is 1 megabyte, and so forth.</p>
+
+<p>These options are <em>very</em> important. In other lessons within the <em>Programming Historian</em>, you’ll see them. <a href="/lessons/applied-archival-downloading-with-wget">Wget</a>, <a href="/lessons/topic-modeling-and-mallet">MALLET</a>, and <a href="/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Pandoc</a> all use the same syntax. Luckily, you do not need to memorize syntax; instead, keep these lessons handy so you can take a quick peek if you need to tweak something. These lessons can all be done in any order.</p>
+
+<p>You’ve now spent a great deal of time in your home directory. Let’s go somewhere else. You can do that through the <code class="language-plaintext highlighter-rouge">cd</code> or Change Directory command.</p>
+
+<p>If you type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd desktop</code></p>
+
+<p>you are now on your desktop. This is akin to you ‘double-clicking’ on the ‘desktop’ folder within a file explorer. To double check, type <code class="language-plaintext highlighter-rouge">pwd</code> and you should see something like:</p>
+
+<p><code class="language-plaintext highlighter-rouge">/Users/ianmilligan1/desktop</code></p>
+
+<p>Try playing around with those earlier commands: explore your current directory using the <code class="language-plaintext highlighter-rouge">ls</code> command.</p>
+
+<p>If you want to go back, you can type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd ..</code></p>
+
+<p>This moves us ‘up’ one directory, putting us back in <code class="language-plaintext highlighter-rouge">/Users/ianmilligan1/</code>. If you ever get completely lost, the command</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd --</code></p>
+
+<p>will bring you right back to the home directory, right where you started.</p>
+
+<p>Try exploring: visit your documents directory, your pictures, folders you might have on your desktop. Get used to moving in and out of directories. Imagine that you are navigating a <a href="https://en.wikipedia.org/wiki/Tree_structure">tree structure</a>. If you’re on the desktop, you won’t be able to <code class="language-plaintext highlighter-rouge">cd documents</code> as it is a ‘child’ of your home directory, whereas your Desktop is a ‘sibling’ of the Documents folder. To get to a sibling, you have to go back to the common parent. To do this, you will have to back up to your home directory (<code class="language-plaintext highlighter-rouge">cd ..</code>) and then go forward again to <code class="language-plaintext highlighter-rouge">cd documents</code>.</p>
+
+<p>Being able to navigate your file system using the bash shell is very important for many of the lessons at the <em>Programming Historian</em>. As you become more comfortable, you’ll soon find yourself skipping directly to the directory that you want. In our case, from anywhere on our system, you could type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd /users/ianmilligan1/mallet-2.0.7</code></p>
+
+<p>or, on Windows, something like</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd c:\mallet-2.0.7\</code></p>
+
+<p>and be brought to our MALLET directory for <a href="/lessons/topic-modeling-and-mallet">topic modeling</a>.</p>
+
+<p>Finally, try</p>
+
+<p><code class="language-plaintext highlighter-rouge">open .</code></p>
+
+<p>in OS X or</p>
+
+<p><code class="language-plaintext highlighter-rouge">explorer .</code></p>
+
+<p>in Windows. That command will open up your GUI at the current directory. Make sure to leave a space between <code class="language-plaintext highlighter-rouge">open</code> or <code class="language-plaintext highlighter-rouge">explorer</code> and the period.</p>
+
+<h2 id="interacting-with-files">Interacting with Files</h2>
+
+<p>As well as navigating directories, you can interact with files on the command line: you can read them, open them, run them, and even edit them, often without ever having to leave the interface. There is some debate over why one would do this. The primary reason is the seamless experience of working on the command line: you never have to pick up your mouse or touch your track pad, and, although it has a steep learning curve it can eventually become a sole writing environment. Furthermore, many programs require you to use the command line to operate with them. Since you’ll be using programs on the command line, it can often be quicker to make small edits without switching into a separate program. For some of these arguments, see Jon Beltran de Heredia’s <a href="http://www.viemu.com/a-why-vi-vim.html">“Why, oh WHY, do those #<span class="__cf_email__" data-cfemail="bf80ff">[email&#160;protected]</span>! nutheads use vi?”</a>.</p>
+
+<p>Here’s a few basic ways to do interact with files.</p>
+
+<p>First, you can create a new directory so you can engage with text files. We will create it on your desktop, for convenience’s sake. You can always move it later. Navigate to your desktop using your shell, and type:</p>
+
+<p><code class="language-plaintext highlighter-rouge">mkdir ProgHist-Text</code></p>
+
+<p>This creates a directory named, you guessed it, ‘ProgHist-Text.’ In general, it’s good to avoid putting spaces in your filenames and directories when using the command line (there are workarounds, of course, but this approach is simpler). You can look at your desktop to verify it has worked. Now, move into that directory (remember, that would be <code class="language-plaintext highlighter-rouge">cd ProgHist-Text</code>).</p>
+
+<p>But wait! There’s a trick to make things a bit quicker. Go up one directory (<code class="language-plaintext highlighter-rouge">cd ..</code> - which will take you back to the Desktop). To navigate to the <code class="language-plaintext highlighter-rouge">ProgHist-Text</code> directory you could type <code class="language-plaintext highlighter-rouge">cd ProgHist-Text</code>. Alternatively, you could type <code class="language-plaintext highlighter-rouge">cd Prog</code> and then hit tab. You will notice that the interface completes the line to <code class="language-plaintext highlighter-rouge">cd ProgHist-Text</code>. <strong>Hitting tab at any time within the shell will prompt it to attempt to auto-complete the line based on the files or sub-directories in the current directory. This is case sensitive, however (i.e. in the previous example, <code class="language-plaintext highlighter-rouge">cd prog</code> would not auto complete to <code class="language-plaintext highlighter-rouge">ProgHist-Text</code>. Where two or more files have the same characters, the auto-complete will only fill up to the first point of difference. We would encourage using this method throughout the lesson to see how it behaves.</strong></p>
+
+<p>Now you need to find a basic text file to help us with the example. Why don’t you use a book that you know is long, such as Leo Tolstoy’s epic <em>War and Peace</em>. The text file is availiable via <a href="https://www.gutenberg.org/ebooks/2600">Project Gutenberg</a>. If you have already installed <a href="/lessons/applied-archival-downloading-with-wget">wget</a>, you can just type</p>
+
+<p><code class="language-plaintext highlighter-rouge">wget http://www.gutenberg.org/files/2600/2600-0.txt</code></p>
+
+<p>If you do not have wget installed, download the text itself using your browser. Go to the link above, and, in your browser, use the ‘Save Page as..’ command in your ‘file menu.’ Save it in your new ‘ProgHist-Text directory.’ Now, when you type</p>
+
+<p><code class="language-plaintext highlighter-rouge">ls -lh</code></p>
+
+<p>you see</p>
+
+<blockquote>
+  <blockquote>
+    <p>-rw-r–r–+ 1 ianmilligan1  staff   3.1M  1 May 10:03 pg2600.txt</p>
+  </blockquote>
+</blockquote>
+
+<p>You can read the text within this file in a few different ways. First, you can tell our computer that you want to read it using the standard program that you use to open text files. By default, this may be TextEdit on OS X or Notepad in Windows. To open a file, just type</p>
+
+<p><code class="language-plaintext highlighter-rouge">open pg2600.txt</code></p>
+
+<p>on OS X, or</p>
+
+<p><code class="language-plaintext highlighter-rouge">explorer pg2600.txt</code></p>
+
+<p>in Windows.</p>
+
+<p>This selects the default program to open that type of file, and opens it.</p>
+
+<p>However, you often want to just work on the command line without leaving it. You can read files within this environment as well. To try this, type:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat pg2600.txt</code></p>
+
+<p>The terminal window erupts and <em>War and Peace</em> cascades by. That’s great, in theory, but you can’t really make any sense of that amount of text? Instead, you may want to just look at the first or the last bit of the file.</p>
+
+<p><code class="language-plaintext highlighter-rouge">head pg2600.txt</code></p>
+
+<p>Provides a view of the first ten lines, whereas</p>
+
+<p><code class="language-plaintext highlighter-rouge">tail pg2600.txt</code></p>
+
+<p>provides a perspective on the last ten lines. This is a good way to quickly determine the contents of the file. You could add a command to change the amount of lines displayed: <code class="language-plaintext highlighter-rouge">head -20 pg2600.txt</code>, for example, would show the first twenty lines.</p>
+
+<p>You may also want to change the file name to something more descriptive. You can ‘move’ it to a new name by typing</p>
+
+<p><code class="language-plaintext highlighter-rouge">mv pg2600.txt tolstoy.txt</code></p>
+
+<p>Afterwards, when you perform a <code class="language-plaintext highlighter-rouge">ls</code> command, you will see that it is now <code class="language-plaintext highlighter-rouge">tolstoy.txt</code>. Had you wanted to duplicate it, you could also have run the copy command by typing</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp pg2600.txt tolstoy.txt</code></p>
+
+<p>you will revisit these commands shortly.</p>
+
+<p>Now that you have used several new commands, it’s time for another trick. Hit the up arrow on your keyboard. Notice that <code class="language-plaintext highlighter-rouge">cp pg2600.txt tolstoy.txt</code> appears before your cursor. You can continue pressing the up arrow to cycle through your previous commands. The down arrow cycles back toward your most recent command.</p>
+
+<p>After having read and renamed several files, you may wish to bring their text together into one file. To combine, or concatenate, two or more files, you can use the <code class="language-plaintext highlighter-rouge">cat</code> command. First, let’s duplicate the Tolstoy file ( <code class="language-plaintext highlighter-rouge">cp tolstoy.txt tolstoy2.txt</code>). Now that you have two copies of <em>War and Peace</em>, let’s put them together to make an <strong>even longer</strong> book.</p>
+
+<p>To combine, or concatenate, two or more files use the <code class="language-plaintext highlighter-rouge">cat</code> command. Type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat tolstoy.txt tolstoy2.txt</code></p>
+
+<p>and press enter. This prints, or displays, the combined files within the shell. However, it is too long to read on this window! Luckily, by using the <code class="language-plaintext highlighter-rouge">&gt;</code> command, you can send the output to a new file, rather than the terminal window. Type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat tolstoy.txt tolstoy2.txt &gt; tolstoy-twice.txt</code>.</p>
+
+<p>Now, when you type <code class="language-plaintext highlighter-rouge">ls</code> you’ll see <code class="language-plaintext highlighter-rouge">tolstoy-twice.txt</code> appear in your directory.</p>
+
+<p>When combining more than two files, using a wildcard can help avoid having to write out each filename individually. As you have seen above, <code class="language-plaintext highlighter-rouge">*</code>, is a place holder for zero or more characters or numbers. So, if you type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat *.txt &gt; everything-together.txt</code></p>
+
+<p>and hit enter, a combination of all the .txt files in the current directory are combined in alphabetical order as <code class="language-plaintext highlighter-rouge">everything-together.txt</code>. This can be very useful if you need to combine a large number of smaller files within a directory so that you can work with them in a text analysis program. Another wildcard worth remembering is <code class="language-plaintext highlighter-rouge">?</code> which is a place holder for a single character or number.</p>
+
+<h2 id="editing-text-files-directly-on-the-command-line">Editing Text Files Directly on the Command Line</h2>
+
+<p>If you want to read a file in its entirety without leaving the command line, you can fire up <a href="https://en.wikipedia.org/wiki/Vim_%28text_editor%29">vim</a>. Vim is a very powerful text editor, which is perfect for using with programs such as <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> to do word processing, or for editing your code without having to switch to another program. Best of all, it comes included with bash on both OS X and Windows. Vim has a fairly steep learning curve, so we will just touch on a few minor points.</p>
+
+<p>Type</p>
+
+<p><code class="language-plaintext highlighter-rouge">vim tolstoy.txt</code></p>
+
+<p>You should see vim come to life before you, a command-line based text editor.</p>
+
+<figure>
+    <img src="/images/intro-to-bash/vim.png" alt="Vim" />
+<figcaption>
+    <p>Vim</p>
+
+</figcaption>
+</figure>
+
+<p>If you really want to get into Vim, there is a <a href="http://vimdoc.sourceforge.net/htmldoc/quickref.html">good Vim guide</a> available.</p>
+
+<p>Using Vim to read files is relatively simple. You can use the arrow keys to navigate around and could theoretically read <em>War and Peace</em> through the command line (one should get an achievement for doing that). Some quick basic navigational commands are as follows:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Ctrl+F</code> (that is, holding down your ‘control key’ and pressing the letter F) will move you down a page (<code class="language-plaintext highlighter-rouge">Shift+UpArrow</code> for Windows).</p>
+
+<p><code class="language-plaintext highlighter-rouge">Ctrl+B</code> will move you up a page. (<code class="language-plaintext highlighter-rouge">Shift+DownArrow</code> for Windows users).</p>
+
+<p>If you want to rapidly move to the end of a line, you can press: <code class="language-plaintext highlighter-rouge">$</code> and to move to the start of one, <code class="language-plaintext highlighter-rouge">0</code>. You can also move between sentences by typing <code class="language-plaintext highlighter-rouge">)</code> (forward) or <code class="language-plaintext highlighter-rouge">(</code> (backwards). For paragraphs, use <code class="language-plaintext highlighter-rouge">}</code> and <code class="language-plaintext highlighter-rouge">{</code>. Since you are doing everything with your keyboard, rather than having to hold your arrow key down to move around a document, this lets you zip quickly back and forth.</p>
+
+<p>Let’s scroll to the top and do a minor change, such as adding a <code class="language-plaintext highlighter-rouge">Reader</code> field in the heading. Move your cursor in between <strong>Author:</strong> and <strong>Translators:</strong>, like so:</p>
+
+<figure>
+    <img src="/images/intro-to-bash/about-to-insert.png" alt="About to Insert a Field" />
+<figcaption>
+    <p>About to Insert a Field</p>
+
+</figcaption>
+</figure>
+
+<p>If you just start typing, you’ll get an error message or the cursor will begin jumping around. This is because you have to specify that you want to do an edit. Press the letter</p>
+
+<p><code class="language-plaintext highlighter-rouge">a</code></p>
+
+<p>At the bottom of the screen, you will see</p>
+
+<p><code class="language-plaintext highlighter-rouge">-- INSERT --</code></p>
+
+<p>This means you are in insert mode. You can now type and edit text as if you are in a standard text editor. Press <code class="language-plaintext highlighter-rouge">enter</code> twice, then <code class="language-plaintext highlighter-rouge">arrow up</code>, and type</p>
+
+<p><code class="language-plaintext highlighter-rouge">Reader: A Programming Historian</code></p>
+
+<p>When you are done, press <code class="language-plaintext highlighter-rouge">ESC</code> to return to reading mode.</p>
+
+<p>To leave vim or to make saves, you have to enter a series of commands. Press <code class="language-plaintext highlighter-rouge">:</code> and you’ll move to the command input line of Vim. you can enter a variety of commands here. If you want to save the file, type <code class="language-plaintext highlighter-rouge">w</code> to ‘write’ the file. If you execute that command, you will see</p>
+
+<blockquote>
+  <blockquote>
+    <p>“tolstoy.txt” [dos] 65009L, 3291681C written</p>
+  </blockquote>
+</blockquote>
+
+<figure>
+    <img src="/images/intro-to-bash/after-writing.png" alt="After Writing the File, with Our Minor Change" />
+<figcaption>
+    <p>After Writing the File, with Our Minor Change</p>
+
+</figcaption>
+</figure>
+
+<p>If you want to quit, type <code class="language-plaintext highlighter-rouge">:</code> again and then <code class="language-plaintext highlighter-rouge">q</code>. It will return you to the command line. As with the rest of bash, you could have also combined the two commands. Pressing <code class="language-plaintext highlighter-rouge">:</code> and then typing <code class="language-plaintext highlighter-rouge">wq</code> would have written the file and then quit. Or, if you wanted to exit <strong>without</strong> saving, <code class="language-plaintext highlighter-rouge">q!</code> would have quit vim and overriden the default preference to save your changes.</p>
+
+<p>Vim is different than you are likely used to and will require more work and practice to become fluent with it. But if you are tweaking minor things in files, it is a good way to get started. As you become more comfortable, you might even find yourself writing term papers with it, by harnessing the <a href="/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">footnoting and formatting power of Pandoc and Markdown</a>.</p>
+
+<h2 id="moving-copying-and-deleting-files">Moving, Copying, and Deleting Files</h2>
+
+<p>Let’s say you are done with this directory, and you would like to move <code class="language-plaintext highlighter-rouge">tolstoy.txt</code> somewhere else. First, you should create a backup copy. The shell is quite unforgiving with mistakes, and backing up is even more important than with GUIs. If you delete something here, there’s no recycling bin to fish it out of. To create a backup, you can type</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp tolstoy.txt tolstoy-backup.txt</code></p>
+
+<p>Now when you run a <code class="language-plaintext highlighter-rouge">ls</code> command you will see five files, two of which are the same: <code class="language-plaintext highlighter-rouge">tolstoy.txt</code> and <code class="language-plaintext highlighter-rouge">tolstoy-backup.txt</code>.</p>
+
+<p>Let’s move the first of these somewhere else. By way of example, let’s create a second directory on your desktop. Move up to your desktop (<code class="language-plaintext highlighter-rouge">cd ..</code>) and <code class="language-plaintext highlighter-rouge">mkdir</code> another directory. Let’s call it <code class="language-plaintext highlighter-rouge">proghist-dest</code>.</p>
+
+<p>To copy <code class="language-plaintext highlighter-rouge">tolstoy.txt</code> you have a few different options. you could run these commands from anywhere in the shell, or you could visit either the origin or destination directories. For this example, let’s just run it from here. The basic format of the copy command is <code class="language-plaintext highlighter-rouge">cp [source] [destination]</code>. That is, you type <code class="language-plaintext highlighter-rouge">cp</code> first, and then enter the file or files that you want to copy followed by where they should go.</p>
+
+<p>In this case, the command</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp /users/ianmilligan1/desktop/proghist-text/tolstoy.txt /users/ianmilligan1/desktop/proghist-dest/</code></p>
+
+<p>will copy Tolstoy from the first directory to the second directory. You will have to insert your own username in place of ‘ianmilligan1’. This means you now have three copies of the novel on our computer. The original, the backup and the new copy in the second directly. If you wanted to <strong>move</strong> the file, that is, not leave a copy behind, you could run the command again, swapping <code class="language-plaintext highlighter-rouge">cp</code> for <code class="language-plaintext highlighter-rouge">mv</code>; let’s not do this yet.</p>
+
+<p>You can also copy multiple files with a single command. If you wanted to copy <strong>both</strong> the original and the backup file, you could use the wildcard command.</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp /users/ianmilligan1/desktop/proghist-text/*.txt /users/ianmilligan1/desktop/proghist-dest/</code></p>
+
+<p>This command copies <strong>all</strong> the text files from the origin directory into the destination directory.</p>
+
+<p>Note: If you are in the directory that you either want to move things to or from, you do not have to type out the whole directory structure. Let’s do two quick examples. Change your directory to the <code class="language-plaintext highlighter-rouge">proghist-text</code> directory. From this location, if you wanted to copy these two files to <code class="language-plaintext highlighter-rouge">proghist-dest</code>, this command would work:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp *.txt /users/ianmilligan1/desktop/proghist-dest/</code> (on OS X, substitute the directory on Windows)</p>
+
+<p>Alternatively, if you were in the <code class="language-plaintext highlighter-rouge">proghist-dest</code> directory, this command would work:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cp /users/ianmilligan1/desktop/proghist-text/*.txt ./</code></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">./</code> command refers to the <strong>current</strong> directory you’re in. <strong>This is a really valuable command.</strong></p>
+
+<p>Finally, if you want to delete a file, for whatever reason, the command is <code class="language-plaintext highlighter-rouge">rm</code>, or remove. <strong>Be careful with the <code class="language-plaintext highlighter-rouge">rm</code> command</strong>, as you don’t want to delete files that you do not mean to. Unlike deleting from within your GUI, there is <strong>no</strong> recycling bin or undo options. For that reason, if you are in doubt, you may want to exercise caution or maintain a regular backup of your data.</p>
+
+<p>Move to <code class="language-plaintext highlighter-rouge">proghist-text</code> and delete the original file by typing</p>
+
+<p><code class="language-plaintext highlighter-rouge">rm tolstoy.txt</code></p>
+
+<p>Check that the file is gone using the <code class="language-plaintext highlighter-rouge">ls</code> command.</p>
+
+<p>If you wanted to delete an entire directory, you have two options. you can use <code class="language-plaintext highlighter-rouge">rmdir</code>, the opposite of <code class="language-plaintext highlighter-rouge">mkdir</code>, to delete an <strong>empty</strong> directory. To delete a directory with files, you could use from the desktop:</p>
+
+<p><code class="language-plaintext highlighter-rouge">rm -r proghist-text</code></p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>You may want to take a break from the terminal at this point. To do so, enter <code class="language-plaintext highlighter-rouge">exit</code> and you’ll close your session.</p>
+
+<p>There are more commands to try as you get more comfortable with the command line. Some of our other favourites are <code class="language-plaintext highlighter-rouge">du</code>, which is a way to find out how much memory is being used (<code class="language-plaintext highlighter-rouge">du -h</code> makes it human readable — as with other commands). For those of you on OS X, <code class="language-plaintext highlighter-rouge">top</code> provides an overview of what processes are running (<code class="language-plaintext highlighter-rouge">mem</code> on Windows) and <code class="language-plaintext highlighter-rouge">touch FILENAME</code> can create a basic text file on both systems</p>
+
+<p>By this point, we hope you have a good, basic understanding of how to move around using the command line, move basic files, and make minor edits here and there. This beginner-level lesson is designed to give you some basic fluency and confidence. In the future, you may want to get involved with scripting.</p>
+
+<p>Have fun! Before you know it, you may find yourself liking the convenience and precision of the command line - for certain applications, at least - far more than the bulkier GUI that your system came with. Your toolkit just got bigger.</p>
+
+<h2 id="reference-guide">Reference Guide</h2>
+
+<p>For your convenience, here are the commands that you have learned in this lesson:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pwd</code></td>
+      <td>Prints the ‘present working directory,’ letting you know where you are.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls</code></td>
+      <td>Lists the files in the current directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">man *</code></td>
+      <td>Lists the manual for the command, substituted for the <code class="language-plaintext highlighter-rouge">*</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd *</code></td>
+      <td>Changes the current directory to <code class="language-plaintext highlighter-rouge">*</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mkdir *</code></td>
+      <td>Makes a directory named <code class="language-plaintext highlighter-rouge">*</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">open</code> or <code class="language-plaintext highlighter-rouge">explorer</code></td>
+      <td>On OS X, <code class="language-plaintext highlighter-rouge">open</code> followed by a file opens it; in Windows, the command <code class="language-plaintext highlighter-rouge">explorer</code> followed by a file name does the same thing.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cat *</code></td>
+      <td><code class="language-plaintext highlighter-rouge">cat</code> is a versatile command. It will read a file to you if you substitute a file for <code class="language-plaintext highlighter-rouge">*</code>, but can also be used to combine files.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">head *</code></td>
+      <td>Displays the first ten lines of <code class="language-plaintext highlighter-rouge">*</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tail *</code></td>
+      <td>Displays the last ten lines of <code class="language-plaintext highlighter-rouge">*</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mv</code></td>
+      <td>Moves a file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cp</code></td>
+      <td>Copies a file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rm</code></td>
+      <td>Deletes a file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vim</code></td>
+      <td>Opens up the <code class="language-plaintext highlighter-rouge">vim</code> document editor.</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+
+  
+  <div class="series-warning alert alert-info">
+    Great! Now you're ready to move on to the <a
+      href="research-data-with-unix">next lesson</a>.
+  </div>
+  
+
+  
+
+
+
+<div class="author-info">
+    <h5 class="author-name">About the authors</h5>
+</div>
+<div class="author-description">
+  
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+         <p>Ian Milligan is an associate professor of history at the University
+of Waterloo.
+<p>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+         <p>James Baker is a Senior Lecturer in Digital History and Archives at the University of Sussex
+and a historian of interactions between people and things.
+ <a href="https://orcid.org/0000-0002-2682-6922"><img src="/images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a><p>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+</div>
+
+
+  <div class="citation-info">
+    
+    
+    
+
+    <h5 class="suggested-citation-header">Suggested Citation</h5>
+    <div class="suggested-citation-text">
+      <p class="suggested-citation-text">
+
+
+
+Ian Milligan and James Baker,
+        "Introduction to the Bash Command Line,"
+        <em>The Programming Historian</em> 3 (2014),
+        https://doi.org/10.46430/phen0037.</p>
+    </div>
+  </div>
+
+  
+  
+<div class="alert alert-success hide-screen"><h2 id="donate-today">Donate today!</h2>
+
+<p>Great Open Access tutorials cost money to produce. Join the growing number of people <a href="https://www.patreon.com/theprogramminghistorian">supporting <em>The Programming Historian</em></a> so we can continue to share knowledge free of charge.</p>
+</div>
+
+  
+
+</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function () {
+    var githubAPI = "https://api.github.com/repos/programminghistorian/jekyll/commits";
+    $.getJSON(githubAPI, {
+      path: "en/lessons/intro-to-bash.md"
+    })
+      .done(function (data) {
+        var date = new Date(data[0].commit.author.date);
+        var formatted_date = new Intl.DateTimeFormat('sv').format(date)
+        $("#modified-date").text(formatted_date);
+      });
+  })();
+</script>
+
+      
+
+<footer role="contentinfo" style="background-color: #444444">
+
+
+<div class="d-flex flex-wrap justify-content-center footer-head">
+  <p><em>The Programming Historian</em> (ISSN: 2397-2068) is released under a <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY</a> license.</p>
+<p>This project is administered by ProgHist Limited, Company Number <a href="https://beta.companieshouse.gov.uk/company/12192946">12192946</a>.</p>
+
+</div>
+
+<div class="d-flex flex-wrap justify-content-around">
+  <div class="mx-4">
+     
+    <strong>
+      <p>
+        <a href="/">ISSN 2397-2068 (English)</a>
+      </p>
+      </strong>  
+      <p>
+        <a href="/es">ISSN 2517-5769 (Spanish)</a>
+      </p>
+        
+      <p>
+        <a href="/fr">ISSN 2631-9462 (French)</a>
+      </p>
+       
+  </div>
+  <div class="mx-4">
+    <i class="fab fa-github" aria-hidden="true"></i>
+    <a href="https://github.com/programminghistorian/jekyll">Hosted on GitHub</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-calendar" aria-hidden="true"></i>
+    <a href="https://github.com/programminghistorian/jekyll/commits/gh-pages">Site last updated 27 July 2020</a>
+  </div>
+ 
+ <div class="mx-4">
+  <i class="fas fa-rss" aria-hidden="true"></i>
+  <a href="https://programminghistorian.org/feed.xml">RSS feed subscriptions</a>
+  </div>
+ 
+  <div class="mx-4">
+  <i class="fa fa-history" aria-hidden="true"></i>
+  <a href="https://github.com/programminghistorian/jekyll/commits/gh-pages/en/lessons/intro-to-bash.md">See page history</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-bolt" aria-hidden="true"></i>
+  <a href="/en/feedback">Make a suggestion</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-chain-broken" aria-hidden="true"></i>
+  <a href="/en/lesson-retirement-policy">Lesson retirement policy</a>
+  </div>
+ 
+  <div class="mx-4">
+  <i class="fa fa-globe" aria-hidden="true"></i>
+  <a href="/translation-concordance">Translation concordance</a>
+  </div>
+ 
+  </div>
+
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2752866-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+    </main>
+  </body>
+
+</html>
