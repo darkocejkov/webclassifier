@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"20ea2f9489",applicationID:"313788190"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta property="og:site_name" content="Defenders of Wildlife" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://defenders.org/wildlife/tiger" />
+<meta property="og:type" content="article" />
+<meta name="description" content="With Tiger King shedding light on how big cats can be forced into cruel, unnatural living situations when held in captivity, you can see why it&#039;s more important than ever to protect all big cats in the wild and to preserve and restore habitat for these amazing creatures. Defenders of Wildlife protects big cats in North America, like Florida panthers and jaguars, and we tirelessly advocate for human-wildlife coexistence, which should never include making wild animals pets. You can help support our efforts too.
+
+The largest of the big cats, tigers are truly impressive animals with their black-striped orange fur and white bellies. A tiger’s stripe pattern is like a fingerprint and can be used to identify individuals.
+
+The tiger is the largest member of the felid (cat) family. Tiger taxonomy was revised in 2017 based on new genetic analysis into two subspecies: Panthera tigris tigris, consisting of tiger populations in continental Asia, and Panthera tigris sondaica, including populations in the Sunda Islands." />
+<meta name="twitter:title" content="Tiger" />
+<meta name="twitter:site" content="@defenders" />
+<meta name="twitter:description" content="With Tiger King shedding light on how big cats can be forced into cruel, unnatural living situations when held in captivity, you can see why it&#039;s more important than ever to protect all big cats in the wild and to preserve and restore habitat for these amazing creatures. Defenders of Wildlife protects big cats in North America, like Florida panthers and jaguars, and we tirelessly advocate for human-wildlife coexistence, which should never include making wild animals pets. You can help support our efforts too.
+
+The largest of the big cats, tigers are truly impressive animals with their black-striped orange fur and white bellies. A tiger’s stripe pattern is like a fingerprint and can be used to identify individuals.
+
+The tiger is the largest member of the felid (cat) family. Tiger taxonomy was revised in 2017 based on new genetic analysis into two subspecies: Panthera tigris tigris, consisting of tiger populations in continental Asia, and Panthera tigris sondaica, including populations in the Sunda Islands." />
+<meta property="og:url" content="https://defenders.org/wildlife/tiger" />
+<link rel="image_src" href="https://defenders.org/sites/default/files/styles/meta_image/public/2019-10/tiger_david_miles_header.jpg?itok=t_7rKHul" />
+<meta property="og:title" content="Tiger" />
+<meta property="og:description" content="With Tiger King shedding light on how big cats can be forced into cruel, unnatural living situations when held in captivity, you can see why it&#039;s more important than ever to protect all big cats in the wild and to preserve and restore habitat for these amazing creatures. Defenders of Wildlife protects big cats in North America, like Florida panthers and jaguars, and we tirelessly advocate for human-wildlife coexistence, which should never include making wild animals pets. You can help support our efforts too.
+
+The largest of the big cats, tigers are truly impressive animals with their black-striped orange fur and white bellies. A tiger’s stripe pattern is like a fingerprint and can be used to identify individuals.
+
+The tiger is the largest member of the felid (cat) family. Tiger taxonomy was revised in 2017 based on new genetic analysis into two subspecies: Panthera tigris tigris, consisting of tiger populations in continental Asia, and Panthera tigris sondaica, including populations in the Sunda Islands." />
+<meta name="twitter:url" content="https://defenders.org/wildlife/tiger" />
+<meta name="twitter:image:alt" content="Tiger" />
+<meta name="twitter:image" content="https://defenders.org/sites/default/files/styles/meta_image/public/2019-10/tiger_david_miles_header.jpg?itok=t_7rKHul" />
+<meta property="og:image" content="https://defenders.org/sites/default/files/styles/meta_image/public/2019-10/tiger_david_miles_header.jpg?itok=t_7rKHul" />
+<meta property="og:image:url" content="https://defenders.org/sites/default/files/styles/meta_image/public/2019-10/tiger_david_miles_header.jpg?itok=t_7rKHul" />
+<meta property="og:image:secure_url" content="https://defenders.org/sites/default/files/styles/meta_image/public/2019-10/tiger_david_miles_header.jpg?itok=t_7rKHul" />
+<meta property="article:author" content="https://www.facebook.com/DefendersofWildlife" />
+<meta property="article:publisher" content="https://www.facebook.com/DefendersofWildlife" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/particle/apps/drupal/favicon.png" type="image/png" />
+<link rel="delete-form" href="/taxonomy/term/1189/delete" />
+<link rel="edit-form" href="/taxonomy/term/1189/edit" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qdze60" defer></script>
+
+    <title>Tiger | Defenders of Wildlife</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_DfIk0kDE_97QqZBJr5TF4iiP6Rt7nG3gWSu-Jh5AKCY.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.5.0/js/v4-shims.js" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_LAa_GEScRKlKDVtm_f7Qaxv3WcbYBJ8hmoXJ7GTo-mY.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_DTnVRXQQvidqal9S89PDsn_KUR8yYBZHPq567gJbQEk.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDPL88" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="layout-container">
+
+  
+<div class="navbar-wrapper fixed-top">
+
+<div class="bg-primary container-fluid">
+            
+
+<div class="signup">
+<div id="headerSignup" class="collapse">  <div class="signup--header">
+    
+        
+            <div class="px-2">
+   <h3 class="meta-info text-white my-1">Get Alerts &amp; Updates</h3>     </div>
+  <div class="px-2">
+      <form class="form email-signup-form " id="email_signup-1" action="https://support.defenders.org/page/18723/subscribe/1" method="GET" target="_blank" >
+      <div class="input-group input-group-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope text-orange"></i></span>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="supporter.emailAddress" placeholder="Enter email" class="form-control email-address" id="email_address-1" required>
+          <input type="number" name="supporter.postcode" id="zip_code-1" class="form-control zip-code collapse" placeholder="Zip Code" required />
+        </div>
+
+        <div class="input-group-append">
+          
+
+
+  
+
+
+<input type="submit" class="btn btn-orange fa" value="&#xf105;" />
+          
+                </div>
+      </div>
+    </form>
+  
+  
+
+  <div class="signup__mobile-thank-you hidden alert small py-0 px-1 mb-0 alert-success">
+    Thank you!
+  </div>
+  </div>
+  <a href="#headerSignup" data-toggle="collapse" class="mx-2 text-white"><i class="fa fa-times-circle"></i></a>
+
+      </div>
+</div></div>
+
+  
+    </div>
+
+<nav role="navigation" aria-labelledby=""  class="navbar navbar-expand-lg w-100">
+      
+<aside class="branding">
+  <div class="branding__site-logo">
+    <a href="/" title="" rel="home">
+              
+      
+      <img src="/themes/custom/particle/dist/assets/logo.png" alt=" site logo" >
+  
+          </a>
+  </div>
+
+  
+  </aside>
+
+    
+
+
+  
+
+
+<button type="button" class="btn btn-outline-dark navbar-toggler rounded-circle collapsed" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse" >
+          
+          </button>
+  
+      <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-col navbar-left">
+        <div class="navbar-row navbar-row-nw">
+                                  
+  <h3 class="visually-hidden" id="block-particle-mainnavigation-menu">Main navigation</h3>
+  
+
+        
+            
+    <div  class="nav--main navbar-nav">
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown nav-item">
+          <a class="nav-link" href="/our-work"  >Our Work</a>
+                                  <a class="dropdown-toggle" href="#" data-toggle="dropdown"></a>
+              <div class="w-100 d-lg-none"></div>
+                          
+    <div class=dropdown-menu>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/conserving-imperiled-species"  >Conserving Imperiled Species</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/advocating-international-species"  >Advocating for International Species</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/protecting-habitat"  >Protecting Habitat</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/promoting-coexistence"  >Promoting Coexistence</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/defending-conservation-laws"  >Defending Conservation Laws</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/innovating-wildlife-conservation"  >Innovating for Wildlife Conservation</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/combating-climate-change"  >Combating Climate Change</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/fighting-invasive-species"  >Fighting Invasive Species</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/issues/speaking-wildlife"  >Speaking for Wildlife</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/where-we-work"  >Where We Work</a>
+                                </div>
+
+          </div>
+  
+                        </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown nav-item">
+          <a class="nav-link" href="/action"  >Take Action</a>
+                                  <a class="dropdown-toggle" href="#" data-toggle="dropdown"></a>
+              <div class="w-100 d-lg-none"></div>
+                          
+    <div class=dropdown-menu>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/action"  >Add Your Voice</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/take-action/events"  >Attend an Event</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/activist"  >Become an Activist</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/take-action/conservation-report-card"  >Hold Congress Accountable</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://support.defenders.org/page/18723/subscribe/1"  >Get Email Alerts</a>
+                                </div>
+
+          </div>
+  
+                        </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown nav-item">
+          <a class="nav-link" href="/support-our-work"  >Support</a>
+                                  <a class="dropdown-toggle" href="#" data-toggle="dropdown"></a>
+              <div class="w-100 d-lg-none"></div>
+                          
+    <div class=dropdown-menu>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://support.defenders.org/page/18223/donate/1"  >Become a Defender</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://support.defenders.org/page/18686/donate/1?supporter_appealCode=3WDW2000RFXXX&amp;en_og_source=FY20_Web_Donation&amp;utm_source=web&amp;utm_medium=web_menu_monthly&amp;utm_campaign=organic"  >Give Monthly</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://gifts.defenders.org/"  >Shop Gifts and Gear</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://gifts.defenders.org/wildlife-adoptions?s_src=3WEW2000AGXXX"  >Adopt an Animal </a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://support.defenders.org/page/18168/donate/1"  >Join Our Leadership Council</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/planned-giving"  >Give Through Your Will or Trust</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="https://support.defenders.org/page/18425/donate/1"  >Renew Your Membership</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown-item nav-item">
+          <a class="nav-link" href="/other-ways-support-defenders"  >Other Ways to Support Defenders</a>
+                                </div>
+
+          </div>
+  
+                        </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown dropdown--mega nav-item">
+          <a class="nav-link" href="/wildlife"  >Wildlife</a>
+                                  <a class="dropdown-toggle" href="#" data-toggle="dropdown"></a>
+              <div class="w-100 d-lg-none"></div>
+              
+<div class="dropdown-menu">
+<div class="dropdown-item nav-item"><a href="/wildlife/american-crocodile-and-alligator" class="nav-link">American Crocodile and Alligator</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/amphibians" class="nav-link">Amphibians</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/bald-eagle" class="nav-link">Bald Eagle</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/bats" class="nav-link">Bats</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/beaver" class="nav-link">Beaver</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/beluga-whale" class="nav-link">Beluga Whale</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/bighorn-sheep" class="nav-link">Bighorn Sheep</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/bison" class="nav-link">Bison</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/black-bear" class="nav-link">Black Bear</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/black-footed-ferret" class="nav-link">Black-Footed Ferret</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/bog-turtle" class="nav-link">Bog Turtle</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/butterflies" class="nav-link">Butterflies</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/california-condor" class="nav-link">California Condor</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/canada-lynx" class="nav-link">Canada Lynx</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/caribou" class="nav-link">Caribou</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/dolphins" class="nav-link">Dolphins</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/elephants" class="nav-link">Elephants</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/fisher" class="nav-link">Fisher</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/florida-manatee" class="nav-link">Florida Manatee</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/florida-panther" class="nav-link">Florida Panther</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/foxes" class="nav-link">Foxes</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/freshwater-fishes" class="nav-link">Freshwater Fishes</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/freshwater-mussels" class="nav-link">Freshwater Mussels</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/gray-wolf" class="nav-link">Gray Wolf</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/grizzly-bear" class="nav-link">Grizzly Bear</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/hellbender" class="nav-link">Hellbender</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/jaguar" class="nav-link">Jaguar</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/lesser-prairie-chicken" class="nav-link">Lesser Prairie Chicken</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/marbled-murrelet" class="nav-link">Marbled Murrelet</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/mexican-gray-wolf" class="nav-link">Mexican Gray Wolf</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/mice-and-rats" class="nav-link">Mice and Rats</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/north-atlantic-right-whale" class="nav-link">North Atlantic Right Whale</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/ocelot" class="nav-link">Ocelot</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/orca" class="nav-link">Orca</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/owls" class="nav-link">Owls</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/pacific-salmon" class="nav-link">Pacific Salmon</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/pacific-walrus" class="nav-link">Pacific Walrus</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/pallid-sturgeon" class="nav-link">Pallid Sturgeon</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/parrots" class="nav-link">Parrots</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/peregrine-falcon" class="nav-link">Peregrine Falcon</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/polar-bear" class="nav-link">Polar Bear</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/pollinators" class="nav-link">Pollinators</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/prairie-dog" class="nav-link">Prairie Dog</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/red-wolf" class="nav-link">Red Wolf</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/sage-grouse" class="nav-link">Sage-Grouse</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/sea-otter" class="nav-link">Sea Otter</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/sea-turtles" class="nav-link">Sea Turtles</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/sharks-and-rays" class="nav-link">Sharks and Rays</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/snakes-and-lizards" class="nav-link">Snakes and Lizards</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/sonoran-pronghorn" class="nav-link">Sonoran Pronghorn</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/tiger" class="nav-link">Tiger</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/tortoises" class="nav-link">Tortoises</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/vaquita" class="nav-link">Vaquita</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wildlife/wolverine" class="nav-link">Wolverine</a></div>
+</div>
+
+                        </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="dropdown dropdown--mega nav-item">
+          <a class="nav-link" href="/wild-places"  >Wild Places</a>
+                                  <a class="dropdown-toggle" href="#" data-toggle="dropdown"></a>
+              <div class="w-100 d-lg-none"></div>
+              
+<div class="dropdown-menu">
+<div class="dropdown-item nav-item"><a href="/wild-places/arctic" class="nav-link">Arctic</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/californias-central-valley" class="nav-link">California&#039;s Central Valley</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/cascadia" class="nav-link">Cascadia</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/coasts-and-intertidal-zones" class="nav-link">Coasts and Intertidal Zones</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/deciduous-forests" class="nav-link">Deciduous Forests</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/deserts" class="nav-link">Deserts</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/great-plains" class="nav-link">Great Plains</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/greater-everglades" class="nav-link">Greater Everglades</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/northwest-florida" class="nav-link">Northwest Florida</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/oceans" class="nav-link">Oceans</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/rocky-mountains" class="nav-link">Rocky Mountains</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/sagebrush-sea" class="nav-link">Sagebrush Sea</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/sky-islands" class="nav-link">Sky Islands</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/southern-appalachians" class="nav-link">Southern Appalachians</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/temperate-rainforest" class="nav-link">Temperate Rainforest</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/texas-hill-country" class="nav-link">Texas Hill Country</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/trans-pecos" class="nav-link">Trans-Pecos</a></div>
+
+<div class="dropdown-item nav-item"><a href="/wild-places/wetlands-and-rivers" class="nav-link">Wetlands and Rivers</a></div>
+</div>
+
+                        </div>
+
+          </div>
+  
+
+
+  
+  
+            </div>
+        <div class="navbar-row navbar-row-sw">
+                                  
+  <h3 class="visually-hidden" id="block-secondarymenu-menu">Secondary Menu</h3>
+  
+
+        
+            
+    <div  class="nav--secondary navbar-nav">
+
+      
+                
+                
+
+
+
+
+
+  <div class="nav-item">
+          <a class="nav-link" href="/about"  >About</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="nav-item">
+          <a class="nav-link" href="/newsroom"  >News</a>
+                                </div>
+
+      
+                
+                
+
+
+
+
+
+  <div class="nav-item">
+          <a class="nav-link" href="/blog"  >Blog</a>
+                                </div>
+
+          </div>
+  
+
+
+  
+  
+            </div>
+      </div>
+      <div class="navbar-col navbar-right">
+        <div class="navbar-row navbar-row-ne">
+                
+
+
+<nav class="nav nav--secondary nav--navbar-tools navbar-nav flex-nowrap"  >
+                    
+
+
+
+
+  
+  <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#headerSignup" data-toggle="collapse" ><i class="fa fa-envelope"></i>&nbsp;Get updates</a>
+           </li>
+                        
+
+
+
+
+
+  <li class="border-right nav-item">
+           </li>
+                        
+
+
+
+
+  
+  <li class="nav-item">
+          <a class="nav-link" href="#searchForm" data-toggle="modal" ><i class="fa fa-search"></i></a>
+           </li>
+            </nav>
+            </div>
+        <div class="navbar-row navbar-row-se">
+                      <div id="block-headerdonateform">  
+    
+      
+<div class="navbar-nav donate-nav position-relative"><a href="https://support.defenders.org/page/18141/donate/1?supporter.appealCode=3WDW2000XXXXX&amp;en_og_source=FY20_Web_Donation&amp;utm_source=web&amp;utm_medium=web_donate_button&amp;utm_campaign=organic" target="_blank" class="btn rounded-0 pt-3 btn-orange px-md-2 px-sm-1 px-lg-3 w-100">Donate</a>
+<div id="headerDonateMenu" class="dropdown-menu"><div class="dropdown-item nav-item"><a href="https://support.defenders.org/page/18141/donate/1?supporter.appealCode=3WDW2000XXXXX&amp;en_og_source=FY20_Web_Donation&amp;utm_source=web&amp;utm_medium=web_menu_donate&amp;utm_campaign=organic" target="_blank" class="nav-item d-block pr-5 pl-2 py-2 text-white text-decoration-none">One-Time Donation</a></div><div class="dropdown-item nav-item"><a href="https://support.defenders.org/page/18686/donate/1?supporter.appealCode=3WDW2000RFXXX&amp;en_og_source=FY20_Web_Donation&amp;utm_source=web&amp;utm_medium=web_menu_monthly&amp;utm_campaign=organic" target="_blank" class="nav-item d-block pr-5 pl-2 py-2 text-white text-decoration-none">Monthly Donation</a></div></div>
+</div>
+
+  </div><div id="block-adoptmenu">  
+    
+      
+        
+            
+            
+
+
+
+  
+
+  <a class="btn btn-purple nav-link rounded-0" href="https://gifts.defenders.org/wildlife-adoptions?source_button=adopt" target="_blank">Adopt</a>
+
+      
+      
+
+
+  </div>
+  
+            </div>
+      </div>
+    </div>
+  
+</nav>
+
+</div>
+
+        <div id="block-particle-page-title">  
+    
+      
+
+
+<div class="bg-img jumbotron-wrapper" style="background-image: url(https://defenders.org/sites/default/files/styles/original_size/public/2019-10/tiger_david_miles_header.jpg?itok=u-xtYgW8);">
+
+<div class="jumbotron">
+  <div class="container">
+      
+      <h1 >
+                  Tiger
+      </h1>
+    
+
+      
+          </div>
+
+</div>
+          <div class="container jumbotron-image-credit">
+<div class="image-credit">                  David Miles
+      </div></div>
+    
+</div>
+
+  </div>
+  
+
+        <div data-drupal-messages-fallback class="hidden"></div>
+
+  
+
+    
+
+  <main role="main" >
+    
+    <a id="main-content" tabindex="-1"></a>    
+
+    
+          <div class="layout-content">
+              <div id="block-particle-content">  
+    
+      <div about="/wildlife/tiger">
+  
+    
+  
+<section class="section" >
+<div class="container">
+        
+        <div class="row justify-content-center">
+              <div  class="col-sm-12">
+            
+    
+      
+<div class="views-element-container"><div class="js-view-dom-id-9a8c0d925383b7e843917ad8ea233b2fd52297db5ec58e4ce8afa497855d51a6">
+  
+  
+  
+
+  
+  
+  
+
+        <div><div  role="article" about="/action/tell-congress-take-stand-against-unregulated-wildlife-markets">
+  
+  
+  
+<div class="callout">
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+              <div class="callout-image bg-img no-screen" style="background-image: url('/sites/default/files/magazine-winter-2010-pangolin-georg-steinmetz.jpg');"></div>
+        <a href="https://act.defenders.org/page/18851/action/1?supporter_appealCode=3WDW2008AHXXX&amp;en_og_source=FY20_Web_Action" class="stretched-link"></a>          </div>
+    <div class="col-md-6 col-lg-8">
+      <div class="callout-content">
+        <h2 class="callout-title">
+          <a href="https://act.defenders.org/page/18851/action/1?supporter_appealCode=3WDW2008AHXXX&amp;en_og_source=FY20_Web_Action">            <span>Tell Congress to take a stand against unregulated wildlife markets</span>
+
+          </a>        </h2>
+                  <div class="callout-text">
+<div class="long-text">                  The COVID-19 epidemic is only the latest catastrophe caused by illegal and unregulated wildlife trade.
+      </div></div>
+                          
+
+
+
+
+
+<a  class="btn btn-orange" href=https://act.defenders.org/page/18851/action/1?supporter_appealCode=3WDW2008AHXXX&en_og_source=FY20_Web_Action >
+          Take a Stand!
+          </a>
+              </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  
+        </div>
+                    <div  class="col-lg-8 col-md-10">
+            
+    
+      
+<div class="body-text long-text">                  <p>With Tiger King shedding light on how big cats can be forced into cruel, unnatural living situations when held in captivity, you can see why it's more important than ever to protect all big cats in the wild and to preserve and restore habitat for these amazing creatures. Defenders of Wildlife protects big cats in North America, like Florida panthers and jaguars, and we tirelessly advocate for human-wildlife coexistence, which should never include making wild animals pets. <a href="https://gifts.defenders.org/tiger" title="Protect Tigers - visit out gift center!">You can help support our efforts too.</a></p>
+
+<p>The largest of the big cats, tigers are truly impressive animals with their black-striped orange fur and white bellies. A tiger’s stripe pattern is like a fingerprint and can be used to identify individuals.</p>
+
+<p>The tiger is the largest member of the felid (cat) family. Tiger taxonomy was revised in 2017 based on new genetic analysis into two subspecies: <em>Panthera tigris tigris</em>, consisting of tiger populations in continental Asia, and <em>Panthera tigris sondaica</em>, including populations in the Sunda Islands.</p>
+
+      </div>
+    
+    
+      
+<div class="long-text">      <div class="h4">Defenders&#039; Impact</div>
+                  <p>Since tigers are not native to North America, Defenders does not work on their conservation directly. Defenders works to ensure that tigers remain protected under the Endangered Species Act, and under the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) highlighting their link to jaguar trade. Many of the threats facing <a href="https://defenders.org/wildlife/florida-panther">Florida panthers</a> and <a href="https://defenders.org/wildlife/jaguar">jaguars</a> in North America, such as habitat loss, road kills and poaching, are also experienced by tigers. Because of this, we work closely with tiger conservationists to better enable human-wildlife coexistence by exchanging innovative and effective tools and technology for protecting livestock and people. </p>
+
+      </div>
+  
+        </div>
+          </div>
+  
+</div></section>
+
+<section class="bg-gray section" >
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+      
+    
+      
+  
+
+  
+<div class="callout">
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+              <div class="callout-image bg-img no-screen" style="background-image: url('https://defenders.org/sites/default/files/2020-04/entry10638.jpg');"></div>
+        <a href="https://gifts.defenders.org/tiger" class="stretched-link"></a>          </div>
+    <div class="col-md-6 col-lg-8">
+      <div class="callout-content">
+        <h2 class="callout-title">
+          <a href="https://gifts.defenders.org/tiger">            Adopt a Tiger
+          </a>        </h2>
+                  <div class="callout-text">
+<div class="long-text"><p>Your adoption supports our work to ensure that tigers remain protected under the Endangered Species Act, the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), and other international laws and treaties.</p>
+</div>
+</div>
+                          
+
+
+
+
+
+<a  class="btn btn-orange" href=https://gifts.defenders.org/tiger >
+          Adopt Now
+          </a>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  </div>
+</div>
+
+</div></section>
+
+<section class="section" >
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+      
+    
+      
+<div class="tab-panel">
+  <div class="row">
+    <div class="col-lg-4 tabs-wrapper">
+      
+
+
+<ul class="flex-lg-column nav nav-pills"  >
+                        
+
+
+
+
+
+    
+  
+
+  <li class="nav-item">
+          <a class="active nav-link tab-link" href="#Threats--Status" aria-controls="Threats--Status" data-toggle="pill" id="Threats--Status-tab" role="tab" aria-selected="false">Threats & Status</a>
+           </li>
+                      
+
+
+
+
+
+    
+  
+
+  <li class="nav-item">
+          <a class="nav-link tab-link" href="#What-You-Can-Do" aria-controls="What-You-Can-Do" data-toggle="pill" id="What-You-Can-Do-tab" role="tab" aria-selected="false">What You Can Do</a>
+           </li>
+                      
+
+
+
+
+
+    
+  
+
+  <li class="nav-item">
+          <a class="nav-link tab-link" href="#Facts" aria-controls="Facts" data-toggle="pill" id="Facts-tab" role="tab" aria-selected="false">Facts</a>
+           </li>
+                      
+
+
+
+
+
+    
+  
+
+  <li class="nav-item">
+          <a class="nav-link tab-link" href="#Range--Population" aria-controls="Range--Population" data-toggle="pill" id="Range--Population-tab" role="tab" aria-selected="false">Range & Population</a>
+           </li>
+                      
+
+
+
+
+
+    
+  
+
+  <li class="nav-item">
+          <a class="nav-link tab-link" href="#Behavior--Reproduction" aria-controls="Behavior--Reproduction" data-toggle="pill" id="Behavior--Reproduction-tab" role="tab" aria-selected="false">Behavior & Reproduction</a>
+           </li>
+                  </ul>
+    </div>
+    <div class="col-lg-8 tab-content-wrapper">
+      <div class="tab-content">
+              
+<div class="active show fade tab-pane" id="Threats--Status" role="tabpanel" aria-labelledby="Threats--Status-tab">
+                    
+      <div class="h4">Threats</div>
+                  
+<div>
+  
+
+
+
+
+
+<div class="card" >
+        
+  
+        <div class="card-body">
+                        <h4 class="card-title"></h4>                                              <p class="card-text ">
+<div class="long-text">                  <p>Tigers face many threats. Their greatest threat is large scale loss of habitat and prey due to human encroachment and habitat degradation for agriculture. Climate change is also causing ocean levels to rise, reducing coastal habitat in areas like India’s Sunderban islands and forcing tigers to move into areas more heavily populated by people. In some parts of their range, tigers are poached because their pelts are valuable in the black market trade in Asia and their other body parts are used in traditional Asian medicine. Tigers are also killed or removed from the wild in efforts to protect livestock and human communities. Finally, as tigers recover in some regions, they come into contact more often with people, pets and livestock, which can increase human-wildlife conflicts if tigers and people are not proactively managed.</p>
+
+      </div></p>
+                                                </div>
+  
+  
+  
+  
+</div>
+</div>
+
+      
+                  <div class="h4">Protection Status</div>
+
+<div class="table-responsive"><table class="table protection-table" data-striping="1">
+  
+  
+  
+      <tbody>
+              <tr>
+                      <td>
+<div class="font-weight-bold">                  Endangered Species Act
+      </div></td>
+                      <td>
+<div class="font-weight-bold">                  IUCN Red List
+      </div></td>
+                      <td>
+<div class="font-weight-bold">                  CITES
+      </div></td>
+                  </tr>
+              <tr>
+                      <td>
+            <div class="text-nowrap">      <i class="fa fa-exclamation-circle text-red"></i>&nbsp;<span class="font-weight-bold small">Endangered</span>
+    </div>  </td>
+                      <td>
+            <div class="text-nowrap">      <i class="fa fa-exclamation-circle text-red"></i>&nbsp;<span class="font-weight-bold small">Endangered</span>
+    </div>  </td>
+                      <td>
+            <div class="text-nowrap">      <i class="fa fa-exclamation-circle text-yellow"></i>&nbsp;<span class="font-weight-bold small">Appendix I</span>
+    </div>  </td>
+                  </tr>
+          </tbody>
+    </table>
+</div>
+
+
+              </div>
+      
+<div class="fade tab-pane" id="What-You-Can-Do" role="tabpanel" aria-labelledby="What-You-Can-Do-tab">
+                    
+<div class="long-text">      <div class="h4">What You Can Do</div>
+                  <p>You can help tigers through being a conscious shopping. Palm oil plantations are replacing tiger habitat in Southeast Asia, so read food ingredient labels to check if the palm oil in your product is sustainably grown. When traveling abroad, do not purchase souvenirs or gifts that may contain tiger products – even products made from ‘tiger substitutes’ can contribute to declines in other endangered species, so it is best to avoid wildlife products entirely. Finally, become big cat savvy by learning about imperiled big cats in North America like the <a href="https://defenders.org/wildlife/florida-panther">Florida panther</a> and <a href="https://defenders.org/wildlife/jaguar">jaguar</a>. </p>
+
+      </div>
+              </div>
+      
+<div class="fade tab-pane" id="Facts" role="tabpanel" aria-labelledby="Facts-tab">
+                    
+      <div class="h4">Facts</div>
+                    <div class="d-flex mb-4 paragraph paragraph--type--fast-fact paragraph--view-mode--default">
+          
+<div class="meta-info mt-1 mr-3 mb-0 text-muted">                  Latin Name
+      </div>
+<div class="font-italic">                  Panthera tigris
+      </div>
+      </div>
+
+                      <div class="d-flex mb-4 paragraph paragraph--type--fast-fact paragraph--view-mode--default">
+          
+<div class="meta-info mt-1 mr-3 mb-0 text-muted">                  Size
+      </div>
+                  Female tigers are smaller than males. 9 -13 ft in length, with the tail representing up to 3 ft.The Siberian tiger ( males weigh 400-675 lbs) is the largest subspecies and the Sumatran tiger (220-310 lbs) is the smallest living subspecies.
+      
+      </div>
+
+                      <div class="d-flex mb-4 paragraph paragraph--type--fast-fact paragraph--view-mode--default">
+          
+<div class="meta-info mt-1 mr-3 mb-0 text-muted">                  Lifespan
+      </div>
+                  10-15 years in the wild, up to 26 years in captivity
+      
+      </div>
+
+      
+              </div>
+      
+<div class="fade tab-pane" id="Range--Population" role="tabpanel" aria-labelledby="Range--Population-tab">
+                    
+<div class="long-text">      <div class="h4">Range/Habitat</div>
+                  <p>Tigers live in 13 range countries across Asia. Tigers occupy a variety of habitats from tropical forests, evergreen forests, woodlands and mangrove swamps to grasslands, savannah and rocky country.</p>
+
+      </div>
+                  
+<div class="long-text">      <div class="h4">Population</div>
+                  <p>In the early 1900s, there were estimated to be around 100,000 tigers throughout their range. Today, around 4,000 tigers live in the wild, while roughly 5,000-7,000 exist in captivity.</p>
+
+      </div>
+              </div>
+      
+<div class="fade tab-pane" id="Behavior--Reproduction" role="tabpanel" aria-labelledby="Behavior--Reproduction-tab">
+                    
+<div class="long-text">      <div class="h4">Behavior</div>
+                  <p>Tigers are mostly nocturnal (more active at night) and are ambush predators that rely on the camouflage their stripes provide to stalk prey. Tigers use their body weight to knock prey to the ground and kill with a bite to the neck. They are also very good swimmers and have been known to drown their prey. Tigers are territorial and typically live solitary lives, except during mating season and while females raise young.</p>
+
+      </div>
+                  
+<div class="long-text">      <div class="h4">Reproduction</div>
+                  <p>Mating Season: In tropical climates, mostly from around November to April; during the winter months in temperate regions.<br />
+Gestation: 103-105 days.<br />
+Litter size: 3-4 cubs.<br />
+Cubs follow their mother out of the den at around 8 weeks and become independent at around 18 months of age. They leave their mothers at about 2 ½ years. Mothers guard their young from wandering males that may kill the cubs to make the female receptive to mating.</p>
+
+      </div>
+                  
+<div class="long-text">      <div class="h4">Diet</div>
+                  <p>Tigers mainly eat sambar deer, wild pigs, water buffalo and antelope. Old and injured tigers have been known to attack domestic cattle and people.</p>
+
+      </div>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  
+  </div>
+</div>
+
+</div></section>
+
+
+
+<section class="grid-lines grid-wide section" >
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+      
+      <h3>Tiger Blog Posts</h3>
+    
+      
+<div class="views-element-container"><div class="card-grid js-view-dom-id-6ed3780721178bd1518a1e691bf1c15d1b3188621d1055018dc3c8d742fc1243">
+  
+  
+  
+
+  
+  
+  
+
+  <div id="views-bootstrap-blog-by-term--2"  class="grid views-view-grid">
+  <div class="row">
+          <div  class="col-12 col-md-4">
+        
+<div  role="article" about="/blog/2018/11/jaguars-are-new-tigers" typeof="schema:Article">
+  
+    <span property="schema:name" content="Jaguars are the New Tigers" class="hidden"></span>
+
+  
+
+
+
+
+
+<div class="card card-linked" >
+        
+      <div class="card-img card-img-top image-style-card">
+            
+<div property="schema:image">            <div property="schema:image">        <a href="/blog/2018/11/jaguars-are-new-tigers" hreflang="en"><img src="/sites/default/files/styles/square/public/wp-content/uploads/2016/04/jaguar-Barry-Draper.jpg?h=1737284e&amp;itok=9ZjvEUfj" width="800" height="800" alt="Jaguar" typeof="foaf:Image" class="img-fluid" />
+
+</a>
+
+    </div>  </div>
+        </div>
+  
+        <div class="bar card-body">
+                  <div class="card-meta">
+<div class="meta-info">
+<div class="meta-info-item"><span>November 1, 2018</span>
+</div>
+</div>
+</div>
+                        <h4 class="card-title"><a class="chevy" href="/blog/2018/11/jaguars-are-new-tigers"><span property="schema:name">Jaguars are the New Tigers</span></a></h4>                              
+                                  </div>
+  
+  
+  
+      <a href="/blog/2018/11/jaguars-are-new-tigers" class="stretched-link"></a>
+  
+</div>
+</div>
+
+      </div>
+      </div>
+</div>
+
+    
+
+  
+  
+<div class="more-link meta-info"><a href="/blog" class="chevy">Visit the blog</a></div>
+
+
+  
+  
+</div>
+</div>
+
+  
+  </div>
+</div>
+
+</div></section>
+
+<section class="bg-dark section" >
+<div class="container">
+        
+  <div  class="row">
+                          <div  class="col-md-4">
+          
+      <h3>Related Issues</h3>
+    
+      
+            <div class="border-bottom border-top">      <a href="/issues/advocating-international-species" class="chevy" hreflang="en">Advocating for International Species</a>
+    </div>  
+  
+      </div>
+      </div>
+
+</div></section>
+
+
+<section class="section" >
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+      
+      <h3>Wildlife and Wild Places</h3>
+    
+      
+<div class="row">
+<div class="col-sm-6 col-lg-3"><div about="/wildlife/ocelot">
+  
+  
+  
+
+
+
+
+
+<div class="card card-linked" >
+        
+      <div class="card-img card-img-top image-style-card">
+            
+                    <a href="/wildlife/ocelot" hreflang="en"><img src="/sites/default/files/styles/square/public/2019-04/ocelot_aussieanouk-stock.adobe_.com_header_0.jpg?h=9b616738&amp;itok=NbBaVlDd" width="800" height="800" alt="Ocelot" typeof="foaf:Image" class="img-fluid" />
+
+</a>
+
+      
+        </div>
+  
+        <div class="card-body">
+                        <h4 class="card-title"><a class="chevy" href="/wildlife/ocelot">Ocelot</a></h4>                              
+                                  </div>
+  
+  
+  
+      <a href="/wildlife/ocelot" class="stretched-link"></a>
+  
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-3"><div about="/wildlife/florida-panther">
+  
+  
+  
+
+
+
+
+
+<div class="card card-linked" >
+        
+      <div class="card-img card-img-top image-style-card">
+            
+                    <a href="/wildlife/florida-panther" hreflang="en"><img src="/sites/default/files/styles/square/public/2019-04/florida_panther_fstop_foundation_header.jpg?h=984b0d80&amp;itok=i1HlGArb" width="800" height="800" alt="Florida Panther walking at night" typeof="foaf:Image" class="img-fluid" />
+
+</a>
+
+      
+        </div>
+  
+        <div class="card-body">
+                        <h4 class="card-title"><a class="chevy" href="/wildlife/florida-panther">Florida Panther</a></h4>                              
+                                  </div>
+  
+  
+  
+      <a href="/wildlife/florida-panther" class="stretched-link"></a>
+  
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-3"><div about="/wildlife/canada-lynx">
+  
+  
+  
+
+
+
+
+
+<div class="card card-linked" >
+        
+      <div class="card-img card-img-top image-style-card">
+            
+                    <a href="/wildlife/canada-lynx" hreflang="en"><img src="/sites/default/files/styles/square/public/2019-04/lynx_sandra_burford_header.jpg?h=e015a0b1&amp;itok=iqtryM0g" width="800" height="800" alt="Canada lynx" typeof="foaf:Image" class="img-fluid" />
+
+</a>
+
+      
+        </div>
+  
+        <div class="card-body">
+                        <h4 class="card-title"><a class="chevy" href="/wildlife/canada-lynx">Canada Lynx</a></h4>                              
+                                  </div>
+  
+  
+  
+      <a href="/wildlife/canada-lynx" class="stretched-link"></a>
+  
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-3"><div about="/wildlife/jaguar">
+  
+  
+  
+
+
+
+
+
+<div class="card card-linked" >
+        
+      <div class="card-img card-img-top image-style-card">
+            
+                    <a href="/wildlife/jaguar" hreflang="en"><img src="/sites/default/files/styles/square/public/2019-04/jaguar_bob_shipbaugh_header.jpg?h=984b0d80&amp;itok=ChZh3eok" width="800" height="800" alt="Jaguar" typeof="foaf:Image" class="img-fluid" />
+
+</a>
+
+      
+        </div>
+  
+        <div class="card-body">
+                        <h4 class="card-title"><a class="chevy" href="/wildlife/jaguar">Jaguar</a></h4>                              
+                                  </div>
+  
+  
+  
+      <a href="/wildlife/jaguar" class="stretched-link"></a>
+  
+</div>
+</div>
+</div>
+</div>
+
+  
+  </div>
+</div>
+
+</div></section>
+
+<section class="bg-img section"  style="background-image: url(https://defenders.org/sites/default/files/styles/original_size/public/2019-04/Sunset-Over-Caribou-Ranch_Jade-Sevelow_2_P8140001.jpg?itok=5cYwVT7p);">
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+    
+
+<div class="signup">
+<div>  <div class="row">
+    
+        
+            <div class="col-md-6 col-lg-4">
+   <h3 >Get Alerts &amp; Updates</h3>     </div>
+  <div class="col-md-6 col-lg-4">
+      <form class="form email-signup-form mb-2" id="email_signup-0" action="https://support.defenders.org/page/18723/subscribe/1" method="GET" target="_blank" >
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope text-orange"></i></span>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="supporter.emailAddress" placeholder="Enter email" class="form-control email-address" id="email_address-0" required>
+          <input type="number" name="supporter.postcode" id="zip_code-0" class="form-control zip-code collapse" placeholder="Zip Code" required />
+        </div>
+
+        <div class="input-group-append">
+          
+
+
+  
+
+
+<input type="submit" class="btn btn-orange fa" value="&#xf105;" />
+          
+                </div>
+      </div>
+    </form>
+  
+      <form class="form mobile-signup-form" id="mobile_signup-0">
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-commenting text-orange"></i></span>
+        </div>
+        <input type="text" placeholder="Enter mobile number" class="form-control form-text form-mobile-number" id="mobile_number-0" required>
+        <div class="input-group-append">
+          
+
+
+  
+
+
+<input type="submit" class="btn btn-orange fa" value="&#xf105;" />
+          
+                </div>
+      </div>
+    </form>
+  
+
+  <div class="signup__mobile-thank-you hidden alert small py-0 px-1 mb-0 alert-success">
+    Thank you!
+  </div>
+  </div>
+
+      </div>
+</div></div>
+
+  </div>
+</div>
+
+</div></section>
+
+</div>
+
+  </div>
+  
+      </div>
+
+    
+    
+  </main>
+
+</div>
+<footer class="section bg-dark" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-8">
+        <div id="block-sociallinksblock">  
+    
+      <div class="mb-4 h5">
+      <a href="http://www.facebook.com/DefendersofWildlife" target="_blank" class="icon-stamp"><i class="fa fa-facebook"></i><span class="sr-only">facebook</span></a>
+      <a href="http://twitter.com/defenders" target="_blank" class="icon-stamp"><i class="fa fa-twitter"></i><span class="sr-only">twitter</span></a>
+      <a href="https://www.instagram.com/defendersofwildlife/?hl=en" target="_blank" class="icon-stamp"><i class="fa fa-instagram"></i><span class="sr-only">instagram</span></a>
+      <a href="http://www.youtube.com/defendersofwildlife" target="_blank" class="icon-stamp"><i class="fa fa-youtube"></i><span class="sr-only">youtube</span></a>
+      <a href="https://medium.com/wild-without-end" target="_blank" class="icon-stamp"><i class="fa fa-medium"></i><span class="sr-only">medium</span></a>
+  </div>
+
+  </div>
+                    
+  <h3 class="visually-hidden" id="block-particle-footer-menu">Footer menu</h3>
+  
+
+        
+                    <div class="nav--secondary nav--footer nav">
+              <div class="nav-item">
+        <a href="/about/about-us" class="nav-link">About Us</a>
+              </div>
+          <div class="nav-item">
+        <a href="/faqs" class="nav-link" data-drupal-link-system-path="node/6411">FAQ</a>
+              </div>
+          <div class="nav-item">
+        <a href="/magazine" class="nav-link" data-drupal-link-system-path="node/5989">Defenders Magazine</a>
+              </div>
+          <div class="nav-item">
+        <a href="/publications" class="nav-link" data-drupal-link-system-path="node/6416">Publications</a>
+              </div>
+          <div class="nav-item">
+        <a href="/jobs" class="nav-link" data-drupal-link-system-path="node/5988">Jobs &amp; Internships</a>
+              </div>
+        </div>
+  
+
+
+  
+        <div class="row small">
+          <div class="col-lg-4"><div id="block-addressphone">  
+    
+      <p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ba838715-483b-4978-9f18-637b9ebe2f1f" href="/contact-us">CONTACT US</a></p>
+
+<p x-ms-format-detection="none">1130 17th Street NW<br />
+Washington, DC 20036<br />
+1-800-385-9712</p>
+
+  </div></div>
+          <div class="col-lg-4"><div id="block-utilitylinkscopyright">  
+    
+      <p><a href="/terms">Terms of Use</a></p>
+
+<p><a href="/defenders-wildlife-privacy-policy">Privacy Policy</a></p>
+
+<p>© 2020 Defenders of Wildlife</p>
+
+  </div></div>
+          <div class="col-lg-4"><div id="block-footerlogos">  
+    
+      <p class="d-flex align-items-center"><img alt="Charity Navigator" class="mr-3" src="/modules/custom/dow_tweaks/img/cn-logo.png" /> <a href="https://www.guidestar.org/profile/53-0183181" target="_blank"><img alt="Guide Star Platinum Charity" src="/modules/custom/dow_tweaks/img/gs-logo.png" /></a></p>
+
+  </div></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div id="block-howfundsareusedblock">  
+      <h5 class="text-muted">How Funds Are Used </h5>
+    
+      <div class="row">
+  <div class="col-6">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="img-fluid">
+     <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="25%" stop-color="#2f3673"></stop>
+          <stop offset="75%" stop-color="#4c2d6a"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="50%" cy="50%" r="125" stroke="url(#gradient)" stroke-width="50" fill="transparent" transform="rotate(-135 150 150)"></circle>
+      <path d="M 150 25 a 125 125, 10.8, 0, 0, -23.422664323216, 2.2140936589139" stroke-width="50" stroke="#716d6a" fill="transparent"></path>
+      <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="50" fill="white" font-weight="700">97%</text>
+    </svg>
+  </div>
+  <div class="col-6 small">
+    97% of our funds go towards program and support services, with only 3% going towards fundraising.
+  </div>
+</div>
+
+  </div>
+      </div>
+    </div>
+  </div>
+</footer>
+        <div class="modal fade" id="searchForm" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+                    
+
+
+  
+
+
+<button type="button" class="btn btn-outline-light close rounded-circle" data-dismiss="modal" >
+          
+            <i class="fa fa-close"></i>
+        </button>
+        </div>
+        <div class="modal-body">
+                      <form action="/search/site" method="get" id="search-block-form--2" accept-charset="UTF-8">
+  
+<div class="form-group js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label class="meta-info visually-hidden" for="edit-keys--2">Search</label>
+          <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys--2" name="keys" value="" size="15" maxlength="128" class="form-search form-control" />
+
+          </div>
+
+<div data-drupal-selector="edit-actions" class="form-actions" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn" />
+</div>
+
+</form>
+
+                  </div>
+                                </div>
+    </div>
+  </div>
+  <div class="lightbox-node modal fade" data-lightbox-delay="2" data-lightbox-period="1" data-lightbox-cookie-id="lightbox-7242" data-lightbox-exit="0" id="block-relatedlightbox" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+                    
+
+
+  
+
+
+<button type="button" class="btn btn-outline-light close rounded-circle" data-dismiss="modal" >
+          
+            <i class="fa fa-close"></i>
+        </button>
+        </div>
+        <div class="modal-body">
+                      <article role="article" about="/hidden/save-americas-endangered-treasures">
+
+  
+    
+
+  
+  <div>
+    
+<section class="section" >
+<div class="container">
+        
+  <div  class="row">
+      <div  class="col-sm-12">
+      
+    
+    <div class="row lightbox-donation-form bg-dark no-gutters">
+    <div class="col-lg-6 col-md-12 d-md-none d-none d-lg-block">
+      
+<div class="field-image col-sm-12 p-0">                    <img src="/sites/default/files/styles/lightbox_donation_image/public/2020-07/Piping-Plover-Mom-and-Chick_Raj-Das_0_PipingPloverMomChick%20left%20vertical_0.jpg?itok=0EK4jeA-" width="556" height="702" alt="Piping plover mom and chick" typeof="foaf:Image" class="img-fluid" />
+
+
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 px-4 pt-4">
+      
+<div class="row justify-content-center">
+<div class="field-headline col-sm-12 h3">                  Save America’s Endangered Treasures
+      </div>
+<div class="field-lb-subtitle col-sm-12 h3 text-orange mt-n4">                  3x match in effect
+      </div>
+<div class="field-intro col-sm-12 long-text">                  <p>THIS WEEK ONLY: Make your generous donation to protect wildlife and our Board of Directors and President's Circle will match your gift 2-for-1. But hurry – this 3x match offer expires at midnight on Friday, July 31st!</p>
+
+      </div><div class="text-center"><a href="https://support.defenders.org/page/21086/donate/1?supporter.appealCode=3WDW2000XXXXX&amp;en_og_source=FY20_Web_Donation&amp;utm_source=web&amp;utm_medium=lightbox&amp;utm_campaign=July_match" target="blank" class="btn rounded-0 btn-orange">Donate Today</a></div></div>
+
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+</div></section>
+
+  </div>
+
+</article>
+
+                  </div>
+                                </div>
+    </div>
+  </div>
+
+  
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/1189","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"copyprevention":{"body":[],"images":{"contextmenu":"contextmenu","transparentgif":"transparentgif"},"images_min_dimension":150,"transparentgif":"https:\/\/defenders.org\/modules\/contrib\/copyprevention\/transparent.gif"},"fitvids":{"selectors":".node\r,#block-particle-content\r,.embedded-entity-inner","custom_vendors":"","ignore_selectors":""},"googleCSE":{"cx":"017568361988050180219:-frwkxkieve","language":"en","resultsWidth":0,"domain":"","isDefault":true},"ajaxTrustedUrl":{"\/search\/site":true},"user":{"uid":0,"permissionsHash":"16b89e5d48d3b731dd91cf194ebddc0a26c3edc3e9cba9f139001426b6555d65"}}</script>
+<script src="/sites/default/files/js/js_lPuppz_1c7gS3app8C0UthDGM9hHspvZ3HVCt2F4aEA.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=defendersofwildlife"></script>
+<script src="/sites/default/files/js/js_AxNUuTjwurxeSeM6VJ9NJFaVLUX0Yt-g4klPfw3TWAE.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"20ea2f9489","applicationID":"313788190","transactionName":"b1BRMhFWXBIEUERYXlYacgUXXl0PSkNRVlRnVlIFC1I=","queueTime":0,"applicationTime":96,"atts":"QxdSRFlMTxw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,5 +1,0 @@
- Commands marked • are bash  
-Many commands particularly the Core Utils
-are also available under alternate   (C shell, Korn shell etc).  More bash commands:   from O'Reilly, GNU  . 
- 
- 

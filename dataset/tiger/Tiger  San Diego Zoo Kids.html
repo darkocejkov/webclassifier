@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js adaptivetheme">
+  <head>
+    
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"ecb4fdaae2",applicationID:"126339335"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-21250163-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta property="og:site_name" content="San Diego Zoo Kids" />
+<meta property="og:url" content="https://kids.sandiegozoo.org/animals/tiger" />
+<meta property="og:title" content="Tiger" />
+<meta property="og:image" content="http://kids.sandiegozoo.org/sites/default/files/kids_fb_share_default.png" />
+<meta property="og:image:url" content="http://kids.sandiegozoo.org/sites/default/files/kids_fb_share_default.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/atkids/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://kids.sandiegozoo.org/animals/tiger" />
+<link rel="shortlink" href="https://kids.sandiegozoo.org/node/164" />
+<link rel="revision" href="https://kids.sandiegozoo.org/animals/tiger" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qe5hsr" defer></script>
+
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"><title>Tiger | San Diego Zoo Kids</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_d2Wl75IHMebKwU_DcZgy68jLE_VfKTKCLvXJ7aob-Ec.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_u64f4AtqAqJg9-fMkyqSR2itO8J8SZGCO7QXaiR8WUo.css" />
+
+    <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+  </head><body role="document" class="layout-type--flex-builder terms--forest page--node-164 user-logged-out path-not-frontpage path-node path-animals-tiger page-node-type--animals site-name--san-diego-zoo-kids theme-name--atkids">
+        <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMWQGH8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="page js-layout">
+  <div data-at-row="leaderboard" class="l-leaderboard l-row">
+  
+  <div class="l-pr page__row pr-leaderboard" id="leaderboard">
+    <div class="l-rw regions container pr-leaderboard__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="1" class="l-r region pr-leaderboard__leaderboard"><nav role="navigation" aria-labelledby="block-utilitynavigation-3-menu" id="block-utilitynavigation-3" class="l-bl block block-menu block-config-provider--system block-plugin-id--system-menu-block-utility-navigation">
+  <div class="block__inner block-menu__inner">
+
+    
+    <h2 class="visually-hidden block__title block-menu__title" id="block-utilitynavigation-3-menu"><span>Utility Navigation</span></h2>
+    <div class="block__content block-menu__content">
+    <ul class="menu odd menu-level-1 menu-name--utility-navigation">      
+                          
+      
+            <li class="menu__item menu__item-title--for-grown-ups" id="mlid-for-grown-ups">
+
+        <span class="menu__link--wrapper">
+          <a href="/grownups" class="menu__link" data-drupal-link-system-path="node/33">For Grown Ups</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--glossary" id="mlid-glossary">
+
+        <span class="menu__link--wrapper">
+          <a href="/glossary" class="menu__link" data-drupal-link-system-path="node/34">Glossary</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--search" id="mlid-search">
+
+        <span class="menu__link--wrapper">
+          <a href="/search" class="menu__link" data-drupal-link-system-path="node/35">Search</a>
+        </span>
+
+        
+      </li></ul>
+  
+
+</div></div>
+</nav>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="navbar" class="l-navbar l-row">
+  
+  <div class="l-pr page__row pr-navbar" id="navbar">
+    <div class="l-rw regions container pr-navbar__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="2" class="l-r region pr-navbar__navbar"><div id="block-atkids-branding" class="l-bl block block-branding block-config-provider--system block-plugin-id--system-branding-block has-logo has-name">
+  <div class="block__inner block-branding__inner">
+
+    <div class="block__content block-branding__content site-branding"><a href="/" title="Home" itemprop="url" rel="home" class="site-branding__logo-link"><img src="/sites/default/files/SDZKidsSecondaryLogo.png" alt="Home" itemprop="logo" class="site-branding__logo-img" /></a><span class="site-branding__text"><strong class="site-branding__name"><a href="/" title="Home" itemprop="url" rel="home" class="site-branding__name-link">San Diego Zoo Kids</a></strong></span></div></div>
+</div>
+<svg style="display:none;">
+    <symbol id="rm-toggle__icon--open" viewBox="0 0 1792 1792" preserveAspectRatio="xMinYMid meet">
+    <path class="rm-toggle__icon__path" d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" />
+  </symbol>
+    <symbol id="rm-toggle__icon--close" viewBox="0 0 1792 1792" preserveAspectRatio="xMinYMid meet">
+    <path class="rm-toggle__icon__path" d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z" />
+  </symbol>
+</svg>
+<nav role="navigation" aria-labelledby="block-atkids-main-menu-menu" id="block-atkids-main-menu" class="l-bl rm-block rm-config-provider--system rm-plugin-id--system-menu-block-main js-hide">
+  <div class="rm-block__inner">
+    <div class="rm-toggle">
+      <button href="#rm-content" class="rm-toggle__link un-button" role='button' aria-controls="rm-content" aria-expanded="false">
+                        <span class="rm-toggle__label" id="block-atkids-main-menu-menu">menu</span>
+      </button>
+    </div><div class="rm-block__content" id="rm-content">
+        
+    <ul class="menu odd menu-level-1 menu-name--main">      
+                          
+      
+            <li class="menu__item menu__item-title--home" id="mlid-home">
+
+        <span class="menu__link--wrapper">
+          <a href="/" class="menu__link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item--collapsed menu__item--active-trail menu__item-title--animals" id="mlid-animals">
+
+        <span class="menu__link--wrapper">
+          <a href="/animals" class="menu__link" data-drupal-link-system-path="node/201">animals</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item--collapsed menu__item-title--videos" id="mlid-videos">
+
+        <span class="menu__link--wrapper">
+          <a href="/videos" class="menu__link" data-drupal-link-system-path="node/17">Videos</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item--collapsed menu__item-title--stories" id="mlid-stories">
+
+        <span class="menu__link--wrapper">
+          <a href="/stories" class="menu__link" data-drupal-link-system-path="node/15">Stories</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item--collapsed menu__item-title--activities" id="mlid-activities">
+
+        <span class="menu__link--wrapper">
+          <a href="/activities" class="menu__link" data-drupal-link-system-path="node/30">Activities</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--games" id="mlid-games">
+
+        <span class="menu__link--wrapper">
+          <a href="/games" class="menu__link" data-drupal-link-system-path="node/31">Games</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--save-animals" id="mlid-save-animals">
+
+        <span class="menu__link--wrapper">
+          <a href="/save-animals" class="menu__link" data-drupal-link-system-path="node/371">save animals</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--search" id="mlid-search">
+
+        <span class="menu__link--wrapper">
+          <a href="/search" class="menu__link" data-drupal-link-system-path="node/35">Search</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--glossary" id="mlid-glossary">
+
+        <span class="menu__link--wrapper">
+          <a href="/glossary" class="menu__link" data-drupal-link-system-path="node/34">Glossary</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--for-grownups" id="mlid-for-grownups">
+
+        <span class="menu__link--wrapper">
+          <a href="/grownups" class="menu__link" data-drupal-link-system-path="node/33">For Grownups</a>
+        </span>
+
+        
+      </li></ul>
+  
+
+</div></div>
+</nav>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="highlighted" class="l-highlighted l-row">
+  
+  <div class="l-pr page__row pr-highlighted" id="highlighted">
+    <div class="l-rw regions container pr-highlighted__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="1" class="l-r region pr-highlighted__highlighted"><div class="l-bl block--messages" data-drupal-messages><div data-drupal-messages-fallback class="hidden"></div></div></div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="main" class="l-main l-row">
+  
+  <div class="l-pr page__row pr-main" id="main-content">
+    <div class="l-rw regions container pr-main__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="4" class="l-r region pr-main__content"><a id="main-content" tabindex="-1"></a>
+<main id="block-atkids-content" class="l-bl block block-main-content" role="main">
+  
+  <div data-history-node-id="164" class="node node--view-mode-full node--type-animals node--id-164 atl atl--ds-1col ds-1col clearfix" role="article">
+
+  
+
+  
+<div  id="hero-group" class="page-section">
+      
+<div  id="hero-title-top">
+      
+<div  id="hero-image">
+      <div class="field field-node--field-hero field-formatter-image field-name-field-hero field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/animal-hero-tiger_0.jpg" width="1020" height="582" alt="Sumatran tiger prowling " typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+  </div>
+
+<div  id="hero-title">
+      
+<div  id="hero-title-content">
+      <div class="field field-node--node-title field-formatter-ds-field field-name-node-title field-type-ds field-label-hidden has-single"><div class="field__items"><div class="field__item"><h1>
+  Tiger
+</h1>
+</div></div>
+</div>
+<div class="field field-node--field-title-description field-formatter-string field-name-field-title-description field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">Tale of the tiger</div></div>
+</div>
+<div class="field field-node-field-video field-entity-reference-type-node field-formatter-entity-reference-entity-view field-name-field-video field-type-entity-reference field-label-hidden"><div class="field__items"><div class="field__item">
+        <span class="field__item-wrapper"><div data-history-node-id="335" class="node node--view-mode-video-in-hero node--type-kids-video node--id-335 atl atl--ds-1col ds-1col clearfix" onclick="location.href=&#039;/index.php/videos/tiger-tale&#039;" role="article">
+
+  
+
+  
+<div  id="hero">
+      <div class="field field-node--field-video-still field-formatter-image field-name-field-video-still field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <a href="/index.php/videos/tiger-tale"><img src="/sites/default/files/styles/animal_hero_video_thumb/public/kids_video_stills/tiger_tale.jpg?itok=UpSbP5Sh" width="250" height="140" alt="A video still close up of two tigers" typeof="foaf:Image" class="image-style-animal-hero-video-thumb" />
+
+</a></div>
+    </figure></div>
+
+  </div>
+
+
+</div>
+
+</span>
+      </div></div>
+</div>
+
+  </div>
+
+  </div>
+
+<div  id="hero-sound-cam">
+      <div class="field field-node--field-optional-sound field-formatter-entity-reference-revisions-entity-view field-name-field-optional-sound field-type-entity-reference-revisions field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-optional-sound paragraph--view-mode-default">
+  
+</div>
+</div></div>
+</div>
+<div class="field field-node--field-optional-live-cam-link field-formatter-link field-name-field-optional-live-cam-link field-type-link field-label-hidden has-single"><div class="field__items"><div class="field__item"><a href="/videos/livecam/tiger-cam">Tiger Cam</a></div></div>
+</div>
+
+  </div>
+
+  </div>
+
+<div  id="facts-group">
+      
+<div  id="hero-facts">
+      <div class="field field-node-field-animal-type field-entity-reference-type-taxonomy-term field-formatter-entity-reference-entity-view field-name-field-animal-type field-type-entity-reference field-label-above"><h3 class="field__label">Type</h3><div class="field__items"><div class="field__item">
+        <span class="field__item-wrapper"><div class="taxonomy_term taxonomy-term--view-mode-default taxonomy-term--type-animal-types taxonomy-term--id-1 atl atl--ds-1col ds-1col clearfix">
+
+  
+
+  <div class="field field-taxonomy-term--field-animal-type-representative field-formatter-image field-name-field-animal-type-representative field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-12/animal-icon-mammals.png" width="355" height="146" alt="giant panda" typeof="foaf:Image" />
+</div>
+    </figure></div>
+<div class="field field-taxonomy-term--taxonomy-term-title field-formatter-ds-field field-name-taxonomy-term-title field-type-ds field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>
+  Mammals
+</p>
+</div></div>
+</div>
+
+
+</div>
+
+</span>
+      </div></div>
+</div>
+<div class="field field-node-field-area field-entity-reference-type-taxonomy-term field-formatter-entity-reference-entity-view field-name-field-area field-type-entity-reference field-label-above"><h3 class="field__label">Area</h3><div class="field__items"><div class="field__item">
+        <span class="field__item-wrapper"><div class="taxonomy_term taxonomy-term--view-mode-default taxonomy-term--type-area taxonomy-term--id-783 atl atl--ds-1col ds-1col clearfix">
+
+  
+
+  <div class="field field-taxonomy-term--field-map field-formatter-image field-name-field-map field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-07/maps-asia.png" width="355" height="146" alt="Map of Asian countries" typeof="foaf:Image" />
+</div>
+    </figure></div>
+<div class="field field-taxonomy-term--taxonomy-term-title field-formatter-ds-field field-name-taxonomy-term-title field-type-ds field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>
+  Asia
+</p>
+</div></div>
+</div>
+
+
+</div>
+
+</span>
+      </div></div>
+</div>
+<div class="field field-node-field-endangered-status field-entity-reference-type-taxonomy-term field-formatter-entity-reference-entity-view field-name-field-endangered-status field-type-entity-reference field-label-above"><h3 class="field__label">Endangered Status</h3><div class="field__items"><div class="field__item">
+        <span class="field__item-wrapper"><div class="taxonomy_term taxonomy-term--view-mode-default taxonomy-term--type-endangered-status taxonomy-term--id-7 atl atl--ds-1col ds-1col clearfix">
+
+  
+
+  <div class="field field-taxonomy-term--field-status field-formatter-image field-name-field-status field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-04/endangered_graph_endangered.png" width="355" height="146" alt="" typeof="foaf:Image" />
+</div>
+    </figure></div>
+<div class="field field-taxonomy-term--taxonomy-term-title field-formatter-ds-field field-name-taxonomy-term-title field-type-ds field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>
+  Endangered
+</p>
+</div></div>
+</div>
+
+
+</div>
+
+</span>
+      </div></div>
+</div>
+
+  </div>
+
+<div  id="facts-cards" class="vertical-text">
+    <h2>facts</h2>
+      <div class="field field-node--field-cards field-formatter-entity-reference-revisions-entity-view field-name-field-cards field-type-entity-reference-revisions field-label-hidden has-multiple"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-animal-facts-cards paragraph--view-mode-default">
+  
+<div  class="fact-card-container-1">
+      
+<div >
+      <div class="field field-paragraph--field-card-title field-formatter-string field-name-field-card-title field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">size</div></div>
+</div>
+
+<div  class="card-title-group">
+      <div class="field field-paragraph--field-card-title-large field-formatter-string field-name-field-card-title-large field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">8 to 10 feet</div></div>
+</div>
+<div class="field field-paragraph--field-card-title-sub field-formatter-string field-name-field-card-title-sub field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">length of adult male tiger</div></div>
+</div>
+
+  </div>
+<div class="clearfix text-formatted field field-paragraph--field-card-front-description field-formatter-text-default field-name-field-card-front-description field-type-text field-label-hidden has-single"><div class="field__items"><div class="field__item">The average bed is 6.25 feet long.</div></div>
+</div>
+<div class="field field-paragraph--field-image field-formatter-image field-name-field-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-07/card-bed-size-tiger.png" width="280" height="210" alt="Tiger compared in size to a bed" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+  </div>
+
+  </div>
+
+</div>
+</div><div class="field__item">  <div  class="paragraph paragraph--type--animal-facts-cards-2-sided paragraph--view-mode--default">
+          <div class="cards"> 
+        <div class="fact-card-front"> 
+          <div class="field field-paragraph--field-card-title field-formatter-string field-name-field-card-title field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">food</div></div>
+</div>
+
+          <div class="card-title-group">
+            <div class="field field-paragraph--field-card-title-large field-formatter-string field-name-field-card-title-large field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">meat</div></div>
+</div>
+
+            
+          </div>
+          <div class="clearfix text-formatted field field-paragraph--field-card-front-description field-formatter-text-default field-name-field-card-front-description field-type-text field-label-hidden has-single"><div class="field__items"><div class="field__item"><abbr title="A meat-eating animal; one who eats the flesh of other animals." class="taxonomy-tooltip-tip">Carnivore</abbr>
+</div></div>
+</div>
+
+          <div class="field field-paragraph--field-image field-formatter-image field-name-field-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/carne_6.png" width="330" height="292" alt="meat" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+        </div> 
+        <div class="fact-card-back">
+          <div class="clearfix text-formatted field field-paragraph--field-side-2-body field-formatter-text-default field-name-field-side-2-body field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Pigs, deer, rhinoceroses, and even small elephants.</p></div></div>
+</div>
+
+        </div> 
+      </div>
+    
+  </div>
+
+</div><div class="field__item">  <div  class="paragraph paragraph--type--animal-facts-cards-2-sided paragraph--view-mode--default">
+          <div class="cards"> 
+        <div class="fact-card-front"> 
+          <div class="field field-paragraph--field-card-title field-formatter-string field-name-field-card-title field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">habitat</div></div>
+</div>
+
+          <div class="card-title-group">
+            <div class="field field-paragraph--field-card-title-large field-formatter-string field-name-field-card-title-large field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">forests</div></div>
+</div>
+
+            <div class="field field-paragraph--field-card-title-sub field-formatter-string field-name-field-card-title-sub field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">and more</div></div>
+</div>
+
+          </div>
+          
+          <div class="field field-paragraph--field-image field-formatter-image field-name-field-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-07/habitats-forest.png" width="330" height="292" alt="forest habitat" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+        </div> 
+        <div class="fact-card-back">
+          <div class="clearfix text-formatted field field-paragraph--field-side-2-body field-formatter-text-default field-name-field-side-2-body field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Tigers live in many habitats, including tropical rain forest, snow-covered coniferous and deciduous forests, mangrove swamps, and drier forest areas.</p></div></div>
+</div>
+
+        </div> 
+      </div>
+    
+  </div>
+
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+<div  id="description-group" class="description-group page-section">
+      
+<div  class="vertical-text">
+    <h2>description</h2>
+      <div class="field field-node--field-additional-description-ite field-formatter-entity-reference-revisions-entity-view field-name-field-additional-description-ite field-type-entity-reference-revisions field-label-hidden has-multiple"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-animals-description-odd paragraph--view-mode-default">
+  
+<div  class="description-odd">
+      
+<div  class="description-image description-side">
+      <div class="field field-paragraph--field-animal-description-image field-formatter-image field-name-field-animal-description-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/tiger-camo.jpg" width="750" height="620" alt="A tiger crouches behind a bush." typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+  </div>
+
+<div  class="description-text description-side">
+      <h3>Built to blend</h3><div class="clearfix text-formatted field field-paragraph--field-animal-description-body field-formatter-text-default field-name-field-animal-description-body field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Recognizing a tiger at the zoo is easy. But in their natural habitat in scattered, small areas in Asia, tigers are really hard to find. That’s because their unique orange, black, and white stripe pattern helps them blend into the forests and grassy areas where they live and hunt.</p></div></div>
+</div>
+<div class="field field-paragraph--field-optional-sound2 field-formatter-entity-reference-revisions-entity-view field-name-field-optional-sound2 field-type-entity-reference-revisions field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-optional-sound paragraph--view-mode-default">
+  
+
+<div class="field field-paragraph--field-sound-file field-name-field-sound-file field-type-file field-label-hidden">
+    <div class="field__items">
+          <p><a class="sm2_button" href="/sites/default/files/animal_sounds/tiger_chuffle.mp3" title="Play "  type="audio/mpeg">bonk.mp3</a></p>
+      </div>
+</div>
+<div class="field field-paragraph--field-sound-title field-formatter-string field-name-field-sound-title field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">Tiger chuffle</div></div>
+</div>
+
+</div>
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div><div class="field__item"><div class="paragraph paragraph--type-animals-description-even paragraph--view-mode-default">
+  
+<div  class="description-even">
+      
+<div  class="description-image description-side test">
+      <div class="field field-paragraph--field-animal-description-image field-formatter-image field-name-field-animal-description-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/tiger-paw.jpg" width="750" height="620" alt="Tiger with its fore-paw held to its mouth" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+  </div>
+
+<div  class="description-text description-side">
+      <h3>Powerful hunters</h3><div class="clearfix text-formatted field field-paragraph--field-animal-description-body field-formatter-text-default field-name-field-animal-description-body field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Tigers are carnivores. <span class="tiger-tangerine">tiger</span> They are quiet, patient hunters with large powerful paws and teeth to help them catch and eat their prey. Some of their favorite meals include pigs, deer, rhinoceroses, and even small elephants.</p></div></div>
+</div>
+<div class="field field-paragraph--field-optional-sound field-formatter-entity-reference-revisions-entity-view field-name-field-optional-sound field-type-entity-reference-revisions field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-optional-sound paragraph--view-mode-default">
+  
+</div>
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div><div class="field__item"><div class="paragraph paragraph--type-animals-description-odd paragraph--view-mode-default">
+  
+<div  class="description-odd">
+      
+<div  class="description-image description-side">
+      <div class="field field-paragraph--field-animal-description-image field-formatter-image field-name-field-animal-description-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/tiger-momcub.jpg" width="750" height="620" alt="A tiger mom grooms her little cub with her large tongue" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+  </div>
+
+<div  class="description-text description-side">
+      <h3>Hunter is hunted</h3><div class="clearfix text-formatted field field-paragraph--field-animal-description-body field-formatter-text-default field-name-field-animal-description-body field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Tigers hunt for their food, but they are also hunted by humans for their valuable fur and body parts. Because of this, tiger researches think there may only be 3,500 tigers left in the world. This makes them an endangered species.</p></div></div>
+</div>
+<div class="field field-paragraph--field-optional-sound2 field-formatter-entity-reference-revisions-entity-view field-name-field-optional-sound2 field-type-entity-reference-revisions field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-optional-sound paragraph--view-mode-default">
+  
+</div>
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+  
+</main>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="content-suffix" class="l-content-suffix l-row">
+  
+  <div class="l-pr page__row pr-content-suffix" id="content-suffix">
+    <div class="l-rw regions container pr-content-suffix__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="4" class="l-r region pr-content-suffix__content-suffix"><div id="block-uniquefeatureshero" class="l-bl block block-config-provider--ctools-block block-plugin-id--entity-field-nodefield-unique-features-hero">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="field field-node--field-unique-features-hero field-formatter-image field-name-field-unique-features-hero field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/tigers-unique-hero.jpg" width="1500" height="503" alt="A tiger walks across grass with its jaw open." typeof="foaf:Image" />
+</div>
+    </figure></div>
+</div></div>
+</div>
+<div id="block-uniquefeatures" class="l-bl block block-config-provider--ctools-block block-plugin-id--entity-field-nodefield-unique-features1">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="field field-node--field-unique-features1 field-formatter-entity-reference-revisions-entity-view field-name-field-unique-features1 field-type-entity-reference-revisions field-label-hidden has-multiple"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-animals-unique-features-odd paragraph--view-mode-default">
+  <div class="field field-paragraph--field-unique-features-image field-formatter-image field-name-field-unique-features-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/unique-tigers-stripes.jpg" width="284" height="284" alt="A tiger cub pounces on its sibling&#039;s back" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+<div  class="unique-text-container">
+      
+<div  class="unique-text">
+      <h3>Read between the lines</h3><div class="clearfix text-formatted field field-paragraph--field-unique-feature-text field-formatter-text-default field-name-field-unique-feature-text field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>Like human fingerprints, every tiger has a unique pattern of stripes that can be used to identify it! <span class="tiger-white">tiger</span></p></div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div><div class="field__item"><div class="paragraph paragraph--type-animals-unique-features-even paragraph--view-mode-default">
+  <div class="field field-paragraph--field-unique-features-image field-formatter-image field-name-field-unique-features-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/unique_tiger-teeth.jpg" width="284" height="284" alt="A tiger yawns, showing off its large canines" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+<div  class="unique-text-container">
+      
+<div  class="unique-text">
+      <h3>It&#039;s the &quot;tooth&quot;</h3><div class="clearfix text-formatted field field-paragraph--field-unique-feature-text field-formatter-text-default field-name-field-unique-feature-text field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>A tiger's canine teeth are 3 inches long.</p></div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div><div class="field__item"><div class="paragraph paragraph--type-animals-unique-features-odd paragraph--view-mode-default">
+  <div class="field field-paragraph--field-unique-features-image field-formatter-image field-name-field-unique-features-image field-type-image field-label-hidden has-single"><figure class="field-type-image__figure image-count-1"><div class="field-type-image__item">
+        <img src="/sites/default/files/2017-06/unique_tiger-eyes.jpg" width="284" height="284" alt="Close-up of a tiger&#039;s green-yellow eyes as it stares from behind a small branch" typeof="foaf:Image" />
+</div>
+    </figure></div>
+
+<div  class="unique-text-container">
+      
+<div  class="unique-text">
+      <h3>I see you!</h3><div class="clearfix text-formatted field field-paragraph--field-unique-feature-text field-formatter-text-default field-name-field-unique-feature-text field-type-text-long field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>A tiger’s night vision is 6 times better than a human’s.</p></div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+</div></div>
+</div>
+</div></div>
+</div>
+<div id="block-optionalanimalsplantssitelink" class="l-bl block block-config-provider--ctools-block block-plugin-id--entity-field-nodefield-optional-animals-plants-si">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="field field-node--field-optional-animals-plants-si field-formatter-entity-reference-revisions-entity-view field-name-field-optional-animals-plants-si field-type-entity-reference-revisions field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="paragraph paragraph--type-learn-more-link paragraph--view-mode-default">
+  
+<div  class="block__inner">
+      <div class="field field-paragraph--field-learn-more-text field-formatter-string field-name-field-learn-more-text field-type-string field-label-hidden has-single"><div class="field__items"><div class="field__item">Learn more about tigers at</div></div>
+</div>
+<div class="field field-paragraph--field-link-to-animals-site field-formatter-link field-name-field-link-to-animals-site field-type-link field-label-hidden has-single"><div class="field__items"><div class="field__item"><a href="http://animals.sandiegozoo.org/animals/tiger">visit site now</a></div></div>
+</div>
+
+  </div>
+
+</div>
+</div></div>
+</div>
+</div></div>
+</div>
+<div class="views-element-container l-bl block block-config-provider--views block-plugin-id--views-block-animals-explore-purely-random has-title" id="block-views-block-animals-explore-purely-random" role="region" aria-labelledby="block-views-block-animals-explore-purely-random-title">
+  <div class="block__inner">
+
+    <h2  class="block__title" id="block-views-block-animals-explore-purely-random-title"><span>Explore</span></h2><div class="block__content"><div class="element-container-wrapper"><div class="view view-animals view-id-animals view-display-id-explore_purely_random js-view-dom-id-bdff50f009c8fdcb6ae118b6d28adbb7c1116782f7ee61f4416169beaa770675">
+  
+    
+      
+      <div class="view-content view-rows">
+          <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/animals/annas-hummingbird"><img src="/sites/default/files/styles/150px_square_focus_crop/public/2017-12/animal-hero-annas-hummingbird.jpg?h=77f2d4e4&amp;itok=9EimhHGX" width="150" height="150" alt="Male Anna&#039;s hummingbird perched on a small branch" typeof="foaf:Image" class="image-style-_50px-square-focus-crop" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/annas-hummingbird" hreflang="en">Anna&#039;s hummingbird</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/animals/california-sea-lion"><img src="/sites/default/files/styles/150px_square_focus_crop/public/2017-12/animal-hero-ca-sea-lion.jpg?h=77f2d4e4&amp;itok=kWncqbMn" width="150" height="150" alt="California sea lion looking right as it sits on a sandy beach" typeof="foaf:Image" class="image-style-_50px-square-focus-crop" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/california-sea-lion" hreflang="en">California sea lion</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/animals/blue-tongued-skink"><img src="/sites/default/files/styles/150px_square_focus_crop/public/2017-06/animal-hero-bluetonguedskink_1.jpg?h=77f2d4e4&amp;itok=CB7l3Ss4" width="150" height="150" alt="Tanimbar blue tongue skink " typeof="foaf:Image" class="image-style-_50px-square-focus-crop" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/blue-tongued-skink" hreflang="en">Blue-tongued skink</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/animals/okapi"><img src="/sites/default/files/styles/150px_square_focus_crop/public/2017-07/animal-hero-tokapi_0.jpg?h=77f2d4e4&amp;itok=qUENSTe9" width="150" height="150" alt="Okapi" typeof="foaf:Image" class="image-style-_50px-square-focus-crop" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/okapi" hreflang="en">Okapi</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/animals/peafowl"><img src="/sites/default/files/styles/150px_square_focus_crop/public/2017-07/animal-hero-peafowl.jpg?h=77f2d4e4&amp;itok=6mNVLhME" width="150" height="150" alt="Peacock displaying his elaborate tail feathers" typeof="foaf:Image" class="image-style-_50px-square-focus-crop" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/peafowl" hreflang="en">Peafowl</a></span></div>
+  </div>
+
+    </div>
+  
+            <div class="view-footer">
+      <div class="views-row explore-view-all">
+<a href="/animals"><img src="/themes/atkids/images/view-all-animals-bg.jpg"><span>view all animals</span></a>
+</div>
+    </div>
+    </div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="subfeatures" class="l-subfeatures l-row">
+  
+  <div class="l-pr page__row pr-subfeatures" id="sub-features">
+    <div class="l-rw regions container pr-subfeatures__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="3" class="l-r region pr-subfeatures__subfeatures-first"><div class="views-element-container l-bl block block-config-provider--views block-plugin-id--views-block-activities-activity-section-promo" id="block-views-block-activities-activity-section-promo">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="element-container-wrapper"><div class="view view-activities view-id-activities view-display-id-activity_section_promo js-view-dom-id-e31520c4f3b4d805390bf602f0ccb510d7ebe53a6b378d3baa3c3fe0b943c6d7">
+  
+    
+      
+      <div class="view-empty">
+      <div class="view view-activities view-id-activities view-display-id-activity_section_promo_animal_page js-view-dom-id-a95a36e7163108ed271aa7c2a634051ba4808aeb372b95663acf9059abf56b68">
+  
+    
+      <div class="view-header">
+      <div class="vertical-text">
+<h2>activities</h2>
+</div>
+    </div>
+      
+      <div class="view-content view-rows">
+          <div class="views-row">
+    <div class="views-field views-field-field-hero"><div class="field-content"><a href="/activities/coloring-page-tiger-family"><img src="/sites/default/files/styles/landing_page_view/public/2020-03/coloring-hero-Tigers.jpg?h=77f2d4e4&amp;itok=YHqoraJJ" width="350" height="234" alt="Tiger family coloring page" typeof="foaf:Image" class="image-style-landing-page-view" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/activities/coloring-page-tiger-family" hreflang="en">Coloring Page: Tiger Family</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+
+    </div>
+  
+          </div>
+</div>
+</div></div>
+</div>
+<div class="views-element-container l-bl block block-config-provider--views block-plugin-id--views-block-games-game-section-promo" id="block-views-block-games-game-section-promo">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="element-container-wrapper"><div class="view view-games view-id-games view-display-id-game_section_promo js-view-dom-id-604c3d81cd66a5d6c3a01a20d6c06e50e0577bc523399f9393032890e0b2dfb6">
+  
+    
+      
+      <div class="view-empty">
+      <div class="view view-games view-id-games view-display-id-game_section_promo_animal_embed js-view-dom-id-54b4c63e6476c7a3b12f4ccf081f6c3c75a99a71a7e5345ab8b4bc5474684453">
+  
+    
+      <div class="view-header">
+      <div class="vertical-text">
+<h2>games</h2>
+</div>
+    </div>
+      
+      <div class="view-content view-rows">
+          <div class="views-row">
+    <div class="views-field views-field-field-thumbnail-image"><div class="field-content"><a href="http://www.tigertrailgame.com/"><img src="/sites/default/files/styles/landing_page_view/public/2017-06/tiger-trail.jpg?h=bd358847&amp;itok=IBlm4op2" width="350" height="234" alt="Tiger Trail. Play Now." typeof="foaf:Image" class="image-style-landing-page-view" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="http://www.tigertrailgame.com/">Tiger Trail</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+
+    </div>
+  
+          </div>
+</div>
+</div></div>
+</div>
+<div class="views-element-container l-bl block block-config-provider--views block-plugin-id--views-block-kids-videos-video-section-promo" id="block-views-block-kids-videos-video-section-promo">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="element-container-wrapper"><div class="view view-kids-videos view-id-kids_videos view-display-id-video_section_promo js-view-dom-id-997b394853d2927b5f56a946fd932ba1dd73836ab5d3187e355707b5c27380bc">
+  
+    
+      
+      <div class="view-empty">
+      <div class="view view-kids-videos view-id-kids_videos view-display-id-video_section_promo_animal_embed js-view-dom-id-d57a9906baa6661f08d32abe9abce6b66b3f1e9872a6f49d0b16dbbdfaf6e5b7">
+  
+    
+      <div class="view-header">
+      <div class="vertical-text">
+<h2>videos</h2>
+</div>
+    </div>
+      
+      <div class="view-content view-rows">
+          <div class="views-row">
+    <div class="views-field views-field-field-video-still"><div class="field-content"><a href="/videos/tiger-cubs-move-tiger-trail"><img src="/sites/default/files/styles/video_landing_page_view/public/kids_video_stills/tigers-cubs-lg.jpg?itok=nXQl94s6" width="350" height="234" alt="Tiger cub in his new exhibit home" typeof="foaf:Image" class="image-style-video-landing-page-view" />
+
+</a></div></div><div class="views-field views-field-title"><span class="field-content"><a href="/videos/tiger-cubs-move-tiger-trail" hreflang="en">Tiger Cubs Move to Tiger Trail</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+
+    </div>
+  
+          </div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="footer" class="l-footer l-row">
+  
+  <footer class="l-pr page__row pr-footer" role="contentinfo" id="footer">
+    <div class="l-rw regions container pr-footer__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="2" class="l-r region pr-footer__footer"><nav role="navigation" aria-labelledby="block-atkids-footer-menu" id="block-atkids-footer" class="l-bl block block-menu block-config-provider--system block-plugin-id--system-menu-block-footer">
+  <div class="block__inner block-menu__inner">
+
+    
+    <h2 class="visually-hidden block__title block-menu__title" id="block-atkids-footer-menu"><span>Footer menu</span></h2>
+    <div class="block__content block-menu__content">
+    <ul class="menu odd menu-level-1 menu-name--footer">      
+            
+      
+            <li class="menu__item menu__item-title--san-diego-zoo" id="mlid-san-diego-zoo">
+
+        <span class="menu__link--wrapper">
+          <a href="https://zoo.sandiegozoo.org" class="menu__link">San Diego Zoo</a>
+        </span>
+
+        
+      </li>      
+            
+      
+            <li class="menu__item menu__item-title--san-diego-zoo-safari-park" id="mlid-san-diego-zoo-safari-park">
+
+        <span class="menu__link--wrapper">
+          <a href="https://sdzsafaripark.org" class="menu__link">San Diego Zoo Safari Park</a>
+        </span>
+
+        
+      </li>      
+            
+      
+            <li class="menu__item menu__item-title--san-diego-zoo-animals--plants" id="mlid-san-diego-zoo-animals--plants">
+
+        <span class="menu__link--wrapper">
+          <a href="https://animals.sandiegozoo.org" class="menu__link">San Diego Zoo Animals &amp; Plants</a>
+        </span>
+
+        
+      </li>      
+            
+      
+            <li class="menu__item menu__item-title--san-diego-zoo-global-zoonooz" id="mlid-san-diego-zoo-global-zoonooz">
+
+        <span class="menu__link--wrapper">
+          <a href="https://zoonooz.sandiegozoo.org" class="menu__link">San Diego Zoo Global ZOONOOZ</a>
+        </span>
+
+        
+      </li></ul>
+  
+
+</div></div>
+</nav>
+<div id="block-footer-2" class="l-bl block block-config-provider--block-content block-plugin-id--block-content-8765eada-b99f-47b9-b7ee-19c46bd4c772 block--type-basic block--view-mode-full">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="clearfix text-formatted field field-block-content--body field-formatter-text-default field-name-body field-type-text-with-summary field-label-hidden has-single"><div class="field__items"><div class="field__item"><div id="footer-legal">
+<div class="footer-copyright">
+<script type="text/javascript">
+
+var mydate= new Date()
+var theyear=mydate.getFullYear()
+
+document.write("&copy;")
+document.write(theyear)
+document.write(" San Diego Zoo Global")
+</script> 
+</div>
+<div class="footer-legal-links">
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/accessibility-statement">Accessibility Statement</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://zoo.sandiegozoo.org/content/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://zoo.sandiegozoo.org/content/terms-use">Terms of Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://zoo.sandiegozoo.org/state-disclosures">State Disclosures</a>
+</div>
+</div></div></div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </footer>
+  
+</div>
+
+  
+</div>
+<!--<img id="egggif" src="/sites/default/files/egg/tickle.gif" />-->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/164","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"theme":"atkids","libraries":"at_core\/at.breakpoints,at_core\/at.responsivemenus,at_core\/at.settings,atkids\/atkids.layout.page,atkids\/audioeye,atkids\/base,atkids\/cardflip,atkids\/ckeditor,atkids\/color,atkids\/comment,atkids\/contact,atkids\/custom_css_file,atkids\/ds,atkids\/fontfaceobserver,atkids\/fonts,atkids\/gothamfonts,atkids\/gtm,atkids\/image_styles,atkids\/jquery_ui,atkids\/mobile_blocks,atkids\/new,atkids\/placeholder-activities,atkids\/placeholder-animals,atkids\/placeholder-stories,atkids\/placeholder-videos,atkids\/responsive_menus,atkids\/responsive_menus_dropmenu,atkids\/responsive_menus_overlay,atkids\/responsive_tables,atkids\/search,atkids\/selectric,atkids\/soundmanager2,atkids\/taxonomy,google_analytics\/google_analytics,paragraphs\/drupal.paragraphs.unpublished,search_kint\/search_kint,system\/base,views\/views.ajax,views\/views.module","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"atkids":{"at_responsivemenus":{"bp":"all and (min-width: 1020px)","default":"ms-overlay","responsive":"ms-dropmenu","acd":{"acd_load":false}},"at_breakpoints":{"at_core_simple_wide":{"breakpoint":"wide","mediaquery":"all and (min-width: 60.0625em)"},"at_core_simple_tablet-isolate":{"breakpoint":"tablet-isolate","mediaquery":"all and (min-width: 45.0625em) and (max-width: 60em)"},"at_core_simple_mobile":{"breakpoint":"mobile","mediaquery":"all and (max-width: 45em)"}}},"field_group":{"html_element":{"mode":"full","context":"view","settings":{"id":"hero-image","classes":"","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","label_element_classes":"","label":"Video"}}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:604c3d81cd66a5d6c3a01a20d6c06e50e0577bc523399f9393032890e0b2dfb6":{"view_name":"games","view_display_id":"game_section_promo","view_args":"164","view_path":"\/node\/164","view_base_path":null,"view_dom_id":"604c3d81cd66a5d6c3a01a20d6c06e50e0577bc523399f9393032890e0b2dfb6","pager_element":0},"views_dom_id:54b4c63e6476c7a3b12f4ccf081f6c3c75a99a71a7e5345ab8b4bc5474684453":{"view_name":"games","view_display_id":"game_section_promo_animal_embed","view_args":"164","view_path":"\/node\/164","view_base_path":null,"view_dom_id":"54b4c63e6476c7a3b12f4ccf081f6c3c75a99a71a7e5345ab8b4bc5474684453","pager_element":0},"views_dom_id:e31520c4f3b4d805390bf602f0ccb510d7ebe53a6b378d3baa3c3fe0b943c6d7":{"view_name":"activities","view_display_id":"activity_section_promo","view_args":"164","view_path":"\/node\/164","view_base_path":null,"view_dom_id":"e31520c4f3b4d805390bf602f0ccb510d7ebe53a6b378d3baa3c3fe0b943c6d7","pager_element":0},"views_dom_id:a95a36e7163108ed271aa7c2a634051ba4808aeb372b95663acf9059abf56b68":{"view_name":"activities","view_display_id":"activity_section_promo_animal_page","view_args":"164","view_path":"\/node\/164","view_base_path":null,"view_dom_id":"a95a36e7163108ed271aa7c2a634051ba4808aeb372b95663acf9059abf56b68","pager_element":0},"views_dom_id:bdff50f009c8fdcb6ae118b6d28adbb7c1116782f7ee61f4416169beaa770675":{"view_name":"animals","view_display_id":"explore_purely_random","view_args":"","view_path":"\/node\/164","view_base_path":null,"view_dom_id":"bdff50f009c8fdcb6ae118b6d28adbb7c1116782f7ee61f4416169beaa770675","pager_element":0}}},"user":{"uid":0,"permissionsHash":"785bdc97089c8442f2c04a4e80f1e67945ffeccbde0c3fef8a512b203d6e7278"}}</script>
+<script src="/sites/default/files/js/js_0UTJjMHzSPKs3VzuQ2d_pnxlGddzWrb_hEzZdhT1Zyk.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.8/fontfaceobserver.js"></script>
+<script src="/sites/default/files/js/js_lFeQY8A6DwLyv6UJ3ojfeBeSJEIbw0zywN_bnIh9v4M.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
+<script src="/sites/default/files/js/js_AgUhNMIIzQpI9fT7J9Bavd2T10PwzGm1llw3k_eChSo.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ecb4fdaae2","applicationID":"126339335","transactionName":"YwdUbRBSD0NXB0cMW1pNY0sLHE5ZWABWHRpECkY=","queueTime":0,"applicationTime":526,"atts":"T0BXG1hIHE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

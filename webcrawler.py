@@ -120,7 +120,70 @@ if(refresh == 1):
                     "link": link
                 }
                 results.append(item)
+        
+        next = soup.find(id='pnnext') #use the parser to find the link to the next google search page
+        next_link = next['href']
+        
+        next_page = "https://www.google.com"+next_link
 
+        for x in results: #repeat for the next page (yes, i know this could've been done with a loop or function im lazy)
+            print(f"{x}")
+            url = x.get('link')
+            response = requests.get(url, headers=headers)
+            if response.status_code != 200:
+                continue
+
+            title = x.get('title')
+            if('/' in title):
+                title = title.replace('/', ' ')
+            
+
+            fileH = f"./dataset/{query}/{title}.html"
+            fileT = f"./textset/{query}/{title}.txt"
+            for ch in ILL_CHARS:
+                if ch in fileH:
+                    fileH = fileH.replace(ch, '')
+                if ch in fileT:
+                    fileT = fileT.replace(ch, '')
+            
+            output = ''
+            searchSoup = BeautifulSoup(response.content, 'html.parser')
+            text = searchSoup.find_all(text=True)
+            # h = html2text.HTML2Text()
+            # h.ignore_links = True #these are settings for html2text object
+            # h.ignore_images = True
+            # h.ignore_tables = True
+
+            #print(h.handle(response.text))
+            for t in text:
+                if t.parent.name in whitelist:
+                    output += '{} '.format(t)
+
+            with open(fileH, 'wb+') as f:
+                f.write(response.content)
+
+            with io.open(fileT, 'w', encoding="utf-8") as ff:
+                #ff.write(h.handle(response.text))
+                #print(f"{title}: {output}")
+                ff.write(output)
+
+        resp = requests.get(next_page, headers=headers) #this requests the next page of search results
+
+        if resp.status_code == 200:
+            soup = BeautifulSoup(resp.content, "html.parser")
+
+        results = []
+        for g in soup.find_all('div', class_='r'): #again, parse through the google page to obtain the actual results
+            anchors = g.find_all('a')
+            if anchors:
+                link = anchors[0]['href']
+                title = g.find('h3').text
+                item = {
+                    "title": title,
+                    "link": link
+                }
+                results.append(item)
+                
         for x in results: #repeat for the next page (yes, i know this could've been done with a loop or function im lazy)
             print(f"{x}")
             url = x.get('link')
