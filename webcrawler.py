@@ -1,10 +1,11 @@
 import urllib.request
 import requests
-from os import path, mkdir
-from shutil import rmtree
+from os import path, mkdir, remove
+from shutil import rmtree, move
 from bs4 import BeautifulSoup
 #import html2text
 import io
+import pathlib
 
 #define user agent for query to force desktop viewing for optimal scraping
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
@@ -19,6 +20,7 @@ for x in range(count_q): #loop and input query names appended into the query arr
     queries.append(i)
 #print(queries)
 refresh = int(input("Refresh dataset? (Yes 1/No 0): "))
+test_query_per_topic = 3
 
 if(refresh == 1):
     if(count_q != 0):
@@ -26,19 +28,20 @@ if(refresh == 1):
             rmtree("./dataset/")
         if path.exists("./textset/"):
             rmtree("./textset/")
+        if path.exists("./testset/"):
+            rmtree("./testset")
         mkdir("./dataset/")
         mkdir("./textset/")
+        mkdir("./testset/")
 
 
     for x in range(count_q): #BEGIN query loop
         query = queries[x]
         print(f"QUERY: {query}")
         mkdir(f'./dataset/{query}/') #make the category directory
-        mkdir(f'./textset/{query}/')
-        if(path.exists(f"./textset/{query}")):
-            print("query subtree exists")
-        else:
-            mkdir(f"./textset/{query}")
+        mkdir(f'./textset/{query}/') 
+        mkdir(f'./testset/{query}/')
+
         query.replace(' ', "+") #replace spaces with + so that it works in the Google query search
         URL  = f"https://google.com/search?q={query}" 
 
@@ -224,6 +227,27 @@ if(refresh == 1):
                 #ff.write(h.handle(response.text))
                 #print(f"{title}: {output}")
                 ff.write(output)
+
+    #we want to move some of the gathered txt files into the testset
+    for query in queries:
+        c = 0
+        for path in pathlib.Path(f"./textset/{query}/").iterdir():
+            p = "./" + str(path)
+            p = p.replace('\\', '/')
+            if (path.is_file()):
+                current = open(path, "r", encoding="utf-8")
+                text = current.read()
+                length = len(text)
+                # corpus_file += text
+                # corpus.append(text)
+                current.close()
+                
+                if(length < 1): #this culls txt files that have nothing in them
+                    remove(path)
+                elif(c < test_query_per_topic):
+                    move(p, f"./testset/{query}") #this moves a file into its respective category folder in ./testset
+                    c += 1
+                
             
 
        

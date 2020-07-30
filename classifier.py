@@ -22,25 +22,22 @@ test = []
 for query in queries:
     for path in pathlib.Path(f"./testset/{query}/").iterdir():
             if path.is_file():
-                current = open(path, "r")
+                current = open(path, "r", encoding="utf-8")
                 text = current.read()
                 test.append(text)
                 current.close()
 
 test_set = load_files("./testset/", shuffle=True, encoding="utf-8")
 
-#print(test)
-
-#test = ["I go to university to get a post-secondary education.", "I tested positive for coronavirus, I heard florida has many deaths.", "Tiger king is my favorite show. There are many species of tigers."]
-
 new_counts = vectorizer.transform(test_set.data)
+print(f"test bag: {new_counts.shape}")
 new_tfidf = downscaler.transform(new_counts)
+print(f"test tfidf: {new_tfidf.shape}")
 
 prediction = Mbayes_model.predict(new_tfidf)
-#pred = Cbayes_model.predict(new_tfidf)
-#print(pred)
 
-# for doc, category in zip(test, prediction):
-#     print(f"{doc} => {training_set.target_names[category]}")
+for doc, category in zip(test_set.filenames, prediction):
+    print(f"{doc} => {test_set.target_names[category]}")
 
-print(np.mean(prediction == test_set.target))
+
+print(f"mean accuracy: {np.mean(prediction == test_set.target)}")

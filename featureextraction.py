@@ -33,13 +33,16 @@ with open("./corpus.txt", "w", encoding="utf-8") as corp:
 
 vectorizer = CountVectorizer()
 vector = vectorizer.fit_transform(corpus)
+print(f"feature bag: {vector.shape}")
+print(vector.toarray())
 #print(vector.shape)
 #indx = vectorizer.vocabulary_.get('shooter') #this vocabulary_ allows us to get the index of a feature
 #print(vector[:, indx].toarray()) #we query the matrix to get occurrence of a single feature by [:, index]
 
 downscaler = TfidfTransformer()
 tfidf_vector = downscaler.fit_transform(vector) #we fit and transform the previous tokenized and counted feature vector and downscale with TFIDF approach
-#print(tfidf_vector.shape)
+print(f"feature tfidf: {tfidf_vector.shape}")
+print(tfidf_vector.toarray())
 
 # scipy.sparse.save_npz('./vector_unscaled.npz', vector) #save feature vectors into .npz (is this necessary?)
 # scipy.sparse.save_npz('./vector_tfidf.npz', tfidf_vector) 
